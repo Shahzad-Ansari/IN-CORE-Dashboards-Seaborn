@@ -1,0 +1,84 @@
+/* Toggle Switch */
+.ddk-container .daq-toggleswitch--light__background,
+.ddk-container .daq-booleanswitch--light__background {
+    box-sizing: content-box;
+}
+.ddk-container.ddk-container .daq-toggleswitch--light button.daq-toggleswitch--light__button:not(.btn):not([type="button"]),
+.ddk-container.ddk-container .daq-booleanswitch--light button.daq-booleanswitch--light__button:not(.btn):not([type="button"]),
+.ddk-container.ddk-container .daq-powerbutton--light button.daq-powerbutton--light__button:not(.btn):not([type="button"]),
+.ddk-container.ddk-container .daq-toggleswitch--dark button.daq-toggleswitch--dark__button:not(.btn):not([type="button"]),
+.ddk-container.ddk-container .daq-booleanswitch--dark button.daq-booleanswitch--dark__button:not(.btn):not([type="button"]),
+.ddk-container.ddk-container .daq-powerbutton--dark button.daq-powerbutton--dark__button:not(.btn):not([type="button"]) {
+    min-height: auto;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.ddk-container.ddk-container button.giccIf.daq-toggleswitch--light__button:not(.btn):not([type="button"]),
+.ddk-container.ddk-container button.eBToyB.daq-toggleswitch--light__button:not(.btn):not([type="button"]) {
+    border: none;
+    border-radius: inherit;
+}
+
+.ddk-container.ddk-container button.mxbZg.daq-booleanswitch--light__button:not(.btn):not([type="button"]) {
+    border: none;
+}
+.ddk-container.ddk-container button.keWoAp.daq-booleanswitch--light__button:not(.btn):not([type="button"]) {
+    border: none;
+}
+
+/* PowerButton */
+.ddk-container.ddk-container button.daq-powerbutton--light__button {
+    display: flex;
+}
+
+/* Knob */
+.ddk-container .knob circle.indent,
+.ddk-container .knob circle.base {
+    pointer-events: visible;
+}
+
+/* LED Display */
+.ddk-container .daq-leddisplay--light > div > div.fBGgGr {
+    background: transparent;
+}
+
+.ddk-container .daq-leddisplay--light .fBGgGr circle[stroke^="#"] {
+    stroke: transparent;
+}
+
+.ddk-container .daq-leddisplay--light__digit path:nth-of-type(2) {
+    stroke: transparent;
+}
+
+/* PrecisionInput */
+.ddk-container .daq-precisioninput--light__output__digit {
+    background: transparent;
+}
+
+/* ColorPicker */
+.ddk-container .chrome-picker {
+    /*
+     * this rounded border-radius looks strage IMO
+     * needs !important because this is in the original
+     * DAQ styles
+     */
+    border-radius: 0 !important;
+    background-color: transparent !important;
+}
+
+.ddk-container .chrome-picker input:not([type]):not(.form-control) {
+    padding: 0;
+}
+
+/* ControlCard fixes */
+
+/* Fixes oversized divs operlapping other controls */
+.ddk-container .card.ddk-card .controls .daq-booleanswitch--light {
+    pointer-events: none;
+}
+.ddk-container .card.ddk-card .controls .daq-booleanswitch--light__background {
+    pointer-events: all;
+}
+

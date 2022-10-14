@@ -1,0 +1,24 @@
+.ddk-page--even .ddk-page__footer_number {
+    float: right;
+    padding-left: 15px;
+}
+.ddk-page--odd .ddk-page__footer_number {
+    float: left;
+    padding-right: 15px;
+}
+
+.ddk-page--even .note-1 {
+    float: right;
+    /* alternatively, hide this note with `display: none` */
+}
+.ddk-page--even .note-2 {
+    float: left;
+}
+
+.ddk-page--odd .note-1 {
+    float: left;
+}
+.ddk-page--odd .note-2 {
+    float: right;
+    /* alternatively, hide this note with `display: none` */
+}

@@ -1,0 +1,333 @@
+/* * {
+ outline: 1px solid red;
+} */
+
+.card-contents {
+    cursor: default;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.placeholder {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 40px;
+}
+
+.placeholder.error-card .card--content {
+    width: 100%;
+}
+
+.focused-backdrop {
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.fab {
+    display: flex;
+    width: fit-content;
+    position: sticky;
+    bottom: 50px;
+    left: 8px;
+    z-index: 0;
+}
+
+div.fab > * {
+    margin: 5px;
+}
+
+div.card-fab {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+div.card-fab > * {
+    margin-top: 15px;
+}
+
+div.overlayed-menu:hover {
+    opacity: 1;
+}
+
+div.overlayed-menu > div.contextual-icons {
+    opacity: 0;
+}
+
+div.overlayed-menu:hover > div.contextual-icons {
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+}
+div.overlayed-menu.active {
+    opacity: 1;
+}
+
+div.overlayed-menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0px;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    transition: opacity 0.25s ease-in;
+}
+
+div.overlayed-menu > * {
+    margin-left: 15px;
+}
+
+div.nested-overlayed-menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    transition: opacity 0.25s ease-in;
+}
+
+div.nested-overlayed-menu:hover {
+    opacity: 1;
+}
+
+.dbe-editor-menu {
+    /* float: left; */
+    width: 30vw;
+    padding: 15px;
+    /* background-color: var(--control_background_color); */
+    /* border: 1px red solid; */
+}
+
+.dbe-editor-menu-paper {
+    background-color: var(--control_background_color) !important;
+}
+
+.bottom-toc--inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-toc--label {
+    margin-left: 15px;
+}
+
+.bottom-toc--link {
+    width: '50%';
+    float: right;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+/* https://raw.githubusercontent.com/STRML/react-grid-layout/master/css/styles.css */
+.react-grid-layout {
+    position: relative;
+    transition: height 200ms ease;
+}
+.react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top;
+}
+.react-grid-item img {
+    pointer-events: none;
+    user-select: none;
+}
+.react-grid-item.cssTransforms {
+    transition-property: transform;
+}
+.react-grid-item.resizing {
+    z-index: -4;
+    will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: -2;
+    will-change: transform;
+}
+
+.react-grid-item.dropping {
+    visibility: hidden;
+}
+
+.react-grid-item.react-grid-placeholder {
+    background: var(--accent);
+    opacity: 0.2;
+    transition-duration: 100ms;
+    z-index: -3;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.react-grid-item > .react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+    content: '';
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.react-resizable-hide > .react-resizable-handle {
+    display: none;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-sw {
+    bottom: 0;
+    left: 0;
+    cursor: sw-resize;
+    transform: rotate(90deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-se {
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-nw {
+    top: 0;
+    left: 0;
+    cursor: nw-resize;
+    transform: rotate(180deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-ne {
+    top: 0;
+    right: 0;
+    cursor: ne-resize;
+    transform: rotate(270deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w,
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e {
+    top: 50%;
+    margin-top: -10px;
+    cursor: ew-resize;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w {
+    left: 0;
+    transform: rotate(135deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e {
+    right: 5px;
+    transform: rotate(315deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n,
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+    left: 50%;
+    margin-left: -10px;
+    cursor: ns-resize;
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n {
+    top: 0;
+    transform: rotate(225deg);
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+/* DDK and Material Overrides */
+.ddk-container .MuiPaper-root {
+    color: var(--text);
+}
+
+.ddk-container .MuiIconButton-root {
+    color: var(--text);
+    padding: 0px;
+}
+
+/* DDK overrides */
+.ddk-container
+    .dashboard-engine-canvas
+    .block.card.ddk-card:not(.card--content) {
+    width: 100% !important;
+    margin: 0;
+}
+
+.ddk-container
+    .dashboard-engine-canvas
+    .block.card.ddk-card
+    .card--content:not(.controls).height-fill,
+.ddk-container
+    .dashboard-engine-canvas
+    .block.card.ddk-card
+    .card--content:not(.controls)
+    .height-fill,
+.ddk-container
+    .dashboard-engine-canvas
+    .block.card.ddk-card
+    .card--content:not(.controls)
+    .ddk-graph {
+    height: 100%;
+    flex: 1;
+    flex-basis: auto;
+}
+
+.ddk-container
+    .dashboard-engine-canvas
+    .block.card.ddk-card
+    .card--content:not(.controls).height-auto {
+    height: 100%;
+}
+
+.ddk-container .dashboard-engine-canvas .dash-graph.ddk-graph {
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.ddk-container .dashboard-engine-canvas .js-plotly-plot .plotly {
+    height: inherit !important;
+}
+
+.ddk-container .dashboard-engine-canvas .plot-container.plotly .svg-container {
+    height: inherit !important;
+}
+
+.ddk-container .dashboard-engine-canvas .dash-table-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ddk-container
+    .dashboard-engine-canvas
+    .dash-spreadsheet-container.dash-spreadsheet {
+    height: 100%;
+    overflow: auto;
+}
+
+.ddk-container .copyText {
+    position: static;
+}

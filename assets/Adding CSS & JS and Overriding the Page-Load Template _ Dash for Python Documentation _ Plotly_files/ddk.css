@@ -1,0 +1,4 @@
+/* ddk-dash-docs has its own scroll-to-top functionality, don't need another */
+a[href="#top"] {
+    display: none;
+}

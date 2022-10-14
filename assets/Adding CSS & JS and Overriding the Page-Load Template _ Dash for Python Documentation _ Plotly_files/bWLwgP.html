@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&type=embed&forceRefresh=1665696986774 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Dash Styleguide</title>
+  
+  
+  
+  
+<style>
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Plotly.js
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+/* PLotly.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* plotly.js's modebar's z-index is 1001 by default
+ * https://github.com/plotly/plotly.js/blob/7e4d8ab164258f6bd48be56589dacd9bdd7fded2/src/css/_modebar.scss#L5
+ * In case a dropdown is above the graph, the dropdown's options
+ * will be rendered below the modebar
+ * Increase the select option's z-index
+ */
+
+/* This was actually not quite right -
+   dropdowns were overlapping each other (edited October 26)
+
+.Select {
+    z-index: 1002;
+}*/
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(50, 50, 50); }
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300; }
+h1 { font-size: 4.5rem; line-height: 1.2;  letter-spacing: -.1rem; margin-bottom: 2rem; }
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; margin-bottom: 1.8rem; margin-top: 1.8rem;}
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; margin-bottom: 1.5rem; margin-top: 1.5rem;}
+h4 { font-size: 2.6rem; line-height: 1.35; letter-spacing: -.08rem; margin-bottom: 1.2rem; margin-top: 1.2rem;}
+h5 { font-size: 2.2rem; line-height: 1.5;  letter-spacing: -.05rem; margin-bottom: 0.6rem; margin-top: 0.6rem;}
+h6 { font-size: 2.0rem; line-height: 1.6;  letter-spacing: 0; margin-bottom: 0.75rem; margin-top: 0.75rem;}
+
+p {
+  margin-top: 0; }
+
+
+/* Blockquotes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+blockquote {
+  border-left: 4px lightgrey solid;
+  padding-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 0rem;
+}
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1EAEDB; 
+  text-decoration: underline;
+  cursor: pointer;}
+a:hover {
+  color: #0FA0CE; }
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; 
+  font-family: inherit;
+  font-size: inherit; /*https://stackoverflow.com/questions/6080413/why-doesnt-input-inherit-the-font-from-body*/}
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: 0px; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  border-collapse: collapse;
+}
+th:not(.CalendarDay),
+td:not(.CalendarDay) {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child:not(.CalendarDay),
+td:first-child:not(.CalendarDay) {
+  padding-left: 0; }
+th:last-child:not(.CalendarDay),
+td:last-child:not(.CalendarDay) {
+  padding-right: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 0rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 0rem; }
+pre,
+dl,
+figure,
+table,
+form {
+  margin-bottom: 0rem; }
+p,
+ul,
+ol {
+  margin-bottom: 0.75rem; }
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <section class="header">
+     <div>
+      This Codepen is a work-in-progress CSS styleguide. By default, Dash is unstyled. You can add CSS stylesheets to your dash apps by URL or you can style elements individually: <a href="https://dash-docs.herokuapp.com/custom-css-and-js">documentation on CSS stylesheets and Dash</a>.
+
+    </div>
+
+    <br>
+
+    <div>
+      This stylesheet is based off of <a href="http://getskeleton.com/" target="_blank">Skeleton</a>. Give them a <a href="https://github.com/dhg/skeleton/" target="_blank">☆</a>!
+    </div>
+
+    <hr>
+
+    <h4>Usage</h4>
+    <div>
+      You can embed custom stylesheets in your dash apps via a custom URL:
+
+      <pre>app.css.append_css({
+    "external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"
+})</pre> You can extract the stylesheet from the Codepen playground by appending ".css" to the end of any codepen URL (e.g. <a href="https://codepen.io/chriddyp/pen/bWLwgP.css">https://codepen.io/chriddyp/pen/bWLwgP.css</a>. You can either use this
+      Codepen directly or you can fork this Codepen and modify it and embed the forked URL.
+
+      <br><br> If your Dash app receives a lot of traffic, you should host the CSS somewhere else. One option is hosting it on GitHub's <a href="https://gist.github.com/">Gist</a> and serving it through the free CDN <a href="https://rawgit.com/">RawGit</a>.
+    </div>
+
+    <hr>
+
+    <h3>Styles</h3>
+  </section>
+
+  <ul class="popover-list">
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#grid">Grid</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#typography">Typography</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#buttons">Buttons</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#forms">Forms</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#lists">Lists</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#code">Code</a>
+    </li>
+    <li>
+      <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#tables">Tables</a>
+    </li>
+  </ul>
+
+  <!-- Grid -->
+  <div id="grid">
+    <h3>The grid</h3>
+    <p>The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes
+      coding responsive much easier. Go ahead, resize the browser. </p>
+    <div>
+      <div class="row">
+        <div class="one column" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">One</div>
+        <div class="eleven columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Eleven</div>
+      </div>
+      <div class="row">
+        <div class="two columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Two</div>
+        <div class="ten columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Ten</div>
+      </div>
+      <div class="row">
+        <div class="three columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Three</div>
+        <div class="nine columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Nine</div>
+      </div>
+      <div class="row">
+        <div class="four columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Four</div>
+        <div class="eight columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Eight</div>
+      </div>
+      <div class="row">
+        <div class="five columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Five</div>
+        <div class="seven columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Seven</div>
+      </div>
+      <div class="row">
+        <div class="six columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Six</div>
+        <div class="six columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Six</div>
+      </div>
+      <div class="row">
+        <div class="seven columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Seven</div>
+        <div class="five columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Five</div>
+      </div>
+      <div class="row">
+        <div class="eight columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Eight</div>
+        <div class="four  columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Four</div>
+      </div>
+      <div class="row">
+        <div class="nine columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Nine</div>
+        <div class="three columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Three</div>
+      </div>
+      <div class="row">
+        <div class="ten columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Ten</div>
+        <div class="two columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Two</div>
+      </div>
+      <div class="row">
+        <div class="eleven columns" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">Eleven</div>
+        <div class="one column" style="text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;">One</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <div id="typography">
+    <h3>Typography</h3>
+    <p>Type is all set with the <code>rems</code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html&gt;</code> font-size property. Out of the box, Dash never changes the <code>&lt;html&gt;</code> font-size,
+      but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1&gt;</code> with <code>5.0rem</code>font-size just means <code>50px</code>.</p>
+
+    <hr>
+
+    <div class="docs-example">
+      <p><strong>The typography base</strong> is <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#">anchors</a>, <strong>strong</strong>,
+        <em>emphasis</em>, and <u>underline</u> are all obviously included.</p>
+      
+      <p>
+        </p><blockquote>
+          Don't forget <b>blockquotes!</b> Blockquotes have a simple
+          left border and an indent, there is nothing too fancy
+          here. These styles are meant to be familiar to GitHub markdown users.
+      </blockquote>
+      <p></p>
+      
+      <p><strong>Headings</strong> create a family of distinct sizes each with specific <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
+    </div>
+    <div>
+      <h1>Heading<span> <code>&lt;h1&gt;</code> 4.5rem</span></h1>
+      <h2>Heading<span> <code>&lt;h2&gt;</code> 3.6rem</span></h2>
+      <h3>Heading<span> <code>&lt;h3&gt;</code> 3.0rem</span></h3>
+      <h4>Heading<span> <code>&lt;h4&gt;</code> 2.6rem</span></h4>
+      <h5>Heading<span> <code>&lt;h5&gt;</code> 2.2rem</span></h5>
+      <h6>Heading<span> <code>&lt;h6&gt;</code> 2.0rem</span></h6>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div id="buttons">
+    <h3>Buttons</h3>
+    <p>Buttons come in two basic flavors in Dash. The standard <code>&lt;button&gt;</code> element is plain, whereas the <code>.button-primary</code> button is vibrant and prominent. Button styles are applied to a number of appropriate form elements,
+      but can also be arbitrarily attached to anchors with a <code>.button</code> class.</p>
+    <div class="docs-example">
+      <div>
+        <a class="button" href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#">Anchor button</a>
+        <button>Button element</button>
+        <input type="submit" value="submit input">
+        <input type="button" value="button input">
+      </div>
+      <div>
+        <a class="button button-primary" href="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed&amp;forceRefresh=1665696986774#">Anchor button</a>
+        <button class="button-primary">Button element</button>
+        <input class="button-primary" type="submit" value="submit input">
+        <input class="button-primary" type="button" value="button input">
+      </div>
+    </div>
+  </div>
+
+  <!-- Forms -->
+  <div id="forms">
+    <h3>Forms</h3>
+    <p>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other.</p>
+    <div class="docs-example docs-example-forms">
+      <form>
+        <div class="row">
+          <div class="six columns">
+            <label for="exampleEmailInput">Your email</label>
+            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+          </div>
+          <div class="six columns">
+            <label for="exampleRecipientInput">Reason for contacting</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+                <option value="Option 1">Questions</option>
+                <option value="Option 2">Admiration</option>
+                <option value="Option 3">Can I get your number?</option>
+              </select>
+          </div>
+        </div>
+        <label for="exampleMessage">Message</label>
+        <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+        <label class="example-send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+          </label>
+        <input class="button-primary" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <label>Text Input</label>
+    <input type="text" value="hello">
+    
+    <label>Radio Input</label>
+    <input type="radio">    
+
+    <label>Numeric Input</label>
+    <input type="number">        
+  </div>
+
+  <!-- Lists -->
+  <div id="lists">
+    <h3>Lists</h3>
+    <div class="row docs-example">
+      <div class="six columns">
+        <ul>
+          <li>Unordered lists have basic styles</li>
+          <li>
+            They use the circle list style
+            <ul>
+              <li>Nested lists styled to feel right</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Just more list items mama san</li>
+        </ul>
+      </div>
+      <div class="six columns">
+        <ol>
+          <li>Ordered lists also have basic styles</li>
+          <li>
+            They use the decimal list style
+            <ul>
+              <li>Ordered and unordered can be nested</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Last list item just for the fun</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code -->
+  <div id="code">
+    <h3>Code</h3>
+    <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+    <div class="docs-example">
+      <pre><code>.some-class {
+  background-color: red;
+}</code></pre>
+    </div>
+  </div>
+
+  <!-- Tables -->
+  <div id="tables">
+    <h3>Tables</h3>
+    <p>Be sure to use properly formed table markup with <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> when building a <code>table</code>.</p>
+    <div class="docs-example">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dave Gamache</td>
+            <td>26</td>
+            <td>Male</td>
+            <td>San Francisco</td>
+          </tr>
+          <tr>
+            <td>Dwayne Johnson</td>
+            <td>42</td>
+            <td>Male</td>
+            <td>Hayward</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Queries -->
+  <div id="queries">
+    <h3>Media queries</h3>
+    <p>Dash uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target <code>min-width</code>. Mobile-first queries are how Dash's
+      grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The
+      sizes for the queries are:</p>
+    <div class="docs-example row">
+      <div class="six columns">
+        <ul>
+          <li><strong>Desktop HD</strong>: 1200px</li>
+          <li><strong>Desktop</strong>: 1000px</li>
+          <li><strong>Tablet</strong>: 750px</li>
+        </ul>
+      </div>
+      <div class="six columns">
+        <ul>
+          <li><strong>Phablet</strong>: 550px</li>
+          <li><strong>Mobile</strong>: 400px</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+
+  <script src="./iframeRefreshCSS-5e03f3.download"></script>
+
+
+
+ 
+</div></body></html>

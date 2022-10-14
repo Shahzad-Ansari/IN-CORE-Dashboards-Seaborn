@@ -1,0 +1,35 @@
+/* Hide ._dash-loading on first paint since SSR content will be visible */
+._dash-loading {
+    display: none;
+}
+
+#chapter[data-dash-is-loading="true"] {
+    display: none;
+    cursor: progress;
+}
+
+#pagemenu[data-dash-is-loading="true"] {
+    display: none;
+    cursor: progress;
+}
+.backlinks[data-dash-is-loading="true"] {
+    display: none;
+    cursor: progress;
+}
+
+/* Loading style for loading examples in /loading-states endpoint */
+*[class="output-example-loading"][data-dash-is-loading="true"]{
+    visibility: hidden;
+}
+
+*[class="output-example-loading"][data-dash-is-loading="true"]::before{
+    content: "Loading...";
+    display: inline-block;
+    color: magenta;
+    visibility: visible;
+}
+
+.loaded .preload {
+    opacity: 0;
+    z-index: -1;
+}

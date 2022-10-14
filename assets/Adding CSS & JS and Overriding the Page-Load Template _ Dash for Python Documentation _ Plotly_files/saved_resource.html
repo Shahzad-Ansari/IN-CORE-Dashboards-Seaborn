@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://codepen.io/chriddyp/embed/bWLwgP/?height=265&theme-id=light&default-tab=css,result&embed-version=2 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Dash Styleguide</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="evFwupBXDJcvSxTgbK5+7qxoxCprToqG2y/NXUOEO97ARKB2iP0FfmYQfHvAQ7GvOMbQAhL2x/MAM3QNtmKlmg==">
+<link rel="stylesheet" media="all" href="./embed-e30d69073af1bf5b38634d.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #fefefe;
+      color: #333333;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #fefefe;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #333333;
+      background-color: #eeeeee;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #cccccc;
+      color: #333333;
+      box-shadow: inset 0px 3px #333333;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #333333;
+    }
+
+    .embed-nav svg {
+      stroke: #333333 !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./classic-fb6703ce37f4cc770d3d.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #eeeeee; --borderWidth: 1px;" class="codepen-embed-body results-active split-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/chriddyp/embed/bWLwgP/?height=265&amp;theme-id=light&amp;default-tab=css,result&amp;embed-version=2#html-box" role="button" aria-pressed="true" class="active">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/chriddyp/embed/bWLwgP/?height=265&amp;theme-id=light&amp;default-tab=css,result&amp;embed-version=2#css-box" role="button" class="" aria-pressed="false">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/chriddyp/embed/bWLwgP/?height=265&amp;theme-id=light&amp;default-tab=css,result&amp;embed-version=2#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/chriddyp/embed/bWLwgP/?height=265&amp;theme-id=light&amp;default-tab=css,result&amp;embed-version=2#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/chriddyp/pen/bWLwgP" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box active" role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-comment">&lt;!-- Primary Page Layout</span>
+  <span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– --&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"header"</span><span class="cm-tag cm-bracket">&gt;</span>
+     <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      This Codepen is a work-in-progress CSS styleguide. By default, Dash is unstyled. You can add CSS stylesheets to your dash apps by URL or you can style elements individually: <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://dash-docs.herokuapp.com/custom-css-and-js"</span><span class="cm-tag cm-bracket">&gt;</span>documentation on CSS stylesheets and Dash<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      This stylesheet is based off of <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"http://getskeleton.com"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>Skeleton<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>. Give them a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://github.com/dhg/skeleton/"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>☆<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>!
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">/&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>Usage<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      You can embed custom stylesheets in your dash apps via a custom URL:
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">pre</span><span class="cm-tag cm-bracket">&gt;</span>app.css.append_css({
+    "external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"
+})<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">pre</span><span class="cm-tag cm-bracket">&gt;</span> You can extract the stylesheet from the Codepen playground by appending ".css" to the end of any codepen URL (e.g. <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://codepen.io/chriddyp/pen/bWLwgP.css"</span><span class="cm-tag cm-bracket">&gt;</span>https://codepen.io/chriddyp/pen/bWLwgP.css<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>. You can either use this
+      Codepen directly or you can fork this Codepen and modify it and embed the forked URL.
+
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">/&gt;</span> If your Dash app receives a lot of traffic, you should host the CSS somewhere else. One option is hosting it on GitHub's <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://gist.github.com"</span><span class="cm-tag cm-bracket">&gt;</span>Gist<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span> and serving it through the free CDN <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://rawgit.com/"</span><span class="cm-tag cm-bracket">&gt;</span>RawGit<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">/&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Styles<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">"popover-list"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#grid"</span><span class="cm-tag cm-bracket">&gt;</span>Grid<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#typography"</span><span class="cm-tag cm-bracket">&gt;</span>Typography<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#buttons"</span><span class="cm-tag cm-bracket">&gt;</span>Buttons<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#forms"</span><span class="cm-tag cm-bracket">&gt;</span>Forms<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#lists"</span><span class="cm-tag cm-bracket">&gt;</span>Lists<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#code"</span><span class="cm-tag cm-bracket">&gt;</span>Code<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#tables"</span><span class="cm-tag cm-bracket">&gt;</span>Tables<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Grid --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"grid"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>The grid<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>The grid is a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">u</span><span class="cm-tag cm-bracket">&gt;</span>12-column fluid grid with a max width of 960px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">u</span><span class="cm-tag cm-bracket">&gt;</span>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes
+      coding responsive much easier. Go ahead, resize the browser. <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"one column"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>One<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"eleven columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Eleven<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"two columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Two<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"ten columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Ten<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"three columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Three<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"nine columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Nine<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"four columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Four<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"eight columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Eight<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"five columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Five<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"seven columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Seven<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Six<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Six<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"seven columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Seven<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"five columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Five<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"eight columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Eight<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"four  columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Four<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"nine columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Nine<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"three columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Three<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"ten columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Ten<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"two columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Two<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"eleven columns"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>Eleven<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"one column"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;"</span><span class="cm-tag cm-bracket">&gt;</span>One<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Typography --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"typography"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Typography<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Type is all set with the <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>rems<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>, so font-sizes and spacial relationships can be responsively sized based on a single <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>html<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> font-size property. Out of the box, Dash never changes the <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>html<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> font-size,
+      but it's there in case you need it for your project. All measurements are still base 10 though so, an <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h1<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> with <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>5.0rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>font-size just means <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>50px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">/&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"docs-example"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>The typography base<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span> is <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://fonts.google.com/specimen/Open+Sans"</span><span class="cm-tag cm-bracket">&gt;</span>Open Sans<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span> served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>anchors<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>, <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>strong<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>,
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">em</span><span class="cm-tag cm-bracket">&gt;</span>emphasis<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">em</span><span class="cm-tag cm-bracket">&gt;</span>, and <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">u</span><span class="cm-tag cm-bracket">&gt;</span>underline<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">u</span><span class="cm-tag cm-bracket">&gt;</span> are all obviously included.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+      
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">blockquote</span><span class="cm-tag cm-bracket">&gt;</span>
+          Don't forget <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">b</span><span class="cm-tag cm-bracket">&gt;</span>blockquotes!<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">b</span><span class="cm-tag cm-bracket">&gt;</span> Blockquotes have a simple
+          left border and an indent, there is nothing too fancy
+          here. These styles are meant to be familiar to GitHub markdown users.
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">blockquote</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag cm-error">p</span><span class="cm-tag cm-bracket cm-error">&gt;</span>
+      
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>Headings<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span> create a family of distinct sizes each with specific <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>letter-spacing<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>, <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>line-height<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>, and <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>margins<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>Heading<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h1<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> 4.5rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Heading<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h2<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> 3.6rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Heading<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h3<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> 3.0rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>Heading<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h4<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> 2.6rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h5</span><span class="cm-tag cm-bracket">&gt;</span>Heading<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h5<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> 2.2rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h5</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h6</span><span class="cm-tag cm-bracket">&gt;</span>Heading<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>h6<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> 2.0rem<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h6</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Buttons --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"buttons"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Buttons<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Buttons come in two basic flavors in Dash. The standard <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>button<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> element is plain, whereas the <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.button-primary<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> button is vibrant and prominent. Button styles are applied to a number of appropriate form elements,
+      but can also be arbitrarily attached to anchors with a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.button<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> class.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"docs-example"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>Anchor button<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>Button element<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"submit input"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"button"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"button input"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button button-primary"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>Anchor button<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button-primary"</span><span class="cm-tag cm-bracket">&gt;</span>Button element<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button-primary"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"submit input"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button-primary"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"button"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"button input"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Forms --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"forms"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Forms<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"docs-example docs-example-forms"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">form</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"exampleEmailInput"</span><span class="cm-tag cm-bracket">&gt;</span>Your email<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">"u-full-width"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"email"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"test@mailbox.com"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"exampleEmailInput"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"exampleRecipientInput"</span><span class="cm-tag cm-bracket">&gt;</span>Reason for contacting<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">select</span> <span class="cm-attribute">class</span>=<span class="cm-string">"u-full-width"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"exampleRecipientInput"</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"Option 1"</span><span class="cm-tag cm-bracket">&gt;</span>Questions<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"Option 2"</span><span class="cm-tag cm-bracket">&gt;</span>Admiration<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"Option 3"</span><span class="cm-tag cm-bracket">&gt;</span>Can I get your number?<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span>
+              <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">select</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"exampleMessage"</span><span class="cm-tag cm-bracket">&gt;</span>Message<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">class</span>=<span class="cm-string">"u-full-width"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Hi Dave &amp;hellip;"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"exampleMessage"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">class</span>=<span class="cm-string">"example-send-yourself-copy"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span> <span class="cm-attribute">class</span>=<span class="cm-string">"label-body"</span><span class="cm-tag cm-bracket">&gt;</span>Send a copy to yourself<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">class</span>=<span class="cm-string">"button-primary"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"submit"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"Submit"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">form</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>Text Input<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"hello"</span><span class="cm-tag cm-bracket">/&gt;</span>
+    
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>Radio Input<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"radio"</span><span class="cm-tag cm-bracket">/&gt;</span>    
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>Numeric Input<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"number"</span><span class="cm-tag cm-bracket">/&gt;</span>        
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Lists --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"lists"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Lists<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row docs-example"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Unordered lists have basic styles<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            They use the circle list style
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+              <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Nested lists styled to feel right<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+              <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Can nest either type of list into the other<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Just more list items mama san<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ol</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Ordered lists also have basic styles<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            They use the decimal list style
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+              <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Ordered and unordered can be nested<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+              <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Can nest either type of list into the other<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>Last list item just for the fun<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ol</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Code --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"code"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Code<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Code styling is kept basic – just wrap anything in a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>code<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> and it will appear like <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>this<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>. For blocks of code, wrap a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>code<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> with a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>pre<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"docs-example"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">pre</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.some-class {
+  background-color: red;
+}<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">pre</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Tables --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"tables"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Tables<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Be sure to use properly formed table markup with <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>thead<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> and <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-atom">&amp;lt;</span>tbody<span class="cm-atom">&amp;gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span> when building a <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>table<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"docs-example"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">table</span> <span class="cm-attribute">class</span>=<span class="cm-string">"u-full-width"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">thead</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Name<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Age<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Sex<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Location<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">thead</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tbody</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Dave Gamache<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>26<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Male<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>San Francisco<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Dwayne Johnson<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>42<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Male<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Hayward<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tbody</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">table</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-comment">&lt;!-- Queries --&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">id</span>=<span class="cm-string">"queries"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>Media queries<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h3</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Dash uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>min-width<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">code</span><span class="cm-tag cm-bracket">&gt;</span>. Mobile-first queries are how Dash's
+      grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The
+      sizes for the queries are:<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"docs-example row"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>Desktop HD<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>: 1200px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>Desktop<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>: 1000px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>Tablet<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>: 750px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"six columns"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>Phablet<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>: 550px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>Mobile<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>: 400px<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box" role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-comment">/* Table of contents</span>
+<span class="cm-comment">––––––––––––––––––––––––––––––––––––––––––––––––––</span>
+<span class="cm-comment">- Plotly.js</span>
+<span class="cm-comment">- Grid</span>
+<span class="cm-comment">- Base Styles</span>
+<span class="cm-comment">- Typography</span>
+<span class="cm-comment">- Links</span>
+<span class="cm-comment">- Buttons</span>
+<span class="cm-comment">- Forms</span>
+<span class="cm-comment">- Lists</span>
+<span class="cm-comment">- Code</span>
+<span class="cm-comment">- Tables</span>
+<span class="cm-comment">- Spacing</span>
+<span class="cm-comment">- Utilities</span>
+<span class="cm-comment">- Clearing</span>
+<span class="cm-comment">- Media Queries</span>
+<span class="cm-comment">*/</span>
+
+<span class="cm-comment">/* PLotly.js </span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-comment">/* plotly.js's modebar's z-index is 1001 by default</span>
+<span class="cm-comment"> * https://github.com/plotly/plotly.js/blob/7e4d8ab164258f6bd48be56589dacd9bdd7fded2/src/css/_modebar.scss#L5</span>
+<span class="cm-comment"> * In case a dropdown is above the graph, the dropdown's options</span>
+<span class="cm-comment"> * will be rendered below the modebar</span>
+<span class="cm-comment"> * Increase the select option's z-index</span>
+<span class="cm-comment"> */</span>
+
+<span class="cm-comment">/* This was actually not quite right -</span>
+<span class="cm-comment">   dropdowns were overlapping each other (edited October 26)</span>
+
+<span class="cm-comment">.Select {</span>
+<span class="cm-comment">    z-index: 1002;</span>
+<span class="cm-comment">}*/</span>
+
+
+<span class="cm-comment">/* Grid</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-qualifier">.container</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">960px</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">20px</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; }
+<span class="cm-qualifier">.column</span>,
+<span class="cm-qualifier">.columns</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">float</span>: <span class="cm-atom">left</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; }
+
+<span class="cm-comment">/* For devices larger than 400px */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">400px</span>) {
+  <span class="cm-qualifier">.container</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">85%</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0</span>; }
+}
+
+<span class="cm-comment">/* For devices larger than 550px */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">550px</span>) {
+  <span class="cm-qualifier">.container</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">80%</span>; }
+  <span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.columns</span> {
+    <span class="cm-property">margin-left</span>: <span class="cm-number">4%</span>; }
+  <span class="cm-qualifier">.column</span>:<span class="cm-variable-3">first-child</span>,
+  <span class="cm-qualifier">.columns</span>:<span class="cm-variable-3">first-child</span> {
+    <span class="cm-property">margin-left</span>: <span class="cm-number">0</span>; }
+
+  <span class="cm-qualifier">.one</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.one</span><span class="cm-qualifier">.columns</span>                    { <span class="cm-property">width</span>: <span class="cm-number">4.66666666667%</span>; }
+  <span class="cm-qualifier">.two</span><span class="cm-qualifier">.columns</span>                    { <span class="cm-property">width</span>: <span class="cm-number">13.3333333333%</span>; }
+  <span class="cm-qualifier">.three</span><span class="cm-qualifier">.columns</span>                  { <span class="cm-property">width</span>: <span class="cm-number">22%</span>;            }
+  <span class="cm-qualifier">.four</span><span class="cm-qualifier">.columns</span>                   { <span class="cm-property">width</span>: <span class="cm-number">30.6666666667%</span>; }
+  <span class="cm-qualifier">.five</span><span class="cm-qualifier">.columns</span>                   { <span class="cm-property">width</span>: <span class="cm-number">39.3333333333%</span>; }
+  <span class="cm-qualifier">.six</span><span class="cm-qualifier">.columns</span>                    { <span class="cm-property">width</span>: <span class="cm-number">48%</span>;            }
+  <span class="cm-qualifier">.seven</span><span class="cm-qualifier">.columns</span>                  { <span class="cm-property">width</span>: <span class="cm-number">56.6666666667%</span>; }
+  <span class="cm-qualifier">.eight</span><span class="cm-qualifier">.columns</span>                  { <span class="cm-property">width</span>: <span class="cm-number">65.3333333333%</span>; }
+  <span class="cm-qualifier">.nine</span><span class="cm-qualifier">.columns</span>                   { <span class="cm-property">width</span>: <span class="cm-number">74.0%</span>;          }
+  <span class="cm-qualifier">.ten</span><span class="cm-qualifier">.columns</span>                    { <span class="cm-property">width</span>: <span class="cm-number">82.6666666667%</span>; }
+  <span class="cm-qualifier">.eleven</span><span class="cm-qualifier">.columns</span>                 { <span class="cm-property">width</span>: <span class="cm-number">91.3333333333%</span>; }
+  <span class="cm-qualifier">.twelve</span><span class="cm-qualifier">.columns</span>                 { <span class="cm-property">width</span>: <span class="cm-number">100%</span>; <span class="cm-property">margin-left</span>: <span class="cm-number">0</span>; }
+
+  <span class="cm-qualifier">.one-third</span><span class="cm-qualifier">.column</span>               { <span class="cm-property">width</span>: <span class="cm-number">30.6666666667%</span>; }
+  <span class="cm-qualifier">.two-thirds</span><span class="cm-qualifier">.column</span>              { <span class="cm-property">width</span>: <span class="cm-number">65.3333333333%</span>; }
+
+  <span class="cm-qualifier">.one-half</span><span class="cm-qualifier">.column</span>                { <span class="cm-property">width</span>: <span class="cm-number">48%</span>; }
+
+  <span class="cm-comment">/* Offsets */</span>
+  <span class="cm-qualifier">.offset-by-one</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-one</span><span class="cm-qualifier">.columns</span>          { <span class="cm-property">margin-left</span>: <span class="cm-number">8.66666666667%</span>; }
+  <span class="cm-qualifier">.offset-by-two</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-two</span><span class="cm-qualifier">.columns</span>          { <span class="cm-property">margin-left</span>: <span class="cm-number">17.3333333333%</span>; }
+  <span class="cm-qualifier">.offset-by-three</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-three</span><span class="cm-qualifier">.columns</span>        { <span class="cm-property">margin-left</span>: <span class="cm-number">26%</span>;            }
+  <span class="cm-qualifier">.offset-by-four</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-four</span><span class="cm-qualifier">.columns</span>         { <span class="cm-property">margin-left</span>: <span class="cm-number">34.6666666667%</span>; }
+  <span class="cm-qualifier">.offset-by-five</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-five</span><span class="cm-qualifier">.columns</span>         { <span class="cm-property">margin-left</span>: <span class="cm-number">43.3333333333%</span>; }
+  <span class="cm-qualifier">.offset-by-six</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-six</span><span class="cm-qualifier">.columns</span>          { <span class="cm-property">margin-left</span>: <span class="cm-number">52%</span>;            }
+  <span class="cm-qualifier">.offset-by-seven</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-seven</span><span class="cm-qualifier">.columns</span>        { <span class="cm-property">margin-left</span>: <span class="cm-number">60.6666666667%</span>; }
+  <span class="cm-qualifier">.offset-by-eight</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-eight</span><span class="cm-qualifier">.columns</span>        { <span class="cm-property">margin-left</span>: <span class="cm-number">69.3333333333%</span>; }
+  <span class="cm-qualifier">.offset-by-nine</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-nine</span><span class="cm-qualifier">.columns</span>         { <span class="cm-property">margin-left</span>: <span class="cm-number">78.0%</span>;          }
+  <span class="cm-qualifier">.offset-by-ten</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-ten</span><span class="cm-qualifier">.columns</span>          { <span class="cm-property">margin-left</span>: <span class="cm-number">86.6666666667%</span>; }
+  <span class="cm-qualifier">.offset-by-eleven</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-eleven</span><span class="cm-qualifier">.columns</span>       { <span class="cm-property">margin-left</span>: <span class="cm-number">95.3333333333%</span>; }
+
+  <span class="cm-qualifier">.offset-by-one-third</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-one-third</span><span class="cm-qualifier">.columns</span>    { <span class="cm-property">margin-left</span>: <span class="cm-number">34.6666666667%</span>; }
+  <span class="cm-qualifier">.offset-by-two-thirds</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-two-thirds</span><span class="cm-qualifier">.columns</span>   { <span class="cm-property">margin-left</span>: <span class="cm-number">69.3333333333%</span>; }
+
+  <span class="cm-qualifier">.offset-by-one-half</span><span class="cm-qualifier">.column</span>,
+  <span class="cm-qualifier">.offset-by-one-half</span><span class="cm-qualifier">.columns</span>     { <span class="cm-property">margin-left</span>: <span class="cm-number">52%</span>; }
+
+}
+
+
+<span class="cm-comment">/* Base Styles</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-comment">/* NOTE</span>
+<span class="cm-comment">html is set to 62.5% so that all the REM measurements throughout Skeleton</span>
+<span class="cm-comment">are based on 10px sizing. So basically 1.5rem = 15px :) */</span>
+<span class="cm-tag">html</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">62.5%</span>; }
+<span class="cm-tag">body</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.5em</span>; <span class="cm-comment">/* currently ems cause chrome bug misinterpreting rems on body element */</span>
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.6</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">400</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Open Sans"</span>, <span class="cm-string">"HelveticaNeue"</span>, <span class="cm-string">"Helvetica Neue"</span>, <span class="cm-variable">Helvetica</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">color</span>: <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">50</span>, <span class="cm-number">50</span>, <span class="cm-number">50</span>); }
+
+
+<span class="cm-comment">/* Typography</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">h1</span>, <span class="cm-tag">h2</span>, <span class="cm-tag">h3</span>, <span class="cm-tag">h4</span>, <span class="cm-tag">h5</span>, <span class="cm-tag">h6</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>; }
+<span class="cm-tag">h1</span> { <span class="cm-property">font-size</span>: <span class="cm-number">4.5rem</span>; <span class="cm-property">line-height</span>: <span class="cm-number">1.2</span>;  <span class="cm-property">letter-spacing</span>: <span class="cm-number">-.1rem</span>; <span class="cm-property">margin-bottom</span>: <span class="cm-number">2rem</span>; }
+<span class="cm-tag">h2</span> { <span class="cm-property">font-size</span>: <span class="cm-number">3.6rem</span>; <span class="cm-property">line-height</span>: <span class="cm-number">1.25</span>; <span class="cm-property">letter-spacing</span>: <span class="cm-number">-.1rem</span>; <span class="cm-property">margin-bottom</span>: <span class="cm-number">1.8rem</span>; <span class="cm-property">margin-top</span>: <span class="cm-number">1.8rem</span>;}
+<span class="cm-tag">h3</span> { <span class="cm-property">font-size</span>: <span class="cm-number">3.0rem</span>; <span class="cm-property">line-height</span>: <span class="cm-number">1.3</span>;  <span class="cm-property">letter-spacing</span>: <span class="cm-number">-.1rem</span>; <span class="cm-property">margin-bottom</span>: <span class="cm-number">1.5rem</span>; <span class="cm-property">margin-top</span>: <span class="cm-number">1.5rem</span>;}
+<span class="cm-tag">h4</span> { <span class="cm-property">font-size</span>: <span class="cm-number">2.6rem</span>; <span class="cm-property">line-height</span>: <span class="cm-number">1.35</span>; <span class="cm-property">letter-spacing</span>: <span class="cm-number">-.08rem</span>; <span class="cm-property">margin-bottom</span>: <span class="cm-number">1.2rem</span>; <span class="cm-property">margin-top</span>: <span class="cm-number">1.2rem</span>;}
+<span class="cm-tag">h5</span> { <span class="cm-property">font-size</span>: <span class="cm-number">2.2rem</span>; <span class="cm-property">line-height</span>: <span class="cm-number">1.5</span>;  <span class="cm-property">letter-spacing</span>: <span class="cm-number">-.05rem</span>; <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.6rem</span>; <span class="cm-property">margin-top</span>: <span class="cm-number">0.6rem</span>;}
+<span class="cm-tag">h6</span> { <span class="cm-property">font-size</span>: <span class="cm-number">2.0rem</span>; <span class="cm-property">line-height</span>: <span class="cm-number">1.6</span>;  <span class="cm-property">letter-spacing</span>: <span class="cm-number">0</span>; <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.75rem</span>; <span class="cm-property">margin-top</span>: <span class="cm-number">0.75rem</span>;}
+
+<span class="cm-tag">p</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-number">0</span>; }
+
+
+<span class="cm-comment">/* Blockquotes</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">blockquote</span> {
+  <span class="cm-property">border-left</span>: <span class="cm-number">4px</span> <span class="cm-keyword">lightgrey</span> <span class="cm-atom">solid</span>;
+  <span class="cm-property">padding-left</span>: <span class="cm-number">1rem</span>;
+  <span class="cm-property">margin-top</span>: <span class="cm-number">2rem</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">2rem</span>;
+  <span class="cm-property">margin-left</span>: <span class="cm-number">0rem</span>;
+}
+
+
+<span class="cm-comment">/* Links</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">a</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#1EAEDB</span>; 
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">underline</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;}
+<span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#0FA0CE</span>; }
+
+
+<span class="cm-comment">/* Buttons</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-qualifier">.button</span>,
+<span class="cm-tag">button</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"reset"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"button"</span>] {
+  <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">38px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">30px</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#555</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">11px</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">38px</span>;
+  <span class="cm-property">letter-spacing</span>: <span class="cm-number">.1rem</span>;
+  <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">white-space</span>: <span class="cm-atom">nowrap</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">transparent</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#bbb</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; }
+<span class="cm-qualifier">.button</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">button</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>]:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"reset"</span>]:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"button"</span>]:<span class="cm-variable-3">hover</span>,
+<span class="cm-qualifier">.button</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">button</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"reset"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"button"</span>]:<span class="cm-variable-3">focus</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#333</span>;
+  <span class="cm-property">border-color</span>: <span class="cm-atom">#888</span>;
+  <span class="cm-property">outline</span>: <span class="cm-number">0</span>; }
+<span class="cm-qualifier">.button</span><span class="cm-qualifier">.button-primary</span>,
+<span class="cm-tag">button</span><span class="cm-qualifier">.button-primary</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>]<span class="cm-qualifier">.button-primary</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"reset"</span>]<span class="cm-qualifier">.button-primary</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"button"</span>]<span class="cm-qualifier">.button-primary</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#FFF</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#33C3F0</span>;
+  <span class="cm-property">border-color</span>: <span class="cm-atom">#33C3F0</span>; }
+<span class="cm-qualifier">.button</span><span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">button</span><span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>]<span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"reset"</span>]<span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"button"</span>]<span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">hover</span>,
+<span class="cm-qualifier">.button</span><span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">button</span><span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>]<span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"reset"</span>]<span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"button"</span>]<span class="cm-qualifier">.button-primary</span>:<span class="cm-variable-3">focus</span> {
+  <span class="cm-property">color</span>: <span class="cm-atom">#FFF</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#1EAEDB</span>;
+  <span class="cm-property">border-color</span>: <span class="cm-atom">#1EAEDB</span>; }
+
+
+<span class="cm-comment">/* Forms</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"email"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"number"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"search"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"text"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"tel"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"url"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"password"</span>],
+<span class="cm-tag">textarea</span>,
+<span class="cm-tag">select</span> {
+  <span class="cm-property">height</span>: <span class="cm-number">38px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">6px</span> <span class="cm-number">10px</span>; <span class="cm-comment">/* The 6px vertically centers text on FF, ignored by Webkit */</span>
+  <span class="cm-property">background-color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#D1D1D1</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">4px</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; 
+  <span class="cm-property">font-family</span>: <span class="cm-atom">inherit</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-atom">inherit</span>; <span class="cm-comment">/*https://stackoverflow.com/questions/6080413/why-doesnt-input-inherit-the-font-from-body*/</span>}
+<span class="cm-comment">/* Removes awkward default styles on some inputs for iOS */</span>
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"email"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"number"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"search"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"text"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"tel"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"url"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"password"</span>],
+<span class="cm-tag">textarea</span> {
+  <span class="cm-meta">-webkit-</span><span class="cm-property">appearance</span>: <span class="cm-atom">none</span>;
+     <span class="cm-meta">-moz-</span><span class="cm-property">appearance</span>: <span class="cm-atom">none</span>;
+          <span class="cm-property">appearance</span>: <span class="cm-atom">none</span>; }
+<span class="cm-tag">textarea</span> {
+  <span class="cm-property">min-height</span>: <span class="cm-number">65px</span>;
+  <span class="cm-property">padding-top</span>: <span class="cm-number">6px</span>;
+  <span class="cm-property">padding-bottom</span>: <span class="cm-number">6px</span>; }
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"email"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"number"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"search"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"text"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"tel"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"url"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"password"</span>]:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">textarea</span>:<span class="cm-variable-3">focus</span>,
+<span class="cm-tag">select</span>:<span class="cm-variable-3">focus</span> {
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#33C3F0</span>;
+  <span class="cm-property">outline</span>: <span class="cm-number">0</span>; }
+<span class="cm-tag">label</span>,
+<span class="cm-tag">legend</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0px</span>; }
+<span class="cm-tag">fieldset</span> {
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">border-width</span>: <span class="cm-number">0</span>; }
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"checkbox"</span>],
+<span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"radio"</span>] {
+  <span class="cm-property">display</span>: <span class="cm-atom">inline</span>; }
+<span class="cm-tag">label</span> &gt; <span class="cm-qualifier">.label-body</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+  <span class="cm-property">margin-left</span>: <span class="cm-number">.5rem</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-atom">normal</span>; }
+
+
+<span class="cm-comment">/* Lists</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">ul</span> {
+  <span class="cm-property">list-style</span>: <span class="cm-atom">circle</span> <span class="cm-atom">inside</span>; }
+<span class="cm-tag">ol</span> {
+  <span class="cm-property">list-style</span>: <span class="cm-atom">decimal</span> <span class="cm-atom">inside</span>; }
+<span class="cm-tag">ol</span>, <span class="cm-tag">ul</span> {
+  <span class="cm-property">padding-left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">margin-top</span>: <span class="cm-number">0</span>; }
+<span class="cm-tag">ul</span> <span class="cm-tag">ul</span>,
+<span class="cm-tag">ul</span> <span class="cm-tag">ol</span>,
+<span class="cm-tag">ol</span> <span class="cm-tag">ol</span>,
+<span class="cm-tag">ol</span> <span class="cm-tag">ul</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">1.5rem</span> <span class="cm-number">0</span> <span class="cm-number">1.5rem</span> <span class="cm-number">3rem</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">90%</span>; }
+<span class="cm-tag">li</span> {
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">1rem</span>; }
+
+
+<span class="cm-comment">/* Tables</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">table</span> {
+  <span class="cm-property">border-collapse</span>: <span class="cm-atom">collapse</span>;
+}
+<span class="cm-tag">th</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.CalendarDay</span>),
+<span class="cm-tag">td</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.CalendarDay</span>) {
+  <span class="cm-property">padding</span>: <span class="cm-number">12px</span> <span class="cm-number">15px</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">left</span>;
+  <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#E1E1E1</span>; }
+<span class="cm-tag">th</span>:<span class="cm-variable-3">first-child</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.CalendarDay</span>),
+<span class="cm-tag">td</span>:<span class="cm-variable-3">first-child</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.CalendarDay</span>) {
+  <span class="cm-property">padding-left</span>: <span class="cm-number">0</span>; }
+<span class="cm-tag">th</span>:<span class="cm-variable-3">last-child</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.CalendarDay</span>),
+<span class="cm-tag">td</span>:<span class="cm-variable-3">last-child</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.CalendarDay</span>) {
+  <span class="cm-property">padding-right</span>: <span class="cm-number">0</span>; }
+
+
+<span class="cm-comment">/* Spacing</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">button</span>,
+<span class="cm-qualifier">.button</span> {
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0rem</span>; }
+<span class="cm-tag">input</span>,
+<span class="cm-tag">textarea</span>,
+<span class="cm-tag">select</span>,
+<span class="cm-tag">fieldset</span> {
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0rem</span>; }
+<span class="cm-tag">pre</span>,
+<span class="cm-tag">dl</span>,
+<span class="cm-tag">figure</span>,
+<span class="cm-tag">table</span>,
+<span class="cm-tag">form</span> {
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0rem</span>; }
+<span class="cm-tag">p</span>,
+<span class="cm-tag">ul</span>,
+<span class="cm-tag">ol</span> {
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">0.75rem</span>; }
+
+<span class="cm-comment">/* Utilities</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-qualifier">.u-full-width</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; }
+<span class="cm-qualifier">.u-max-full-width</span> {
+  <span class="cm-property">max-width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; }
+<span class="cm-qualifier">.u-pull-right</span> {
+  <span class="cm-property">float</span>: <span class="cm-atom">right</span>; }
+<span class="cm-qualifier">.u-pull-left</span> {
+  <span class="cm-property">float</span>: <span class="cm-atom">left</span>; }
+
+
+<span class="cm-comment">/* Misc</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-tag">hr</span> {
+  <span class="cm-property">margin-top</span>: <span class="cm-number">3rem</span>;
+  <span class="cm-property">margin-bottom</span>: <span class="cm-number">3.5rem</span>;
+  <span class="cm-property">border-width</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">border-top</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#E1E1E1</span>; }
+
+
+<span class="cm-comment">/* Clearing</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+
+<span class="cm-comment">/* Self Clearing Goodness */</span>
+<span class="cm-qualifier">.container</span>:<span class="cm-variable-3">after</span>,
+<span class="cm-qualifier">.row</span>:<span class="cm-variable-3">after</span>,
+<span class="cm-qualifier">.u-cf</span> {
+  <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">table</span>;
+  <span class="cm-property">clear</span>: <span class="cm-atom">both</span>; }
+
+
+<span class="cm-comment">/* Media Queries</span>
+<span class="cm-comment">–––––––––––––––––––––––––––––––––––––––––––––––––– */</span>
+<span class="cm-comment">/*</span>
+<span class="cm-comment">Note: The best way to structure the use of media queries is to create the queries</span>
+<span class="cm-comment">near the relevant code. For example, if you wanted to change the styles for buttons</span>
+<span class="cm-comment">on small devices, paste the mobile query code up in the buttons section and style it</span>
+<span class="cm-comment">there.</span>
+<span class="cm-comment">*/</span>
+
+
+<span class="cm-comment">/* Larger than mobile */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">400px</span>) {}
+
+<span class="cm-comment">/* Larger than phablet (also point when grid becomes active) */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">550px</span>) {}
+
+<span class="cm-comment">/* Larger than tablet */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">750px</span>) {}
+
+<span class="cm-comment">/* Larger than desktop */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1000px</span>) {}
+
+<span class="cm-comment">/* Larger than Desktop HD */</span>
+<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">1200px</span>) {}</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Dash Styleguide" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" scrolling="yes" title="CodePen Preview for Dash Styleguide" data-src="https://cdpn.io/chriddyp/fullembedgrid/bWLwgP?animations=run&amp;type=embed" src="./bWLwgP.html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/chriddyp" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/chriddyp" target="_blank" rel="noopener">Chris P</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/chriddyp" target="_blank" rel="noopener" class="about-user-more">
+See more by @chriddyp on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button active" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;!-- Primary Page Layout\n  –––––––––––––––––––––––––––––––––––––––––––––––––– --&gt;\n&lt;div class=&quot;container&quot;&gt;\n  &lt;section class=&quot;header&quot;&gt;\n     &lt;div&gt;\n      This Codepen is a work-in-progress CSS styleguide. By default, Dash is unstyled. You can add CSS stylesheets to your dash apps by URL or you can style elements individually: &lt;a href=&quot;https://dash-docs.herokuapp.com/custom-css-and-js&quot;&gt;documentation on CSS stylesheets and Dash&lt;/a&gt;.\n\n    &lt;/div&gt;\n\n    &lt;br/&gt;\n\n    &lt;div&gt;\n      This stylesheet is based off of &lt;a href=&quot;http://getskeleton.com&quot; target=&quot;_blank&quot;&gt;Skeleton&lt;/a&gt;. Give them a &lt;a href=&quot;https://github.com/dhg/skeleton/&quot; target=&quot;_blank&quot;&gt;☆&lt;/a&gt;!\n    &lt;/div&gt;\n\n    &lt;hr/&gt;\n\n    &lt;h4&gt;Usage&lt;/h4&gt;\n    &lt;div&gt;\n      You can embed custom stylesheets in your dash apps via a custom URL:\n\n      &lt;pre&gt;app.css.append_css({\n    &quot;external_url&quot;: &quot;https://codepen.io/chriddyp/pen/bWLwgP.css&quot;\n})&lt;/pre&gt; You can extract the stylesheet from the Codepen playground by appending &quot;.css&quot; to the end of any codepen URL (e.g. &lt;a href=&quot;https://codepen.io/chriddyp/pen/bWLwgP.css&quot;&gt;https://codepen.io/chriddyp/pen/bWLwgP.css&lt;/a&gt;. You can either use this\n      Codepen directly or you can fork this Codepen and modify it and embed the forked URL.\n\n      &lt;br/&gt;&lt;br/&gt; If your Dash app receives a lot of traffic, you should host the CSS somewhere else. One option is hosting it on GitHub&#39;s &lt;a href=&quot;https://gist.github.com&quot;&gt;Gist&lt;/a&gt; and serving it through the free CDN &lt;a href=&quot;https://rawgit.com/&quot;&gt;RawGit&lt;/a&gt;.\n    &lt;/div&gt;\n\n    &lt;hr/&gt;\n\n    &lt;h3&gt;Styles&lt;/h3&gt;\n  &lt;/section&gt;\n\n  &lt;ul class=&quot;popover-list&quot;&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#grid&quot;&gt;Grid&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#typography&quot;&gt;Typography&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#buttons&quot;&gt;Buttons&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#forms&quot;&gt;Forms&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#lists&quot;&gt;Lists&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li&gt;\n      &lt;a href=&quot;#tables&quot;&gt;Tables&lt;/a&gt;\n    &lt;/li&gt;\n  &lt;/ul&gt;\n\n  &lt;!-- Grid --&gt;\n  &lt;div id=&quot;grid&quot;&gt;\n    &lt;h3&gt;The grid&lt;/h3&gt;\n    &lt;p&gt;The grid is a &lt;u&gt;12-column fluid grid with a max width of 960px&lt;/u&gt;, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes\n      coding responsive much easier. Go ahead, resize the browser. &lt;/p&gt;\n    &lt;div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;one column&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;One&lt;/div&gt;\n        &lt;div class=&quot;eleven columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Eleven&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;two columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Two&lt;/div&gt;\n        &lt;div class=&quot;ten columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Ten&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;three columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Three&lt;/div&gt;\n        &lt;div class=&quot;nine columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Nine&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;four columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Four&lt;/div&gt;\n        &lt;div class=&quot;eight columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Eight&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;five columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Five&lt;/div&gt;\n        &lt;div class=&quot;seven columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Seven&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;six columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Six&lt;/div&gt;\n        &lt;div class=&quot;six columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Six&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;seven columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Seven&lt;/div&gt;\n        &lt;div class=&quot;five columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Five&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;eight columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Eight&lt;/div&gt;\n        &lt;div class=&quot;four  columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Four&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;nine columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Nine&lt;/div&gt;\n        &lt;div class=&quot;three columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Three&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;ten columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Ten&lt;/div&gt;\n        &lt;div class=&quot;two columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Two&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;row&quot;&gt;\n        &lt;div class=&quot;eleven columns&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;Eleven&lt;/div&gt;\n        &lt;div class=&quot;one column&quot; style=&quot;text-align: center; border-radius: 4px; margin: 2px; background-color: lightgrey;&quot;&gt;One&lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;!-- Typography --&gt;\n  &lt;div id=&quot;typography&quot;&gt;\n    &lt;h3&gt;Typography&lt;/h3&gt;\n    &lt;p&gt;Type is all set with the &lt;code&gt;rems&lt;/code&gt;, so font-sizes and spacial relationships can be responsively sized based on a single &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; font-size property. Out of the box, Dash never changes the &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; font-size,\n      but it&#39;s there in case you need it for your project. All measurements are still base 10 though so, an &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; with &lt;code&gt;5.0rem&lt;/code&gt;font-size just means &lt;code&gt;50px&lt;/code&gt;.&lt;/p&gt;\n\n    &lt;hr/&gt;\n\n    &lt;div class=&quot;docs-example&quot;&gt;\n      &lt;p&gt;&lt;strong&gt;The typography base&lt;/strong&gt; is &lt;a href=&quot;https://fonts.google.com/specimen/Open+Sans&quot;&gt;Open Sans&lt;/a&gt; served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like &lt;a href=&quot;#&quot;&gt;anchors&lt;/a&gt;, &lt;strong&gt;strong&lt;/strong&gt;,\n        &lt;em&gt;emphasis&lt;/em&gt;, and &lt;u&gt;underline&lt;/u&gt; are all obviously included.&lt;/p&gt;\n      \n      &lt;p&gt;\n        &lt;blockquote&gt;\n          Don&#39;t forget &lt;b&gt;blockquotes!&lt;/b&gt; Blockquotes have a simple\n          left border and an indent, there is nothing too fancy\n          here. These styles are meant to be familiar to GitHub markdown users.\n      &lt;/blockquote&gt;\n      &lt;/p&gt;\n      \n      &lt;p&gt;&lt;strong&gt;Headings&lt;/strong&gt; create a family of distinct sizes each with specific &lt;code&gt;letter-spacing&lt;/code&gt;, &lt;code&gt;line-height&lt;/code&gt;, and &lt;code&gt;margins&lt;/code&gt;.&lt;/p&gt;\n    &lt;/div&gt;\n    &lt;div&gt;\n      &lt;h1&gt;Heading&lt;span&gt; &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 4.5rem&lt;/span&gt;&lt;/h1&gt;\n      &lt;h2&gt;Heading&lt;span&gt; &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; 3.6rem&lt;/span&gt;&lt;/h2&gt;\n      &lt;h3&gt;Heading&lt;span&gt; &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt; 3.0rem&lt;/span&gt;&lt;/h3&gt;\n      &lt;h4&gt;Heading&lt;span&gt; &lt;code&gt;&amp;lt;h4&amp;gt;&lt;/code&gt; 2.6rem&lt;/span&gt;&lt;/h4&gt;\n      &lt;h5&gt;Heading&lt;span&gt; &lt;code&gt;&amp;lt;h5&amp;gt;&lt;/code&gt; 2.2rem&lt;/span&gt;&lt;/h5&gt;\n      &lt;h6&gt;Heading&lt;span&gt; &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; 2.0rem&lt;/span&gt;&lt;/h6&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;!-- Buttons --&gt;\n  &lt;div id=&quot;buttons&quot;&gt;\n    &lt;h3&gt;Buttons&lt;/h3&gt;\n    &lt;p&gt;Buttons come in two basic flavors in Dash. The standard &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt; element is plain, whereas the &lt;code&gt;.button-primary&lt;/code&gt; button is vibrant and prominent. Button styles are applied to a number of appropriate form elements,\n      but can also be arbitrarily attached to anchors with a &lt;code&gt;.button&lt;/code&gt; class.&lt;/p&gt;\n    &lt;div class=&quot;docs-example&quot;&gt;\n      &lt;div&gt;\n        &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Anchor button&lt;/a&gt;\n        &lt;button&gt;Button element&lt;/button&gt;\n        &lt;input type=&quot;submit&quot; value=&quot;submit input&quot;&gt;\n        &lt;input type=&quot;button&quot; value=&quot;button input&quot;&gt;\n      &lt;/div&gt;\n      &lt;div&gt;\n        &lt;a class=&quot;button button-primary&quot; href=&quot;#&quot;&gt;Anchor button&lt;/a&gt;\n        &lt;button class=&quot;button-primary&quot;&gt;Button element&lt;/button&gt;\n        &lt;input class=&quot;button-primary&quot; type=&quot;submit&quot; value=&quot;submit input&quot;&gt;\n        &lt;input class=&quot;button-primary&quot; type=&quot;button&quot; value=&quot;button input&quot;&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;!-- Forms --&gt;\n  &lt;div id=&quot;forms&quot;&gt;\n    &lt;h3&gt;Forms&lt;/h3&gt;\n    &lt;p&gt;Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other.&lt;/p&gt;\n    &lt;div class=&quot;docs-example docs-example-forms&quot;&gt;\n      &lt;form&gt;\n        &lt;div class=&quot;row&quot;&gt;\n          &lt;div class=&quot;six columns&quot;&gt;\n            &lt;label for=&quot;exampleEmailInput&quot;&gt;Your email&lt;/label&gt;\n            &lt;input class=&quot;u-full-width&quot; type=&quot;email&quot; placeholder=&quot;test@mailbox.com&quot; id=&quot;exampleEmailInput&quot;&gt;\n          &lt;/div&gt;\n          &lt;div class=&quot;six columns&quot;&gt;\n            &lt;label for=&quot;exampleRecipientInput&quot;&gt;Reason for contacting&lt;/label&gt;\n            &lt;select class=&quot;u-full-width&quot; id=&quot;exampleRecipientInput&quot;&gt;\n                &lt;option value=&quot;Option 1&quot;&gt;Questions&lt;/option&gt;\n                &lt;option value=&quot;Option 2&quot;&gt;Admiration&lt;/option&gt;\n                &lt;option value=&quot;Option 3&quot;&gt;Can I get your number?&lt;/option&gt;\n              &lt;/select&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n        &lt;label for=&quot;exampleMessage&quot;&gt;Message&lt;/label&gt;\n        &lt;textarea class=&quot;u-full-width&quot; placeholder=&quot;Hi Dave &amp;hellip;&quot; id=&quot;exampleMessage&quot;&gt;&lt;/textarea&gt;\n        &lt;label class=&quot;example-send-yourself-copy&quot;&gt;\n            &lt;input type=&quot;checkbox&quot;&gt;\n            &lt;span class=&quot;label-body&quot;&gt;Send a copy to yourself&lt;/span&gt;\n          &lt;/label&gt;\n        &lt;input class=&quot;button-primary&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;div&gt;\n    &lt;label&gt;Text Input&lt;/label&gt;\n    &lt;input type=&quot;text&quot; value=&quot;hello&quot;/&gt;\n    \n    &lt;label&gt;Radio Input&lt;/label&gt;\n    &lt;input type=&quot;radio&quot;/&gt;    \n\n    &lt;label&gt;Numeric Input&lt;/label&gt;\n    &lt;input type=&quot;number&quot;/&gt;        \n  &lt;/div&gt;\n\n  &lt;!-- Lists --&gt;\n  &lt;div id=&quot;lists&quot;&gt;\n    &lt;h3&gt;Lists&lt;/h3&gt;\n    &lt;div class=&quot;row docs-example&quot;&gt;\n      &lt;div class=&quot;six columns&quot;&gt;\n        &lt;ul&gt;\n          &lt;li&gt;Unordered lists have basic styles&lt;/li&gt;\n          &lt;li&gt;\n            They use the circle list style\n            &lt;ul&gt;\n              &lt;li&gt;Nested lists styled to feel right&lt;/li&gt;\n              &lt;li&gt;Can nest either type of list into the other&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/li&gt;\n          &lt;li&gt;Just more list items mama san&lt;/li&gt;\n        &lt;/ul&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;six columns&quot;&gt;\n        &lt;ol&gt;\n          &lt;li&gt;Ordered lists also have basic styles&lt;/li&gt;\n          &lt;li&gt;\n            They use the decimal list style\n            &lt;ul&gt;\n              &lt;li&gt;Ordered and unordered can be nested&lt;/li&gt;\n              &lt;li&gt;Can nest either type of list into the other&lt;/li&gt;\n            &lt;/ul&gt;\n          &lt;/li&gt;\n          &lt;li&gt;Last list item just for the fun&lt;/li&gt;\n        &lt;/ol&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;!-- Code --&gt;\n  &lt;div id=&quot;code&quot;&gt;\n    &lt;h3&gt;Code&lt;/h3&gt;\n    &lt;p&gt;Code styling is kept basic – just wrap anything in a &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; and it will appear like &lt;code&gt;this&lt;/code&gt;. For blocks of code, wrap a &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; with a &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;.&lt;/p&gt;\n    &lt;div class=&quot;docs-example&quot;&gt;\n      &lt;pre&gt;&lt;code&gt;.some-class {\n  background-color: red;\n}&lt;/code&gt;&lt;/pre&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;!-- Tables --&gt;\n  &lt;div id=&quot;tables&quot;&gt;\n    &lt;h3&gt;Tables&lt;/h3&gt;\n    &lt;p&gt;Be sure to use properly formed table markup with &lt;code&gt;&amp;lt;thead&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;tbody&amp;gt;&lt;/code&gt; when building a &lt;code&gt;table&lt;/code&gt;.&lt;/p&gt;\n    &lt;div class=&quot;docs-example&quot;&gt;\n      &lt;table class=&quot;u-full-width&quot;&gt;\n        &lt;thead&gt;\n          &lt;tr&gt;\n            &lt;th&gt;Name&lt;/th&gt;\n            &lt;th&gt;Age&lt;/th&gt;\n            &lt;th&gt;Sex&lt;/th&gt;\n            &lt;th&gt;Location&lt;/th&gt;\n          &lt;/tr&gt;\n        &lt;/thead&gt;\n        &lt;tbody&gt;\n          &lt;tr&gt;\n            &lt;td&gt;Dave Gamache&lt;/td&gt;\n            &lt;td&gt;26&lt;/td&gt;\n            &lt;td&gt;Male&lt;/td&gt;\n            &lt;td&gt;San Francisco&lt;/td&gt;\n          &lt;/tr&gt;\n          &lt;tr&gt;\n            &lt;td&gt;Dwayne Johnson&lt;/td&gt;\n            &lt;td&gt;42&lt;/td&gt;\n            &lt;td&gt;Male&lt;/td&gt;\n            &lt;td&gt;Hayward&lt;/td&gt;\n          &lt;/tr&gt;\n        &lt;/tbody&gt;\n      &lt;/table&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n\n  &lt;!-- Queries --&gt;\n  &lt;div id=&quot;queries&quot;&gt;\n    &lt;h3&gt;Media queries&lt;/h3&gt;\n    &lt;p&gt;Dash uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target &lt;code&gt;min-width&lt;/code&gt;. Mobile-first queries are how Dash&#39;s\n      grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The\n      sizes for the queries are:&lt;/p&gt;\n    &lt;div class=&quot;docs-example row&quot;&gt;\n      &lt;div class=&quot;six columns&quot;&gt;\n        &lt;ul&gt;\n          &lt;li&gt;&lt;strong&gt;Desktop HD&lt;/strong&gt;: 1200px&lt;/li&gt;\n          &lt;li&gt;&lt;strong&gt;Desktop&lt;/strong&gt;: 1000px&lt;/li&gt;\n          &lt;li&gt;&lt;strong&gt;Tablet&lt;/strong&gt;: 750px&lt;/li&gt;\n        &lt;/ul&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;six columns&quot;&gt;\n        &lt;ul&gt;\n          &lt;li&gt;&lt;strong&gt;Phablet&lt;/strong&gt;: 550px&lt;/li&gt;\n          &lt;li&gt;&lt;strong&gt;Mobile&lt;/strong&gt;: 400px&lt;/li&gt;\n        &lt;/ul&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;","css":"/* Table of contents\n––––––––––––––––––––––––––––––––––––––––––––––––––\n- Plotly.js\n- Grid\n- Base Styles\n- Typography\n- Links\n- Buttons\n- Forms\n- Lists\n- Code\n- Tables\n- Spacing\n- Utilities\n- Clearing\n- Media Queries\n*/\n\n/* PLotly.js \n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n/* plotly.js&#39;s modebar&#39;s z-index is 1001 by default\n * https://github.com/plotly/plotly.js/blob/7e4d8ab164258f6bd48be56589dacd9bdd7fded2/src/css/_modebar.scss#L5\n * In case a dropdown is above the graph, the dropdown&#39;s options\n * will be rendered below the modebar\n * Increase the select option&#39;s z-index\n */\n\n/* This was actually not quite right -\n   dropdowns were overlapping each other (edited October 26)\n\n.Select {\n    z-index: 1002;\n}*/\n\n\n/* Grid\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n.container {\n  position: relative;\n  width: 100%;\n  max-width: 960px;\n  margin: 0 auto;\n  padding: 0 20px;\n  box-sizing: border-box; }\n.column,\n.columns {\n  width: 100%;\n  float: left;\n  box-sizing: border-box; }\n\n/* For devices larger than 400px */\n@media (min-width: 400px) {\n  .container {\n    width: 85%;\n    padding: 0; }\n}\n\n/* For devices larger than 550px */\n@media (min-width: 550px) {\n  .container {\n    width: 80%; }\n  .column,\n  .columns {\n    margin-left: 4%; }\n  .column:first-child,\n  .columns:first-child {\n    margin-left: 0; }\n\n  .one.column,\n  .one.columns                    { width: 4.66666666667%; }\n  .two.columns                    { width: 13.3333333333%; }\n  .three.columns                  { width: 22%;            }\n  .four.columns                   { width: 30.6666666667%; }\n  .five.columns                   { width: 39.3333333333%; }\n  .six.columns                    { width: 48%;            }\n  .seven.columns                  { width: 56.6666666667%; }\n  .eight.columns                  { width: 65.3333333333%; }\n  .nine.columns                   { width: 74.0%;          }\n  .ten.columns                    { width: 82.6666666667%; }\n  .eleven.columns                 { width: 91.3333333333%; }\n  .twelve.columns                 { width: 100%; margin-left: 0; }\n\n  .one-third.column               { width: 30.6666666667%; }\n  .two-thirds.column              { width: 65.3333333333%; }\n\n  .one-half.column                { width: 48%; }\n\n  /* Offsets */\n  .offset-by-one.column,\n  .offset-by-one.columns          { margin-left: 8.66666666667%; }\n  .offset-by-two.column,\n  .offset-by-two.columns          { margin-left: 17.3333333333%; }\n  .offset-by-three.column,\n  .offset-by-three.columns        { margin-left: 26%;            }\n  .offset-by-four.column,\n  .offset-by-four.columns         { margin-left: 34.6666666667%; }\n  .offset-by-five.column,\n  .offset-by-five.columns         { margin-left: 43.3333333333%; }\n  .offset-by-six.column,\n  .offset-by-six.columns          { margin-left: 52%;            }\n  .offset-by-seven.column,\n  .offset-by-seven.columns        { margin-left: 60.6666666667%; }\n  .offset-by-eight.column,\n  .offset-by-eight.columns        { margin-left: 69.3333333333%; }\n  .offset-by-nine.column,\n  .offset-by-nine.columns         { margin-left: 78.0%;          }\n  .offset-by-ten.column,\n  .offset-by-ten.columns          { margin-left: 86.6666666667%; }\n  .offset-by-eleven.column,\n  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }\n\n  .offset-by-one-third.column,\n  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }\n  .offset-by-two-thirds.column,\n  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }\n\n  .offset-by-one-half.column,\n  .offset-by-one-half.columns     { margin-left: 52%; }\n\n}\n\n\n/* Base Styles\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n/* NOTE\nhtml is set to 62.5% so that all the REM measurements throughout Skeleton\nare based on 10px sizing. So basically 1.5rem = 15px :) */\nhtml {\n  font-size: 62.5%; }\nbody {\n  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */\n  line-height: 1.6;\n  font-weight: 400;\n  font-family: &quot;Open Sans&quot;, &quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\n  color: rgb(50, 50, 50); }\n\n\n/* Typography\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\nh1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  margin-bottom: 0;\n  font-weight: 300; }\nh1 { font-size: 4.5rem; line-height: 1.2;  letter-spacing: -.1rem; margin-bottom: 2rem; }\nh2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; margin-bottom: 1.8rem; margin-top: 1.8rem;}\nh3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; margin-bottom: 1.5rem; margin-top: 1.5rem;}\nh4 { font-size: 2.6rem; line-height: 1.35; letter-spacing: -.08rem; margin-bottom: 1.2rem; margin-top: 1.2rem;}\nh5 { font-size: 2.2rem; line-height: 1.5;  letter-spacing: -.05rem; margin-bottom: 0.6rem; margin-top: 0.6rem;}\nh6 { font-size: 2.0rem; line-height: 1.6;  letter-spacing: 0; margin-bottom: 0.75rem; margin-top: 0.75rem;}\n\np {\n  margin-top: 0; }\n\n\n/* Blockquotes\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\nblockquote {\n  border-left: 4px lightgrey solid;\n  padding-left: 1rem;\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n  margin-left: 0rem;\n}\n\n\n/* Links\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\na {\n  color: #1EAEDB; \n  text-decoration: underline;\n  cursor: pointer;}\na:hover {\n  color: #0FA0CE; }\n\n\n/* Buttons\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n.button,\nbutton,\ninput[type=&quot;submit&quot;],\ninput[type=&quot;reset&quot;],\ninput[type=&quot;button&quot;] {\n  display: inline-block;\n  height: 38px;\n  padding: 0 30px;\n  color: #555;\n  text-align: center;\n  font-size: 11px;\n  font-weight: 600;\n  line-height: 38px;\n  letter-spacing: .1rem;\n  text-transform: uppercase;\n  text-decoration: none;\n  white-space: nowrap;\n  background-color: transparent;\n  border-radius: 4px;\n  border: 1px solid #bbb;\n  cursor: pointer;\n  box-sizing: border-box; }\n.button:hover,\nbutton:hover,\ninput[type=&quot;submit&quot;]:hover,\ninput[type=&quot;reset&quot;]:hover,\ninput[type=&quot;button&quot;]:hover,\n.button:focus,\nbutton:focus,\ninput[type=&quot;submit&quot;]:focus,\ninput[type=&quot;reset&quot;]:focus,\ninput[type=&quot;button&quot;]:focus {\n  color: #333;\n  border-color: #888;\n  outline: 0; }\n.button.button-primary,\nbutton.button-primary,\ninput[type=&quot;submit&quot;].button-primary,\ninput[type=&quot;reset&quot;].button-primary,\ninput[type=&quot;button&quot;].button-primary {\n  color: #FFF;\n  background-color: #33C3F0;\n  border-color: #33C3F0; }\n.button.button-primary:hover,\nbutton.button-primary:hover,\ninput[type=&quot;submit&quot;].button-primary:hover,\ninput[type=&quot;reset&quot;].button-primary:hover,\ninput[type=&quot;button&quot;].button-primary:hover,\n.button.button-primary:focus,\nbutton.button-primary:focus,\ninput[type=&quot;submit&quot;].button-primary:focus,\ninput[type=&quot;reset&quot;].button-primary:focus,\ninput[type=&quot;button&quot;].button-primary:focus {\n  color: #FFF;\n  background-color: #1EAEDB;\n  border-color: #1EAEDB; }\n\n\n/* Forms\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\ninput[type=&quot;email&quot;],\ninput[type=&quot;number&quot;],\ninput[type=&quot;search&quot;],\ninput[type=&quot;text&quot;],\ninput[type=&quot;tel&quot;],\ninput[type=&quot;url&quot;],\ninput[type=&quot;password&quot;],\ntextarea,\nselect {\n  height: 38px;\n  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */\n  background-color: #fff;\n  border: 1px solid #D1D1D1;\n  border-radius: 4px;\n  box-shadow: none;\n  box-sizing: border-box; \n  font-family: inherit;\n  font-size: inherit; /*https://stackoverflow.com/questions/6080413/why-doesnt-input-inherit-the-font-from-body*/}\n/* Removes awkward default styles on some inputs for iOS */\ninput[type=&quot;email&quot;],\ninput[type=&quot;number&quot;],\ninput[type=&quot;search&quot;],\ninput[type=&quot;text&quot;],\ninput[type=&quot;tel&quot;],\ninput[type=&quot;url&quot;],\ninput[type=&quot;password&quot;],\ntextarea {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none; }\ntextarea {\n  min-height: 65px;\n  padding-top: 6px;\n  padding-bottom: 6px; }\ninput[type=&quot;email&quot;]:focus,\ninput[type=&quot;number&quot;]:focus,\ninput[type=&quot;search&quot;]:focus,\ninput[type=&quot;text&quot;]:focus,\ninput[type=&quot;tel&quot;]:focus,\ninput[type=&quot;url&quot;]:focus,\ninput[type=&quot;password&quot;]:focus,\ntextarea:focus,\nselect:focus {\n  border: 1px solid #33C3F0;\n  outline: 0; }\nlabel,\nlegend {\n  display: block;\n  margin-bottom: 0px; }\nfieldset {\n  padding: 0;\n  border-width: 0; }\ninput[type=&quot;checkbox&quot;],\ninput[type=&quot;radio&quot;] {\n  display: inline; }\nlabel &gt; .label-body {\n  display: inline-block;\n  margin-left: .5rem;\n  font-weight: normal; }\n\n\n/* Lists\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\nul {\n  list-style: circle inside; }\nol {\n  list-style: decimal inside; }\nol, ul {\n  padding-left: 0;\n  margin-top: 0; }\nul ul,\nul ol,\nol ol,\nol ul {\n  margin: 1.5rem 0 1.5rem 3rem;\n  font-size: 90%; }\nli {\n  margin-bottom: 1rem; }\n\n\n/* Tables\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\ntable {\n  border-collapse: collapse;\n}\nth:not(.CalendarDay),\ntd:not(.CalendarDay) {\n  padding: 12px 15px;\n  text-align: left;\n  border-bottom: 1px solid #E1E1E1; }\nth:first-child:not(.CalendarDay),\ntd:first-child:not(.CalendarDay) {\n  padding-left: 0; }\nth:last-child:not(.CalendarDay),\ntd:last-child:not(.CalendarDay) {\n  padding-right: 0; }\n\n\n/* Spacing\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\nbutton,\n.button {\n  margin-bottom: 0rem; }\ninput,\ntextarea,\nselect,\nfieldset {\n  margin-bottom: 0rem; }\npre,\ndl,\nfigure,\ntable,\nform {\n  margin-bottom: 0rem; }\np,\nul,\nol {\n  margin-bottom: 0.75rem; }\n\n/* Utilities\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n.u-full-width {\n  width: 100%;\n  box-sizing: border-box; }\n.u-max-full-width {\n  max-width: 100%;\n  box-sizing: border-box; }\n.u-pull-right {\n  float: right; }\n.u-pull-left {\n  float: left; }\n\n\n/* Misc\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\nhr {\n  margin-top: 3rem;\n  margin-bottom: 3.5rem;\n  border-width: 0;\n  border-top: 1px solid #E1E1E1; }\n\n\n/* Clearing\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n\n/* Self Clearing Goodness */\n.container:after,\n.row:after,\n.u-cf {\n  content: &quot;&quot;;\n  display: table;\n  clear: both; }\n\n\n/* Media Queries\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\n/*\nNote: The best way to structure the use of media queries is to create the queries\nnear the relevant code. For example, if you wanted to change the styles for buttons\non small devices, paste the mobile query code up in the buttons section and style it\nthere.\n*/\n\n\n/* Larger than mobile */\n@media (min-width: 400px) {}\n\n/* Larger than phablet (also point when grid becomes active) */\n@media (min-width: 550px) {}\n\n/* Larger than tablet */\n@media (min-width: 750px) {}\n\n/* Larger than desktop */\n@media (min-width: 1000px) {}\n\n/* Larger than Desktop HD */\n@media (min-width: 1200px) {}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-2fdb1b1f31d291596.download"></script>
+
+
+</body></html>

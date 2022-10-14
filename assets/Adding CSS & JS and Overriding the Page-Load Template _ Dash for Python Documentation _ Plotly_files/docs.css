@@ -1,0 +1,412 @@
+.docs-article.docs-article {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.docs-article.docs-article li {
+    word-wrap: break-word; /* prevents x-overflow */
+}
+
+@media only screen
+    and (min-width: 0px)
+    and (max-width: 670px) {
+    .docs-article.docs-article {
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.anchor {
+    color: var(--text) !important;
+}
+.anchor:hover {
+    text-decoration: none;
+}
+
+pre {
+    padding: 10px;
+    background-color: var(--background_content);
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 70vh;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.docs-article.docs-article blockquote {
+    opacity: 0.8;
+    font-style: oblique;
+}
+
+/* couldn't help myself */
+.awesome {
+  -webkit-animation: colorchange 90s infinite alternate;
+}
+.awesome-background {
+    -webkit-animation: bgcolorchange 30s infinite alternate;
+}
+
+@-webkit-keyframes colorchange {
+  20% {color: var(--colorway-0);}
+  40% {color: var(--colorway-1);}
+  60% {color: var(--colorway-2);}
+  80% {color: var(--colorway-3);}
+  100% {color: var(--colorway-4);}
+}
+@-webkit-keyframes bgcolorchange {
+  20% {background-color: var(--colorway-0);}
+  40% {background-color: var(--colorway-1);}
+  60% {background-color: var(--colorway-2);}
+  80% {background-color: var(--colorway-3);}
+  100% {background-color: var(--colorway-4);}
+}
+
+.tile-row {
+    display: flex;
+    justify-content: center;
+}
+
+.tile {
+    display: inline-block;
+    padding: 20px;
+    max-width: fit-content;
+}
+
+.tile img {
+    max-width: 280px;
+}
+
+.ddk-container.ddk-container .tile h3 {
+    max-width: fit-content;
+    margin: 0.2em 0em;
+}
+
+/* larger than 1000px */
+@media only screen
+    and (min-width: 1000px) {
+    .tile img {
+        max-width: 400px;
+    }
+    .templates_sample-apps .tile-row.gov-variations--tiles .tile img,
+    .templates_sample-apps .tile-row.templates--tiles .tile img {
+        max-width: 100%;
+    }
+    .templates_sample-apps .tile-row.sample-apps--tiles .tile img {
+        max-width: 200px;
+    }
+}
+
+/* single row below 1000px */
+@media only screen
+    and (min-width: 0px)
+    and (max-width: 1000px) {
+    .tile {
+        display: block;
+    }
+    .tile-row {
+        display: block;
+    }
+}
+
+@media only screen
+    and (min-width: 600px)
+    and (max-width: 1000px) {
+    .tile img {
+        max-width: 550px;
+    }
+}
+
+@media only screen
+    and (min-width: 0px)
+    and (max-width: 600px) {
+    .tile img {
+        max-width: 100%;
+    }
+}
+
+/* flights app override - avoid x-overflow */
+.rc-slider.rc-slider-with-marks.flight-delay-slider {
+    margin-left: -45px;
+}
+
+/* Templates & Sample Apps tabs */
+.templates_sample-apps .tab-parent .templates-tabs {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    border-radius: 48px;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    flex-direction: row;
+}
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.templates-tabs--tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 50%;
+    font-weight: 400;
+    position: relative;
+    -webkit-transition: .38s all cubic-bezier(.24,.8,0,.97);
+    transition: .38s all cubic-bezier(.24,.8,0,.97);
+}
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.templates-tabs--tab span {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.templates-tabs--tab span::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #00cc96;
+    top: 100%;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: .1s all ease-in-out;
+    transition: .1s all ease-in-out;
+}
+
+/* necessary for specificity overrides */
+@media screen and (min-width: 0px) {
+
+    .templates_sample-apps .tab-parent .templates-tabs .tab.templates-tabs--tab,
+    .templates_sample-apps .tab-parent .templates-tabs .tab.templates-tabs--tab:last-of-type,
+    .templates_sample-apps .tab-parent .templates-tabs .tab.tab--selected.templates-tabs--tab, 
+    .templates_sample-apps .tab-parent .templates-tabs .tab:last-of-type.tab--selected.templates-tabs--tab {
+        border: none;
+    }
+
+}
+
+.templates_sample-apps .tab-parent .templates-tabs--tab::before {
+    position: absolute;
+    content: '';
+    width: 127%;
+    height: 103%;
+    background-color: #00cc96;
+    top: 0;
+    left: -20%;
+    -webkit-transform: skew(35deg);
+    transform: skew(35deg);
+    opacity: 0;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    will-change: transform;
+    -webkit-transition: .2s -webkit-transform ease-in-out;
+    transition: .2s -webkit-transform ease-in-out;
+    transition: .2s transform ease-in-out;
+    transition: .2s transform ease-in-out,.2s -webkit-transform ease-in-out;
+}
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.tab--selected.templates-tabs--tab {
+    color: #fff;
+}
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.tab--selected.templates-tabs--tab:before {
+    opacity: 1;
+    transform: skew(-36deg);
+    z-index: 1;
+    border-right: 6px solid white;
+}
+
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.templates-tabs--tab:nth-child(2):before {
+    transform: skew(-35deg);
+    right: -20%;
+    left: auto;
+}
+
+.templates_sample-apps .tab-parent .templates-tabs .tab.tab--selected.templates-tabs--tab:nth-child(2):before {
+    transform: skew(35deg);
+    border-left: 6px solid white;
+}
+
+.templates_sample-apps .tab-container.templates-tabs {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.templates_sample-apps .tab.tab {
+    padding: 12px 6px;
+}
+
+.templates_sample-apps .tab span {
+    font-size: 12px;
+}
+
+.templates_sample-apps h1 { 
+    font-size: 32px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.templates_sample-apps .tab-content h2 {
+    font-size: 24px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+body .templates_sample-apps {
+    font-size: 14px;
+}
+
+/* Center "Example Source Code" screenshots */
+.card.ex--source--code-screenshot .card--content {
+    display: flex;
+    align-items: center;
+}
+
+.docs-article .hljs {
+  /*
+   * needed to ensure there's a draggable
+   * horizontal scrollbar on docs examples
+   */
+    overflow-x: initial;
+}
+
+.ddk-container .docs-icon--list small {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hide problematic graphs from Percy */
+ @media only percy { 
+    .template-controls-multiple-graphs-header-data-cards .plot-container,
+    .template-horizontal-controls-graph-2x2-header .plot-container, 
+    .themes .plot-container,
+    .extra-traces .plot-container,
+    .card-styles .plot-container,
+    .overview .plot-container,
+    .template-controls-multiple-graphs-sidebar .plot-container,
+    .template-controls-sidebar-multiple-graphs-header .plot-container,
+    .template-horizontal-controls-graph-header-card-controls .plot-container,
+    .template-controls-multiple-graphs-header-data-cards-text-2 .plot-container,
+    .menus-headers-and-sidebars .plot-container,
+    .template-horizontal-controls-graph-header .plot-container,
+    .template-controls-multiple-graphs-header-data-cards-text .plot-container,
+    .reports .plot-container,
+    .report-graph .plot-container, 
+    .fullscreen-modal .plot-container,
+    .controls .plot-container,
+    .graphs .plot-container,
+    .template-controls-graph-sidebar .plot-container {
+        visibility: hidden;
+    }
+/* Show outline of problematic graphs in Percy */
+    .template-controls-multiple-graphs-header-data-cards .js-plotly-plot,
+    .template-horizontal-controls-graph-2x2-header  .js-plotly-plot,
+    .themes .js-plotly-plot,
+    .extra-traces .js-plotly-plot,
+    .card-styles .js-plotly-plot,
+    .overview .js-plotly-plot,
+    .template-controls-multiple-graphs-sidebar .js-plotly-plot,
+    .template-controls-sidebar-multiple-graphs-header .js-plotly-plot,
+    .template-horizontal-controls-graph-header-card-controls .js-plotly-plot,
+    .template-controls-multiple-graphs-header-data-cards-text-2 .js-plotly-plot,
+    .menus-headers-and-sidebars .js-plotly-plot,
+    .template-horizontal-controls-graph-header .js-plotly-plot,
+    .template-controls-multiple-graphs-header-data-cards-text .js-plotly-plot,
+    .reports .js-plotly-plot,
+    .report-graph  .js-plotly-plot,
+    .fullscreen-modal .js-plotly-plot,
+    .controls .js-plotly-plot,
+    .graphs .js-plotly-plot,
+    .template-controls-graph-sidebar .js-plotly-plot {
+        outline: 1px solid purple;
+    }
+/* Display message in Percy explaining hiding of problematic graphs */
+    .template-controls-multiple-graphs-header-data-cards .plot-container.plotly .svg-container:before,
+    .template-horizontal-controls-graph-2x2-header .plot-container.plotly .svg-container:before,
+    .themes .plot-container.plotly .svg-container:before,
+    .extra-traces .plot-container.plotly .svg-container:before,
+    .card-styles .plot-container.plotly .svg-container:before,
+    .overview .plot-container.plotly .svg-container:before,
+    .template-controls-multiple-graphs-sidebar .plot-container.plotly .svg-container:before,
+    .template-controls-sidebar-multiple-graphs-header .plot-container.plotly .svg-container:before,
+    .template-horizontal-controls-graph-header-card-controls .plot-container.plotly .svg-container:before,
+    .template-controls-multiple-graphs-header-data-cards-text-2 .plot-container.plotly .svg-container:before,
+    .menus-headers-and-sidebars .plot-container.plotly .svg-container:before,
+    .template-horizontal-controls-graph-header .plot-container.plotly .svg-container:before,
+    .template-controls-multiple-graphs-header-data-cards-text .plot-container.plotly .svg-container:before,
+    .reports .plot-container.plotly .svg-container:before,
+    .report-graph .plot-container.plotly .svg-container:before,
+    .fullscreen-modal .plot-container.plotly .svg-container:before, 
+    .controls .plot-container.plotly .svg-container:before,
+    .graphs .plot-container.plotly .svg-container:before,
+    .template-controls-graph-sidebar .plot-container.plotly .svg-container:before {
+        visibility: visible;
+        content: 'This graph produces false positive visual diffs on Percy, \A so it has been hidden with a Percy-specific media query only.';
+        color: purple;
+        outline: 1px solid purple;
+    }
+
+/* Hide problematic pages from Percy */
+    .blocks.ddk-container,
+    .card-controls,
+    .pro-tips.ddk-container,
+    .template-screen-fit-3-rows,
+    .template-screen-fit {
+        visibility: hidden;
+    }
+    
+/* Display message in Percy explaining hiding of problematic pages */
+    
+    .blocks.ddk-container:before,
+    .card-controls:before,
+    .pro-tips.ddk-container:before,
+    .template-screen-fit:before,
+    .template-screen-fit-3-rows:before {
+        visibility: visible;
+        content: 'This page produces false positive visual diffs on Percy, \A so it has been hidden with a Percy-specific media query only.';
+        color: purple;
+        outline: 1px solid purple;
+    }
+}
+
+.docs-article img {
+    max-width: 100%;
+}
+
+#output1,
+#output2,
+#output3,
+#output4,
+#my-button,
+#notification-outputs,
+#my-input {
+    display: block;
+    margin: 0 auto;
+}
+
+#notification-outputs,
+#output1,
+#output2,
+#output3,
+#output4 {
+    width: 250px;
+}

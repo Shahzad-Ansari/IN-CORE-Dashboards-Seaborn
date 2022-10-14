@@ -1,0 +1,69 @@
+#my-sequence-viewer, #my-dashbio-sequenceviewer,
+#sequence-viewer-selection, #sequence-viewer-lines,
+#sequence-viewer-toolbar, #sequence-viewer-titlebadge {
+  width: 420px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sequence-viewer-lines {
+  width: 200px;
+}
+
+#sequence-viewer-toolbar label, #sequence-viewer-toolbar .sequenceToolbar {
+  display: inline-block;
+  font-size: 12pt;
+}
+
+#sequence-viewer-toolbar {
+  width: auto;
+}
+
+.igv-root-div {
+  background-color: #f9f9f9 !important;
+  padding: 5px;
+}
+
+.igv-chromosome-select-widget-container select {
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 75% !important;
+  outline: none;
+  font-size: 12px !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  padding: 0px !important;
+}
+
+div.igv-search-container > input {
+  height: 100% !important;
+}
+
+.pileup-root > .controls select {
+  margin: 2px;
+  width: 150px;
+  height: 30px;
+}
+
+
+.pileup-root input[type=text] {
+  height: 30px !important;
+  margin: 2px;
+
+}
+
+.pileup-root button {
+  height: 30px !important;
+  margin: 2px;
+}
+
+
+#_ideogram.labeledLeft {
+  padding-left: 0px !important;
+  padding-top: 0px !important;
+}

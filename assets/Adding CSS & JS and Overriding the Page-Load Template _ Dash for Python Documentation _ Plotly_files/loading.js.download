@@ -1,0 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
+    setTimeout(function () {
+        root.setAttribute('class', 'loaded');
+    }, 2000);
+});
