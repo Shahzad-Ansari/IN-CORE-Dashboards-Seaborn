@@ -185,6 +185,20 @@ Yr500 = pd.DataFrame(Yr500.items(),columns = ['Community Metrics','500 Year Even
 Yr500 = Yr500.round(decimals=0)
 Yr500
 
+#%%
+yr1000_Buildings = qt1000.b.sum().tolist()
+yr1000_Repair_Time = np.sum(qt1000.b*qt1000.Q_t_hat).tolist()
+yr1000_Population_Dislocation = np.sum(qt1000.b*qt1000.d_ijk).tolist()
+yr1000_Economic_Loss = np.sum(qt1000.b*qt1000.l).tolist()
+Yr1000 ={
+    ('Buildings'):yr1000_Buildings,
+    ('Economic Loss'):yr1000_Economic_Loss,
+    ('Population Dislocation'):yr1000_Population_Dislocation,
+    ('Repair Time (Days)'):yr1000_Repair_Time
+}
+Yr1000 = pd.DataFrame(Yr1000.items(),columns = ['Community Metrics','1000 Year Event Stats'])
+Yr1000 = Yr1000.round(decimals=0)
+Yr1000
 
 
 

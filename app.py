@@ -30,8 +30,7 @@ all_options = {
     '1000 Years': ['20% Budget Option', '40% Budget Option','60% Budget Option']
 }
 
-df = pr.Yr500
-table = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+
 
 jumbotron = html.Div(
     dbc.Container(
@@ -76,7 +75,7 @@ app.layout = dbc.Container([
     dbc.Row([
         dbc.Col([
             html.Div(id = 'metricsNoSol'), 
-            table    
+            html.Div(id = 'Yr500')   
         ]),
         dbc.Col(html.Div(html.H1("Second Table goes here")))
         
@@ -177,6 +176,19 @@ def set_display_children(year, budget):
     )
 def setmetricsNoSol(year):
     return html.H6(f'{year} Event community Metrics without any Strategy')
+
+
+@app.callback(
+        Output('Yr500','children'),
+        Input('year-radio','value'),
+    )
+def setmetricsNoSol(year):
+    if year == '500 Years':
+        df = pr.Yr500
+        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+    else:
+        df = pr.Yr1000
+        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
 
 
 
