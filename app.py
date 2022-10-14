@@ -29,7 +29,12 @@ all_options = {
     '1000 Years': ['20% Budget Option', '40% Budget Option','60% Budget Option']
 }
 
+
 app.layout = html.Div([
+    html.Div([html.H1("Seaborn IN-CORE Dashbord App")]),
+    html.Hr(),
+    html.Div([html.H4("Select what budget you want to analyze")]),
+    dcc.Dropdown(id='budget-radio'),
     dcc.RadioItems(
         list(all_options.keys()),
         '500 Years',
@@ -37,15 +42,11 @@ app.layout = html.Div([
     ),
     
     html.Hr(),
-    
-    dcc.RadioItems(id='budget-radio'),
-
-
-    html.Hr(),
-
     html.Div(id='repair'),
     html.Div(id='dislocation'),
     html.Div(id='eloss'),
+    html.Hr(),
+
 ])
 
 
@@ -97,46 +98,6 @@ def set_display_children(year, budget):
             b = f'Range of Population Dislocation: {min(pr.dislocation_1000optimal60)} , {max(pr.dislocation_1000optimal60)}'
             c = f'Range of Economic loss($Million Dollar): {min(pr.loss_1000optimal60)} , {max(pr.loss_1000optimal60)}'
     return a,b,c
-
-
-
-
-
-
-# if year == '500 Years':
-#     if budget == '20% Budget Option':
-#         repairTime = f'Range of Repair Time: {min(pr.func_500optimal20)} , {max(pr.func_500optimal20)} '
-#         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_500optimal20)} , {max(pr.dislocation_500optimal20)}'
-#         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_500optimal20)} , {max(pr.loss_500optimal20)}'
-#         return repairTime, dislocaiton, eloss
-#     elif budget == '40% Budget Option':
-#         repairTime = f'Range of Repair Time: {min(pr.func_500optimal20)} , {max(pr.func_500optimal20)} '
-#         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_500optimal20)} , {max(pr.dislocation_500optimal20)}'
-#         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_500optimal20)} , {max(pr.loss_500optimal20)}'
-#         return repairTime, dislocaiton, eloss
-#     elif budget == '60% Budget Option':
-#         repairTime = f'Range of Repair Time: {min(pr.func_500optimal20)} , {max(pr.func_500optimal20)} '
-#         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_500optimal20)} , {max(pr.dislocation_500optimal20)}'
-#         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_500optimal20)} , {max(pr.loss_500optimal20)}'
-#         return repairTime, dislocaiton, eloss
-# elif year == '1000 Years':
-#     return(f'{year} {budget} ')
-#     if budget == '20% Budget Option':
-#         repairTime = f'Range of Repair Time: {min(pr.func_1000optimal20)} , {max(pr.func_1000optimal20)} '
-#         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_1000optimal20)} , {max(pr.dislocation_1000optimal20)}'
-#         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_1000optimal20)} , {max(pr.loss_1000optimal20)}'
-#         return repairTime, dislocaiton, eloss
-#     elif budget == '40% Budget Option':
-#         repairTime = f'Range of Repair Time: {min(pr.func_1000optimal20)} , {max(pr.func_1000optimal20)} '
-#         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_1000optimal20)} , {max(pr.dislocation_1000optimal20)}'
-#         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_1000optimal20)} , {max(pr.loss_1000optimal20)}'
-#         return repairTime, dislocaiton, eloss
-#     elif budget == '60% Budget Option':
-#         repairTime = f'Range of Repair Time: {min(pr.func_1000optimal20)} , {max(pr.func_1000optimal20)} '
-#         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_1000optimal20)} , {max(pr.dislocation_1000optimal20)}'
-#         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_1000opt)}'
-#         return repairTime, dislocaiton, eloss
-
 
 
 
