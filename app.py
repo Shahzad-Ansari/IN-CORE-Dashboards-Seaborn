@@ -5,12 +5,13 @@ Created on Thu Oct 13 15:51:16 2022
 @author: ShahzadAnsari
 """
 
-from dash import Dash, html, dcc, Input, Output
+from dash import Dash, html, dcc, Input, Output,dash_table
+import dash_bootstrap_components as dbc
 import dash
 import plotting_results as pr
 
 
-
+#https://dashcheatsheet.pythonanywhere.com/
 
 external_stylesheets = [
     'https://codepen.io/chriddyp/pen/bWLwgP.css',
@@ -21,7 +22,7 @@ external_stylesheets = [
         'crossorigin': 'anonymous'
     }
 ]
-app = Dash(__name__,external_stylesheets=external_stylesheets)
+app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
 all_options = {
@@ -29,25 +30,96 @@ all_options = {
     '1000 Years': ['20% Budget Option', '40% Budget Option','60% Budget Option']
 }
 
+df = pr.Yr500
+table = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
 
-app.layout = html.Div([
-    html.Div([html.H1("Seaborn IN-CORE Dashbord App")]),
-    html.Hr(),
-    html.Div([html.H4("Select what budget you want to analyze")]),
-    dcc.Dropdown(id='budget-radio'),
-    dcc.RadioItems(
-        list(all_options.keys()),
-        '500 Years',
-        id='year-radio',
+jumbotron = html.Div(
+    dbc.Container(
+        [
+            html.H1("Seaborn IN-CORE Dashbord App", className="display-3"),
+            html.P(
+                "Data visualization dashboard for Seaborn. Model created by XXXXX Visualizations created by Shahzad Ansari",
+                className="lead",
+            ),
+            html.Hr(className="my-2"),
+        ],
+        fluid=True,
+        className="py-3",
     ),
+    className="p-3 bg-light rounded-3",
+)
+
+app.layout = dbc.Container([
+    
+    jumbotron,
+    html.Hr(),
+    html.Div([html.H6("Select what budget and projected year you want to analyze")]),
+    
+    dbc.Row([
+        
+        dbc.Col(dcc.Dropdown(id='budget-radio',clearable=False)),
+        dbc.Col(
+            dcc.RadioItems(
+                list(all_options.keys()),
+                '500 Years',
+                id='year-radio',
+            )
+        ),
+    ]),
+    
     
     html.Hr(),
     html.Div(id='repair'),
     html.Div(id='dislocation'),
     html.Div(id='eloss'),
     html.Hr(),
+    dbc.Row([
+        dbc.Col([
+            html.Div(id = 'metricsNoSol'), 
+            table    
+        ]),
+        dbc.Col(html.Div(html.H1("Second Table goes here")))
+        
+    ])
+    
+    
+],fluid=False)
 
-])
+
+
+# app.layout = html.Div([
+#     html.Div([html.H1("Seaborn IN-CORE Dashbord App")]),
+#     html.Hr(),
+#     html.Div([html.H4("Select what budget you want to analyze")]),
+#     dcc.Dropdown(id='budget-radio'),
+#     dcc.RadioItems(
+#         list(all_options.keys()),
+#         '500 Years',
+#         id='year-radio',
+#     ),
+    
+#     html.Hr(),
+#     html.Div(id='repair'),
+#     html.Div(id='dislocation'),
+#     html.Div(id='eloss'),
+#     html.Hr(),
+#     html.Div(id = 'metricsNoSol'),
+#     # dash_table.DataTable(
+#     #         df.to_dict('records'), 
+#     #         [{"name": i, "id": i} for i in df.columns],
+#     #         style_cell={
+#     #             'overflow': 'hidden',
+#     #             'textOverflow': 'ellipsis',
+#     #             'maxWidth': 0
+#     #         }
+        
+#     #     )
+    
+    
+
+    
+
+# ])
 
 
 @app.callback(
@@ -98,6 +170,21 @@ def set_display_children(year, budget):
             b = f'Range of Population Dislocation: {min(pr.dislocation_1000optimal60)} , {max(pr.dislocation_1000optimal60)}'
             c = f'Range of Economic loss($Million Dollar): {min(pr.loss_1000optimal60)} , {max(pr.loss_1000optimal60)}'
     return a,b,c
+
+@app.callback(
+        Output('metricsNoSol','children'),
+        Input('year-radio','value'),
+    )
+def setmetricsNoSol(year):
+    return html.H6(f'{year} Event community Metrics without any Strategy')
+
+
+
+
+
+
+
+
 
 
 
