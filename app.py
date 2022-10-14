@@ -84,43 +84,6 @@ app.layout = dbc.Container([
     
 ],fluid=False)
 
-
-
-# app.layout = html.Div([
-#     html.Div([html.H1("Seaborn IN-CORE Dashbord App")]),
-#     html.Hr(),
-#     html.Div([html.H4("Select what budget you want to analyze")]),
-#     dcc.Dropdown(id='budget-radio'),
-#     dcc.RadioItems(
-#         list(all_options.keys()),
-#         '500 Years',
-#         id='year-radio',
-#     ),
-    
-#     html.Hr(),
-#     html.Div(id='repair'),
-#     html.Div(id='dislocation'),
-#     html.Div(id='eloss'),
-#     html.Hr(),
-#     html.Div(id = 'metricsNoSol'),
-#     # dash_table.DataTable(
-#     #         df.to_dict('records'), 
-#     #         [{"name": i, "id": i} for i in df.columns],
-#     #         style_cell={
-#     #             'overflow': 'hidden',
-#     #             'textOverflow': 'ellipsis',
-#     #             'maxWidth': 0
-#     #         }
-        
-#     #     )
-    
-    
-
-    
-
-# ])
-
-
 @app.callback(
     Output('budget-radio', 'options'),
     Input('year-radio', 'value'))
@@ -189,16 +152,6 @@ def setmetricsNoSol(year):
     else:
         df = pr.Yr1000
         return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
-
-
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
