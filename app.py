@@ -105,15 +105,28 @@ other = html.Div(
         html.Div(id='dislocation'),
         html.Div(id='eloss'),
         html.Hr(),
+        
         dbc.Row([
             dbc.Col([
                 html.Div(id = 'metricsNoSol'), 
                 html.Div(id = 'Yr500')   
             ]),
-            dbc.Col(html.Div(html.H1("Second Table goes here")))
-            
-        ])
+        ]),
         
+        
+        dbc.Row([
+            # dbc.Col([
+            #     html.Div(id = 'metricsNoSol'), 
+            #     html.Div(id = 'Yr500')   
+            # ]),
+        ]),
+        
+        dbc.Row([
+            dbc.Col([
+                html.Div(id = 'metricsWBudget'), 
+                html.Div(id = 'Budget1')   
+            ]),
+        ]),
     ])
     
     
@@ -183,6 +196,12 @@ def set_display_children(year, budget):
 def setmetricsNoSol(year):
     return html.H6(f'{year} Event community Metrics without any Strategy')
 
+@app.callback(
+        Output('metricsWBudget','children'),
+        Input('year-radio','value'),
+    )
+def setmetricsNoSol(year):
+    return html.H6(f'{year} Event soultion with budget')
 
 @app.callback(
         Output('Yr500','children'),
@@ -196,93 +215,41 @@ def setmetricsNoSol(year):
         df = pr.Yr1000
         return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
 
+
+
+@app.callback(
+        Output('Budget1','children'),
+        Input('year-radio', 'value'),
+        Input('budget-radio', 'value')
+    )
+def setbudgetDf(year,budget):
+    if budget == '20% Budget Option':
+        df = pr.Budget1_df
+        if year == '500 Years':
+            df = df[df['Budget $40,000,000'].str.contains('500')]
+        else:
+            df = df[df['Budget $40,000,000'].str.contains('1000')]
+        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+    elif budget == '40% Budget Option':
+        df = pr.Budget2_df
+        if year == '500 Years':
+            df = df[df['Budget $80,000,000'].str.contains('500')]
+        else:
+            df = df[df['Budget $80,000,000'].str.contains('1000')]
+        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+    else:
+        df = pr.Budget3_df
+        if year == '500 Years':
+            df = df[df['Budget $120,000,000'].str.contains('500')]
+        else:
+            df = df[df['Budget $120,000,000'].str.contains('1000')]
+        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+    
+    
+    
+    
 if __name__ == '__main__':
     app.run_server(debug=True)
 
 
-# if (values is not None and len(values) != 0) and (col_name_list is not None and len(col_name_list) != 0):
-#         log_mssg = [html.P(log_mssg + str(dict(zip(col_name_list, i))).replace('{', '').replace('}', '')) for i in values]
-#         current_time = [html.P(current_time)] + log_mssg
 
-
-
-# app.layout = html.Div([
-#     #  html.Div([
-#     #     html.H2("Seaborn IN-CORE Dashbord App"),
-#     #     html.Img(src="/assets/incore-logo.png")
-#     # ], className="banner")
-   
-#     html.Div([html.H1("Seaborn IN-CORE Dashbord App")]),
-#     html.Div([html.H4("Select what budget you want to analyze")]),
-#     dcc.Dropdown(['20% Budget Option', '40% Budget Option','60% Budget Option'], '20% Budget Option', id='budget-dropdown'),
-#     dcc.RadioItems(['500 years','1000 years'],'500 years',id = 'year-selector'),
-#     html.Div(html.Hr()),
-#     html.Div(id='repair'),
-#     html.Div(id='dislocation'),
-#     html.Div(id='eloss'),
-   
-# ])
-
-
-
-
-# @app.callback(
-#         Output('eloss','children'),
-#         Input('year-selector','value'),
-#     )
-# def setYear(year):
-#     return year
-
-
-# @app.callback(
-#             #Output('repair', component_property='children'),
-#             #Output('dislocation', component_property='children'),
-#             Output('eloss', component_property='children'),
-#             #Input('budget-dropdown',component_property = 'value'),
-#             Input('eloss','options'),
-#         )
-# def displayRanges(year):
-#     return f'{year}'
-#     # if year == '500 years':
-#     #     if input_value == '20% Budget Option':
-#     #         repairTime = f'Range of Repair Time: {min(pr.func_500optimal20)} , {max(pr.func_500optimal20)} '
-#     #         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_500optimal20)} , {max(pr.dislocation_500optimal20)}'
-#     #         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_500optimal20)} , {max(pr.loss_500optimal20)}'
-#     #         return repairTime, dislocaiton, eloss
-#     #     elif input_value == '40% Budget Option':
-#     #         repairTime = f'Range of Repair Time: {min(pr.func_500optimal20)} , {max(pr.func_500optimal20)} '
-#     #         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_500optimal20)} , {max(pr.dislocation_500optimal20)}'
-#     #         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_500optimal20)} , {max(pr.loss_500optimal20)}'
-#     #     elif input_value == '60% Budget Option':
-#     #         repairTime = f'Range of Repair Time: {min(pr.func_500optimal20)} , {max(pr.func_500optimal20)} '
-#     #         dislocaiton = f'Range of Population Dislocation: {min(pr.dislocation_500optimal20)} , {max(pr.dislocation_500optimal20)}'
-#     #         eloss = f'Range of Economic loss($Million Dollar): {min(pr.loss_500optimal20)} , {max(pr.loss_500optimal20)}'
-
-# def set_display_children(year, budget):
-#     if year == '500 Years':
-#         if budget == '20% Budget Option':
-#             a = '1'
-#             b = 'a'
-#             c = 'a'
-#         elif budget == '40% Budget Option':
-#             a = '2'
-#             b = 'a'
-#             c = 'a'
-#         elif budget == '60% Budget Option':
-#             a = '3'
-#             b = 'a'
-#             c = 'a'
-#     elif year == '1000 Years':
-#         if budget == '20% Budget Option':
-#             a = '4'
-#             b = 'a'
-#             c = 'a'
-#         elif budget == '40% Budget Option':
-#             a = '5'
-#             b = 'a'
-#             c = 'a'
-#         elif budget == '60% Budget Option':
-#             a = '6'
-#             b = 'a'
-#             c = 'a'
-#     return a,b,c

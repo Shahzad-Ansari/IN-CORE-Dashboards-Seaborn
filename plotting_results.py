@@ -199,24 +199,297 @@ Yr1000 ={
 Yr1000 = pd.DataFrame(Yr1000.items(),columns = ['Community Metrics','1000 Year Event Stats'])
 Yr1000 = Yr1000.round(decimals=0)
 Yr1000
+#%%
+Fmin500_B20 = yr500B20[yr500B20.Functionality == yr500B20.Functionality.min()].iloc[0]
+Dmin500_B20 = yr500B20[yr500B20.Dislocation == yr500B20.Dislocation.min()].iloc[0]
+Emin500_B20 = yr500B20[yr500B20.Economic_loss == yr500B20.Economic_loss.min()].iloc[0]
+Fmin500_B40 = yr500B40[yr500B40.Functionality == yr500B40.Functionality.min()].iloc[0]
+Dmin500_B40 = yr500B40[yr500B40.Dislocation == yr500B40.Dislocation.min()].iloc[0]
+Emin500_B40 = yr500B40[yr500B40.Economic_loss == yr500B40.Economic_loss.min()].iloc[0]
+Fmin500_B60 = yr500B60[yr500B60.Functionality == yr500B60.Functionality.min()].iloc[0]
+Dmin500_B60 = yr500B60[yr500B60.Dislocation == yr500B60.Dislocation.min()].iloc[0]
+Emin500_B60 = yr500B60[yr500B60.Economic_loss == yr500B60.Economic_loss.min()].iloc[0]
+Fmin1000_B20 = yr1000B20[yr1000B20.Functionality == yr1000B20.Functionality.min()].iloc[0]
+Dmin1000_B20 = yr1000B20[yr1000B20.Dislocation == yr1000B20.Dislocation.min()].iloc[0]
+Emin1000_B20 = yr1000B20[yr1000B20.Economic_loss == yr1000B20.Economic_loss.min()].iloc[0]
+Fmin1000_B40 = yr1000B40[yr1000B40.Functionality == yr1000B40.Functionality.min()].iloc[0]
+Dmin1000_B40 = yr1000B40[yr1000B40.Dislocation == yr1000B40.Dislocation.min()].iloc[0]
+Emin1000_B40 = yr1000B40[yr1000B40.Economic_loss == yr1000B40.Economic_loss.min()].iloc[0]
+Fmin1000_B60 = yr1000B60[yr1000B60.Functionality == yr1000B60.Functionality.min()].iloc[0]
+Dmin1000_B60 = yr1000B60[yr1000B60.Dislocation == yr1000B60.Dislocation.min()].iloc[0]
+Emin1000_B60 = yr1000B60[yr1000B60.Economic_loss == yr1000B60.Economic_loss.min()].iloc[0]
+#%%
+# print("Solution Selected for Least Repair Time in 500 year event :",Fmin500_B20['S'])
+# print("Solution Selected for Least Economic Loss in 500 year event :",Emin500_B20['S'])
+# print("Solution Selected for Least Population Dislocation in 500 year event :",Dmin500_B20['S'])
+# print("Solution Selected for Least Repair Time in 500 year event :",Fmin500_B40['S'])
+# print("Solution Selected for Least Economic Loss in 500 year event :",Emin500_B40['S'])
+# print("Solution Selected for Least Population Dislocation in 500 year event :",Dmin500_B40['S'])
+# print("Solution Selected for Least Repair Time in 500 year event :",Fmin500_B60['S'])
+# print("Solution Selected for Least Economic Loss in 500 year event :",Emin500_B60['S'])
+# print("Solution Selected for Least Population Dislocation in 500 year event :",Dmin500_B60['S'])
+# print("Solution Selected for Least Repair Time in 1000 year event :",Fmin1000_B20['S'])
+# print("Solution Selected for Least Economic Loss in 1000 year event :",Emin1000_B20['S'])
+# print("Solution Selected for Least Population Dislocation in 1000 year event :",Dmin1000_B20['S'])
+# print("Solution Selected for Least Repair Time in 1000 year event :",Fmin1000_B40['S'])
+# print("Solution Selected for Least Economic Loss in 1000 year event :",Emin1000_B40['S'])
+# print("Solution Selected for Least Population Dislocation in 1000 year event :",Dmin1000_B40['S'])
+# print("Solution Selected for Least Repair Time in 1000 year event :",Fmin1000_B60['S'])
+# print("Solution Selected for Least Economic Loss in 1000 year event :",Emin1000_B60['S'])
+# print("Solution Selected for Least Population Dislocation in 1000 year event :",Dmin1000_B60['S'])
+#%%
+Op1_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X0.csv")
+Op2_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X79.csv")
+Op3_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X42.csv")
+Op1_1000B20 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B20_X0.csv")
+Op2_1000B20 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B20_X199.csv")
+Op3_1000B20 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B20_X18.csv")
+Op1_500B40 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B40_X0.csv")
+Op2_500B40 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B40_X376.csv")
+Op3_500B40 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B40_X122.csv")
+Op1_1000B40 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B40_X0.csv")
+Op2_1000B40 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B40_X119.csv")
+Op3_1000B40 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B40_X196.csv")
+Op1_500B60 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B60_X0.csv")
+Op2_500B60 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B60_X235.csv")
+Op3_500B60 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B60_X44.csv")
+Op1_1000B60 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B60_X0.csv")
+Op2_1000B60 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B60_X259.csv")
+Op3_1000B60 = pd.read_csv("Optimization_Model/1000_yr_Results/decision_variable_B60_X205.csv")
+#%%
+### PLAN 1
 
 
+subset0_Op1_500B20 = Op1_500B20[Op1_500B20["K"] == 0]
+subset1_Op1_500B20 = Op1_500B20[Op1_500B20["K"] == 1]
+subset2_Op1_500B20 = Op1_500B20[Op1_500B20["K"] == 2]
+subset3_Op1_500B20 = Op1_500B20[Op1_500B20["K"] == 3]
+P1NumB050020 = round(subset0_Op1_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P1NumB150020 = round(subset1_Op1_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P1NumB250020 = round(subset2_Op1_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P1NumB350020 = round(subset3_Op1_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op1_1000B20 = Op1_1000B20[Op1_1000B20["K"] == 0]
+subset1_Op1_1000B20 = Op1_1000B20[Op1_1000B20["K"] == 1]
+subset2_Op1_1000B20 = Op1_1000B20[Op1_1000B20["K"] == 2]
+subset3_Op1_1000B20 = Op1_1000B20[Op1_1000B20["K"] == 3]
+P1NumB0100020 = round(subset0_Op1_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P1NumB1100020 = round(subset1_Op1_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P1NumB2100020 = round(subset2_Op1_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P1NumB3100020 = round(subset3_Op1_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
 
+### PLAN 2 
+subset0_Op2_500B20 = Op2_500B20[Op2_500B20["K"] == 0]
+subset1_Op2_500B20 = Op2_500B20[Op2_500B20["K"] == 1]
+subset2_Op2_500B20 = Op2_500B20[Op2_500B20["K"] == 2]
+subset3_Op2_500B20 = Op2_500B20[Op2_500B20["K"] == 3]
+P2NumB050020 = round(subset0_Op2_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P2NumB150020 = round(subset1_Op2_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P2NumB250020 = round(subset2_Op2_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P2NumB350020 = round(subset3_Op2_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op2_1000B20 = Op2_1000B20[Op2_1000B20["K"] == 0]
+subset1_Op2_1000B20 = Op2_1000B20[Op2_1000B20["K"] == 1]
+subset2_Op2_1000B20 = Op2_1000B20[Op2_1000B20["K"] == 2]
+subset3_Op2_1000B20 = Op2_1000B20[Op2_1000B20["K"] == 3]
+P2NumB0100020 = round(subset0_Op2_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P2NumB1100020 = round(subset1_Op2_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P2NumB2100020 = round(subset2_Op2_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P2NumB3100020 = round(subset3_Op2_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
 
+### PLAN 3
+
+subset0_Op3_500B20 = Op3_500B20[Op3_500B20["K"] == 0]
+subset1_Op3_500B20 = Op3_500B20[Op3_500B20["K"] == 1]
+subset2_Op3_500B20 = Op3_500B20[Op3_500B20["K"] == 2]
+subset3_Op3_500B20 = Op3_500B20[Op3_500B20["K"] == 3]
+P3NumB050020 = round(subset0_Op3_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P3NumB150020 = round(subset1_Op3_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P3NumB250020 = round(subset2_Op3_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P3NumB350020 = round(subset3_Op3_500B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op3_1000B20 = Op3_1000B20[Op3_1000B20["K"] == 0]
+subset1_Op3_1000B20 = Op3_1000B20[Op3_1000B20["K"] == 1]
+subset2_Op3_1000B20 = Op3_1000B20[Op3_1000B20["K"] == 2]
+subset3_Op3_1000B20 = Op3_1000B20[Op3_1000B20["K"] == 3]
+P3NumB0100020 = round(subset0_Op3_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P3NumB1100020 = round(subset1_Op3_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P3NumB2100020 = round(subset2_Op3_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P3NumB3100020 = round(subset3_Op3_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
+#%%
+Budget1 = {
+    ("500 Year Event Plan 1"):(Emin500_B20['Economic_loss'],Emin500_B20['Dislocation'],Emin500_B20['Functionality'],P1NumB050020,P1NumB150020,P1NumB250020,P1NumB350020),
+    ("500 Year Event Plan 2"):(Dmin500_B20['Economic_loss'],Dmin500_B20['Dislocation'],Dmin500_B20['Functionality'],P2NumB050020,P2NumB150020,P2NumB250020,P2NumB350020),
+    ("500 Year Event Plan 3"):(Fmin500_B20['Economic_loss'],Fmin500_B20['Dislocation'],Fmin500_B20['Functionality'],P3NumB050020,P3NumB150020,P3NumB250020,P3NumB350020),
+    
+    ("1000 Year Event Plan 1"):(Emin1000_B20['Economic_loss'],Emin1000_B20['Dislocation'],Emin1000_B20['Functionality'],P1NumB0100020,P1NumB1100020,P1NumB2100020,P1NumB3100020),
+    ("1000 Year Event Plan 2"):(Dmin1000_B20['Economic_loss'],Dmin1000_B20['Dislocation'],Dmin1000_B20['Functionality'],P2NumB0100020,P2NumB1100020,P2NumB2100020,P2NumB3100020),
+    ("1000 Year Event Plan 3"):(Fmin1000_B20['Economic_loss'],Fmin1000_B20['Dislocation'],Fmin1000_B20['Functionality'],P3NumB0100020,P3NumB1100020,P3NumB2100020,P3NumB3100020),
+}
+#%%
+Budget1_df = pd.DataFrame(list(Budget1.items()),columns = ['Budget $40,000,000','column2']) 
+new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+for n,col in enumerate(new_col_list):
+    Budget1_df[col] = Budget1_df['column2'].apply(lambda column2: column2[n])
+
+Budget1_df = Budget1_df.drop('column2',axis=1)
+Budget1_df = Budget1_df.round(decimals=0)
+Budget1_df.to_csv("Budget1_OptionsTable.csv")
+Budget1_df
+#%%
+### PLAN 1
+
+subset0_Op1_500B40 = Op1_500B40[Op1_500B40["K"] == 0]
+subset1_Op1_500B40 = Op1_500B40[Op1_500B40["K"] == 1]
+subset2_Op1_500B40 = Op1_500B40[Op1_500B40["K"] == 2]
+subset3_Op1_500B40 = Op1_500B40[Op1_500B40["K"] == 3]
+P1NumB050040 = round(subset0_Op1_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P1NumB150040 = round(subset1_Op1_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P1NumB250040 = round(subset2_Op1_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P1NumB350040 = round(subset3_Op1_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op1_1000B40 = Op1_1000B40[Op1_1000B40["K"] == 0]
+subset1_Op1_1000B40 = Op1_1000B40[Op1_1000B40["K"] == 1]
+subset2_Op1_1000B40 = Op1_1000B40[Op1_1000B40["K"] == 2]
+subset3_Op1_1000B40 = Op1_1000B40[Op1_1000B40["K"] == 3]
+P1NumB0100040 = round(subset0_Op1_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P1NumB1100040 = round(subset1_Op1_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P1NumB2100040 = round(subset2_Op1_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P1NumB3100040 = round(subset3_Op1_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
+
+### PLAN 2
+
+subset0_Op2_500B40 = Op2_500B40[Op2_500B40["K"] == 0]
+subset1_Op2_500B40 = Op2_500B40[Op2_500B40["K"] == 1]
+subset2_Op2_500B40 = Op2_500B40[Op2_500B40["K"] == 2]
+subset3_Op2_500B40 = Op2_500B40[Op2_500B40["K"] == 3]
+P2NumB050040 = round(subset0_Op2_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P2NumB150040 = round(subset1_Op2_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P2NumB250040 = round(subset2_Op2_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P2NumB350040 = round(subset3_Op2_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op2_1000B40 = Op2_1000B40[Op2_1000B40["K"] == 0]
+subset1_Op2_1000B40 = Op2_1000B40[Op2_1000B40["K"] == 1]
+subset2_Op2_1000B40 = Op2_1000B40[Op2_1000B40["K"] == 2]
+subset3_Op2_1000B40 = Op2_1000B40[Op2_1000B40["K"] == 3]
+P2NumB0100040 = round(subset0_Op2_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P2NumB1100040 = round(subset1_Op2_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P2NumB2100040 = round(subset2_Op2_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P2NumB3100040 = round(subset3_Op2_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
 
+#### PLAN 3
 
+subset0_Op3_500B40 = Op3_500B40[Op3_500B40["K"] == 0]
+subset1_Op3_500B40 = Op3_500B40[Op3_500B40["K"] == 1]
+subset2_Op3_500B40 = Op3_500B40[Op3_500B40["K"] == 2]
+subset3_Op3_500B40 = Op3_500B40[Op3_500B40["K"] == 3]
+P3NumB050040 = round(subset0_Op3_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P3NumB150040 = round(subset1_Op3_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P3NumB250040 = round(subset2_Op3_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P3NumB350040 = round(subset3_Op3_500B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op3_1000B40 = Op3_1000B40[Op3_1000B40["K"] == 0]
+subset1_Op3_1000B40 = Op3_1000B40[Op3_1000B40["K"] == 1]
+subset2_Op3_1000B40 = Op3_1000B40[Op3_1000B40["K"] == 2]
+subset3_Op3_1000B40 = Op3_1000B40[Op3_1000B40["K"] == 3]
+P3NumB0100040 = round(subset0_Op3_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P3NumB1100040 = round(subset1_Op3_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P3NumB2100040 = round(subset2_Op3_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P3NumB3100040 = round(subset3_Op3_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
+Budget2 = {
+    ("500 Year Event Plan 1"):(Emin500_B40['Economic_loss'],Emin500_B40['Dislocation'],Emin500_B40['Functionality'],P1NumB050040,P1NumB150040,P1NumB250040,P1NumB350040),
+    ("500 Year Event Plan 2"):(Dmin500_B40['Economic_loss'],Dmin500_B40['Dislocation'],Dmin500_B40['Functionality'],P2NumB050040,P2NumB150040,P2NumB250040,P2NumB350040),
+    ("500 Year Event Plan 3"):(Fmin500_B40['Economic_loss'],Fmin500_B40['Dislocation'],Fmin500_B40['Functionality'],P3NumB050040,P3NumB150040,P3NumB250040,P3NumB350040),
+    
+    ("1000 Year Event Plan 1"):(Emin1000_B40['Economic_loss'],Emin1000_B40['Dislocation'],Emin1000_B40['Functionality'],P1NumB0100040,P1NumB1100040,P1NumB2100040,P1NumB3100040),
+    ("1000 Year Event Plan 2"):(Dmin1000_B40['Economic_loss'],Dmin1000_B40['Dislocation'],Dmin1000_B40['Functionality'],P2NumB0100040,P2NumB1100040,P2NumB2100040,P2NumB3100040),
+    ("1000 Year Event Plan 3"):(Fmin1000_B40['Economic_loss'],Fmin1000_B40['Dislocation'],Fmin1000_B40['Functionality'],P3NumB0100040,P3NumB1100040,P3NumB2100040,P3NumB3100040),
+}
+Budget2_df = pd.DataFrame(list(Budget2.items()),columns = ['Budget $80,000,000','column2']) 
+new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+for n,col in enumerate(new_col_list):
+    Budget2_df[col] = Budget2_df['column2'].apply(lambda column2: column2[n])
 
+Budget2_df = Budget2_df.drop('column2',axis=1)
+Budget2_df = Budget2_df.round(decimals=0)
+Budget2_df.to_csv("Budget2_OptionsTable.csv")
+Budget2_df
 
+#%%
+### PLAN 1
 
+subset0_Op1_500B60 = Op1_500B60[Op1_500B60["K"] == 0]
+subset1_Op1_500B60 = Op1_500B60[Op1_500B60["K"] == 1]
+subset2_Op1_500B60 = Op1_500B60[Op1_500B60["K"] == 2]
+subset3_Op1_500B60 = Op1_500B60[Op1_500B60["K"] == 3]
+P1NumB050060 = round(subset0_Op1_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P1NumB150060 = round(subset1_Op1_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P1NumB250060 = round(subset2_Op1_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P1NumB350060 = round(subset3_Op1_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op1_1000B60 = Op1_1000B60[Op1_1000B60["K"] == 0]
+subset1_Op1_1000B60 = Op1_1000B60[Op1_1000B60["K"] == 1]
+subset2_Op1_1000B60 = Op1_1000B60[Op1_1000B60["K"] == 2]
+subset3_Op1_1000B60 = Op1_1000B60[Op1_1000B60["K"] == 3]
+P1NumB0100060 = round(subset0_Op1_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P1NumB1100060 = round(subset1_Op1_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P1NumB2100060 = round(subset2_Op1_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P1NumB3100060 = round(subset3_Op1_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
+### PLAN 2
 
+subset0_Op2_500B60 = Op2_500B60[Op2_500B60["K"] == 0]
+subset1_Op2_500B60 = Op2_500B60[Op2_500B60["K"] == 1]
+subset2_Op2_500B60 = Op2_500B60[Op2_500B60["K"] == 2]
+subset3_Op2_500B60 = Op2_500B60[Op2_500B60["K"] == 3]
+P2NumB050060 = round(subset0_Op2_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P2NumB150060 = round(subset1_Op2_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P2NumB250060 = round(subset2_Op2_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P2NumB350060 = round(subset3_Op2_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op2_1000B60 = Op2_1000B60[Op2_1000B60["K"] == 0]
+subset1_Op2_1000B60 = Op2_1000B60[Op2_1000B60["K"] == 1]
+subset2_Op2_1000B60 = Op2_1000B60[Op2_1000B60["K"] == 2]
+subset3_Op2_1000B60 = Op2_1000B60[Op2_1000B60["K"] == 3]
+P2NumB0100060 = round(subset0_Op2_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P2NumB1100060 = round(subset1_Op2_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P2NumB2100060 = round(subset2_Op2_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P2NumB3100060 = round(subset3_Op2_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
+### PLAN 3
 
+subset0_Op3_500B60 = Op3_500B60[Op3_500B60["K"] == 0]
+subset1_Op3_500B60 = Op3_500B60[Op3_500B60["K"] == 1]
+subset2_Op3_500B60 = Op3_500B60[Op3_500B60["K"] == 2]
+subset3_Op3_500B60 = Op3_500B60[Op3_500B60["K"] == 3]
+P3NumB050060 = round(subset0_Op3_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 500 yr event
+P3NumB150060 = round(subset1_Op3_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 500 yr event
+P3NumB250060 = round(subset2_Op3_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 500 yr event
+P3NumB350060 = round(subset3_Op3_500B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 500 yr event
+subset0_Op3_1000B60 = Op3_1000B60[Op3_1000B60["K"] == 0]
+subset1_Op3_1000B60 = Op3_1000B60[Op3_1000B60["K"] == 1]
+subset2_Op3_1000B60 = Op3_1000B60[Op3_1000B60["K"] == 2]
+subset3_Op3_1000B60 = Op3_1000B60[Op3_1000B60["K"] == 3]
+P3NumB0100060 = round(subset0_Op3_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 0 for 1000 yr event
+P3NumB1100060 = round(subset1_Op3_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 1 for 1000 yr event
+P3NumB2100060 = round(subset2_Op3_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
+P3NumB3100060 = round(subset3_Op3_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
+Budget3 = {
+    ("500 Year Event Plan 1"):(Emin500_B60['Economic_loss'],Emin500_B60['Dislocation'],Emin500_B60['Functionality'],P1NumB050060,P1NumB150060,P1NumB250060,P1NumB350060),
+    ("500 Year Event Plan 2"):(Dmin500_B60['Economic_loss'],Dmin500_B60['Dislocation'],Dmin500_B60['Functionality'],P2NumB050060,P2NumB150060,P2NumB250060,P2NumB350060),
+    ("500 Year Event Plan 3"):(Fmin500_B60['Economic_loss'],Fmin500_B60['Dislocation'],Fmin500_B60['Functionality'],P3NumB050060,P3NumB150060,P3NumB250060,P3NumB350060),
+    
+    ("1000 Year Event Plan 1"):(Emin1000_B60['Economic_loss'],Emin1000_B60['Dislocation'],Emin1000_B60['Functionality'],P1NumB0100060,P1NumB1100060,P1NumB2100060,P1NumB3100060),
+    ("1000 Year Event Plan 2"):(Dmin1000_B60['Economic_loss'],Dmin1000_B60['Dislocation'],Dmin1000_B60['Functionality'],P2NumB0100060,P2NumB1100060,P2NumB2100060,P2NumB3100060),
+    ("1000 Year Event Plan 3"):(Fmin1000_B60['Economic_loss'],Fmin1000_B60['Dislocation'],Fmin1000_B60['Functionality'],P3NumB0100060,P3NumB1100060,P3NumB2100060,P3NumB3100060),
+}
+
+Budget3_df = pd.DataFrame(list(Budget3.items()),columns = ['Budget $120,000,000','column2']) 
+new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+for n,col in enumerate(new_col_list):
+    Budget3_df[col] = Budget3_df['column2'].apply(lambda column2: column2[n])
+
+Budget3_df = Budget3_df.drop('column2',axis=1)
+Budget3_df = Budget3_df.round(decimals=0)
+Budget3_df.to_csv("Budget3_OptionsTable.csv")
+Budget3_df
 
 
 
