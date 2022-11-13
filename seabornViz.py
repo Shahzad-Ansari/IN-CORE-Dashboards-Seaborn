@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed Nov  9 18:47:35 2022
+
+@author: ShahzadAnsari
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Thu Oct 13 15:51:16 2022
 
 @author: ShahzadAnsari
@@ -8,6 +15,7 @@ Created on Thu Oct 13 15:51:16 2022
 from dash import Dash, html, dcc, Input, Output,dash_table
 import dash_bootstrap_components as dbc
 import dash
+import plotly.graph_objects as go
 import plotting_results as pr
 
 
@@ -24,6 +32,11 @@ external_stylesheets = [
     }
 ]
 app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+
+#(loss_500optimal60,dislocation_500optimal60,c=func_500optimal60,cmap =plt.cm.get_cmap('Blues', 10))
+
+
 
 
 all_options = {
@@ -65,6 +78,7 @@ img = dbc.Card(
         ]
     )
 
+
 jumbotron = html.Div(
     dbc.Container(
         [
@@ -96,6 +110,7 @@ jumbotron = html.Div(
 other = html.Div(
     dbc.Container([
         
+        html.Div(id='result'),
         html.Hr(),
         html.Div([html.H6("Select what budget and projected year you want to analyze")]),   
         dbc.Row([
@@ -110,6 +125,9 @@ other = html.Div(
             ),
         ]),
         
+        dcc.Graph(
+            id='graph'
+        ),
         
         html.Hr(),
         html.Div(id='repair'),
@@ -129,20 +147,10 @@ other = html.Div(
                 html.Div(id = 'metricsWBudget'), 
                 html.Div(id = 'Budget1')   
             ]),
-        ]),
-        dbc.Row([
-              dbc.Col(
-                  img,width = {"size": 15, "order": "last", "offset": 0}
-                    
-              )
-        ]),
-        
-
+        ]),  
     ])
-    
-    
-    
 )
+
 
 
 
@@ -152,18 +160,151 @@ app.layout = dbc.Container([
 ],style={"overflowY":"scroll",'height':"1500px"},fluid=True)
 
 @app.callback(
+    Output('graph','figure'),
+    Input('year-radio', 'value'),
+    Input('budget-radio', 'value')
+    
+    )
+def updateGraph(year, budget):
+    fig = go.Figure() # create a figure
+    
+    
+    if year == '500 Years':
+        if budget == '20% Budget Option':
+            fig.add_trace(go.Scatter3d(
+                        x = pr.loss_500optimal20, # x dim for scatter plot
+                        y = pr.dislocation_500optimal20, # y dim for scatter plot
+                        z = pr.func_500optimal20, # z dim for scatter plot
+                        mode = 'markers', # type of points on scatterplot
+                        name = 'markers', # name of the points on the scatterplot
+                        
+                        # settings for the scatterplot
+                        marker=dict(
+                            size=10, # The size of the markers are set by this 
+                            color=pr.func_500optimal20, # set color to an array/list of desired values
+                            colorscale='Viridis',   # choose a colorscale
+                            opacity=0.8 # opacity 
+                        )
+                    ))
+            
+           
+        elif budget == '40% Budget Option':
+            fig.add_trace(go.Scatter3d(
+                        x = pr.loss_500optimal40, # x dim for scatter plot
+                        y = pr.dislocation_500optimal40, # y dim for scatter plot
+                        z = pr.func_500optimal40, # z dim for scatter plot
+                        mode = 'markers', # type of points on scatterplot
+                        name = 'markers', # name of the points on the scatterplot
+                        
+                        # settings for the scatterplot
+                        marker=dict(
+                            size=10, # The size of the markers are set by this 
+                            color=pr.func_500optimal40, # set color to an array/list of desired values
+                            colorscale='Viridis',   # choose a colorscale
+                            opacity=0.8 # opacity 
+                        )
+                    ))
+            
+           
+        elif budget == '60% Budget Option':
+            fig.add_trace(go.Scatter3d(
+                        x = pr.loss_500optimal60, # x dim for scatter plot
+                        y = pr.dislocation_500optimal60, # y dim for scatter plot
+                        z = pr.func_500optimal60, # z dim for scatter plot
+                        mode = 'markers', # type of points on scatterplot
+                        name = 'markers', # name of the points on the scatterplot
+                        
+                        # settings for the scatterplot
+                        marker=dict(
+                            size=10, # The size of the markers are set by this 
+                            color=pr.func_500optimal60, # set color to an array/list of desired values
+                            colorscale='Viridis',   # choose a colorscale
+                            opacity=0.8 # opacity 
+                        )
+                    ))
+            
+           
+    elif year == '1000 Years':
+        if budget == '20% Budget Option':
+            fig.add_trace(go.Scatter3d(
+                        x = pr.loss_1000optimal20, # x dim for scatter plot
+                        y = pr.dislocation_1000optimal20, # y dim for scatter plot
+                        z = pr.func_1000optimal20, # z dim for scatter plot
+                        mode = 'markers', # type of points on scatterplot
+                        name = 'markers', # name of the points on the scatterplot
+                        
+                        # settings for the scatterplot
+                        marker=dict(
+                            size=10, # The size of the markers are set by this 
+                            color=pr.func_1000optimal20, # set color to an array/list of desired values
+                            colorscale='Viridis',   # choose a colorscale
+                            opacity=0.8 # opacity 
+                        )
+                    ))
+            
+           
+        elif budget == '40% Budget Option':
+            fig.add_trace(go.Scatter3d(
+                        x = pr.loss_1000optimal40, # x dim for scatter plot
+                        y = pr.dislocation_1000optimal40, # y dim for scatter plot
+                        z = pr.func_1000optimal40, # z dim for scatter plot
+                        mode = 'markers', # type of points on scatterplot
+                        name = 'markers', # name of the points on the scatterplot
+                        
+                        # settings for the scatterplot
+                        marker=dict(
+                            size=10, # The size of the markers are set by this 
+                            color=pr.func_1000optimal40, # set color to an array/list of desired values
+                            colorscale='Viridis',   # choose a colorscale
+                            opacity=0.8 # opacity 
+                        )
+                    ))
+            
+           
+        elif budget == '60% Budget Option':
+            fig.add_trace(go.Scatter3d(
+                        x = pr.loss_1000optimal60, # x dim for scatter plot
+                        y = pr.dislocation_1000optimal60, # y dim for scatter plot
+                        z = pr.func_1000optimal60, # z dim for scatter plot
+                        mode = 'markers', # type of points on scatterplot
+                        name = 'markers', # name of the points on the scatterplot
+                        
+                        # settings for the scatterplot
+                        marker=dict(
+                            size=10, # The size of the markers are set by this 
+                            color=pr.func_1000optimal60, # set color to an array/list of desired values
+                            colorscale='Viridis',   # choose a colorscale
+                            opacity=0.8 # opacity 
+                        )
+                    ))
+            
+        
+    
+    # 3D Scatter plot 
+    
+    fig.update_layout(clickmode='event+select') #What happens when you click on a point
+    # titles and dimensions
+    fig.update_layout(scene = dict(
+                        xaxis_title='Economic Loss',
+                        yaxis_title='Functionality',
+                        zaxis_title='Dislocation'),
+                        title="Preto Frontier",
+                        width=1200,
+                        height=900)
+    
+    return fig
+           
+@app.callback(
     Output('budget-radio', 'options'),
     Input('year-radio', 'value'))
 def set_budget_options(year):
     return [{'label': i, 'value': i} for i in all_options[year]]
-
 
 @app.callback(
     Output('budget-radio', 'value'),
     Input('budget-radio', 'options'))
 def set_budget_value(available_options):
     return available_options[0]['value']
-
 
 @app.callback(
     Output('repair', component_property='children'),
@@ -255,6 +396,27 @@ def setbudgetDf(year,budget):
         return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
     
     
+@app.callback(
+    Output('result','children'),
+    Input('graph', 'clickData'))
+# =============================================================================
+#   Block 11: Callback Function
+# =============================================================================
+def show_coords(clickData):
+
+        if clickData is None: 
+            return "no clickdata chosen"
+        else:
+            xCoord = clickData['points'][0]['x'] 
+            yCoord = clickData['points'][0]["y"]
+            zCoord = clickData['points'][0]["z"]
+            
+            #add flush = True or it wont display the message.
+            print(f'xcoord is {xCoord} and ycoord is {yCoord} and zcord is {zCoord}',flush=True)
+           
+            return "xcoord is {} and ycoord is {} and zcord is {}".format(xCoord,yCoord,zCoord)
+    
+
     
     
 if __name__ == '__main__':

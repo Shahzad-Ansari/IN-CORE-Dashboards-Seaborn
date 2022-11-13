@@ -35,6 +35,7 @@ yr1000B20 = pd.read_csv("Optimization_Model/1000_yr_Results/results_B20_.csv")
 yr1000B40 = pd.read_csv("Optimization_Model/1000_yr_Results/results_B40_.csv")
 yr1000B60 = pd.read_csv("Optimization_Model/1000_yr_Results/results_B60_.csv")
 #%%
+yr500B20
 def optimal_points(list_loss,list_dislocation,list_func):
     
     """
@@ -132,6 +133,7 @@ loss_500optimal60 = yr500B60['Economic_loss']
 dislocation_500optimal60 = yr500B60['Dislocation']
 func_500optimal60 = yr500B60['Functionality']
 
+
 #%%
 loss_1000optimal20 = yr1000B20['Economic_loss']
 dislocation_1000optimal20 = yr1000B20['Dislocation']
@@ -151,6 +153,11 @@ loss_1000optimal20, dislocation_1000optimal20,func_1000optimal20 = optimal_point
 loss_1000optimal40, dislocation_1000optimal40,func_1000optimal40 = optimal_points(loss_1000optimal40,dislocation_1000optimal40,func_1000optimal40)
 loss_1000optimal60, dislocation_1000optimal60,func_1000optimal60 = optimal_points(loss_1000optimal60,dislocation_1000optimal60,func_1000optimal60)
 #%%
+
+
+#%%
+
+
 #20% Budget Options ($40,000,000)
 print("Range of Repair Time:",min(func_500optimal20),",",max(func_500optimal20))
 print("Range of Population Dislocation:",min(dislocation_500optimal20),",",max(dislocation_500optimal20))
@@ -200,43 +207,37 @@ Yr1000 = pd.DataFrame(Yr1000.items(),columns = ['Community Metrics','1000 Year E
 Yr1000 = Yr1000.round(decimals=0)
 Yr1000
 #%%
+
+
+
+#%%
 Fmin500_B20 = yr500B20[yr500B20.Functionality == yr500B20.Functionality.min()].iloc[0]
 Dmin500_B20 = yr500B20[yr500B20.Dislocation == yr500B20.Dislocation.min()].iloc[0]
+
 Emin500_B20 = yr500B20[yr500B20.Economic_loss == yr500B20.Economic_loss.min()].iloc[0]
 Fmin500_B40 = yr500B40[yr500B40.Functionality == yr500B40.Functionality.min()].iloc[0]
+
 Dmin500_B40 = yr500B40[yr500B40.Dislocation == yr500B40.Dislocation.min()].iloc[0]
 Emin500_B40 = yr500B40[yr500B40.Economic_loss == yr500B40.Economic_loss.min()].iloc[0]
+
 Fmin500_B60 = yr500B60[yr500B60.Functionality == yr500B60.Functionality.min()].iloc[0]
 Dmin500_B60 = yr500B60[yr500B60.Dislocation == yr500B60.Dislocation.min()].iloc[0]
+
 Emin500_B60 = yr500B60[yr500B60.Economic_loss == yr500B60.Economic_loss.min()].iloc[0]
 Fmin1000_B20 = yr1000B20[yr1000B20.Functionality == yr1000B20.Functionality.min()].iloc[0]
+
 Dmin1000_B20 = yr1000B20[yr1000B20.Dislocation == yr1000B20.Dislocation.min()].iloc[0]
 Emin1000_B20 = yr1000B20[yr1000B20.Economic_loss == yr1000B20.Economic_loss.min()].iloc[0]
+
 Fmin1000_B40 = yr1000B40[yr1000B40.Functionality == yr1000B40.Functionality.min()].iloc[0]
 Dmin1000_B40 = yr1000B40[yr1000B40.Dislocation == yr1000B40.Dislocation.min()].iloc[0]
+
 Emin1000_B40 = yr1000B40[yr1000B40.Economic_loss == yr1000B40.Economic_loss.min()].iloc[0]
 Fmin1000_B60 = yr1000B60[yr1000B60.Functionality == yr1000B60.Functionality.min()].iloc[0]
 Dmin1000_B60 = yr1000B60[yr1000B60.Dislocation == yr1000B60.Dislocation.min()].iloc[0]
 Emin1000_B60 = yr1000B60[yr1000B60.Economic_loss == yr1000B60.Economic_loss.min()].iloc[0]
 #%%
-# print("Solution Selected for Least Repair Time in 500 year event :",Fmin500_B20['S'])
-# print("Solution Selected for Least Economic Loss in 500 year event :",Emin500_B20['S'])
-# print("Solution Selected for Least Population Dislocation in 500 year event :",Dmin500_B20['S'])
-# print("Solution Selected for Least Repair Time in 500 year event :",Fmin500_B40['S'])
-# print("Solution Selected for Least Economic Loss in 500 year event :",Emin500_B40['S'])
-# print("Solution Selected for Least Population Dislocation in 500 year event :",Dmin500_B40['S'])
-# print("Solution Selected for Least Repair Time in 500 year event :",Fmin500_B60['S'])
-# print("Solution Selected for Least Economic Loss in 500 year event :",Emin500_B60['S'])
-# print("Solution Selected for Least Population Dislocation in 500 year event :",Dmin500_B60['S'])
-# print("Solution Selected for Least Repair Time in 1000 year event :",Fmin1000_B20['S'])
-# print("Solution Selected for Least Economic Loss in 1000 year event :",Emin1000_B20['S'])
-# print("Solution Selected for Least Population Dislocation in 1000 year event :",Dmin1000_B20['S'])
-# print("Solution Selected for Least Repair Time in 1000 year event :",Fmin1000_B40['S'])
-# print("Solution Selected for Least Economic Loss in 1000 year event :",Emin1000_B40['S'])
-# print("Solution Selected for Least Population Dislocation in 1000 year event :",Dmin1000_B40['S'])
-# print("Solution Selected for Least Repair Time in 1000 year event :",Fmin1000_B60['S'])
-# print("Solution Selected for Least Economic Loss in 1000 year event :",Emin1000_B60['S'])
-# print("Solution Selected for Least Population Dislocation in 1000 year event :",Dmin1000_B60['S'])
+# 6
 #%%
 Op1_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X0.csv")
 Op2_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X79.csv")
@@ -494,14 +495,56 @@ Budget3_df
 
 
 
+#%%
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+#%%
+fig,ax = plt.subplots(figsize=(15,7))
+sc1 = ax.scatter(loss_500optimal60,dislocation_500optimal60,c=func_500optimal60,cmap =plt.cm.get_cmap('Blues', 10))
+fig.colorbar(sc1,shrink=0.5, aspect=7,label = 'Avg Repair Time with $120M budget')
+#legend1 = ax.legend(*sc1.legend_elements(),loc="upper right")
+#ax.add_artist(legend1)
 
+sc2 = ax.scatter(loss_500optimal40,dislocation_500optimal40,c=func_500optimal40,cmap =plt.cm.get_cmap('Greens', 10))
+fig.colorbar(sc2,shrink=0.5, aspect=7,label = "Avg Repair Time with $80M budget")
+#legend2 = ax.legend(*sc2.legend_elements(),loc="lower right")
+#ax.add_artist(legend2)
 
+sc3 = ax.scatter(loss_500optimal20,dislocation_500optimal20,c=func_500optimal20,cmap =plt.cm.get_cmap('Reds', 10))
+#v3 = np.linspace(min(loss_optimal20), max(loss_optimal20), 10, endpoint=True)
+fig.colorbar(sc3,shrink=0.5, aspect=7,label = "Avg Repair Time with $40M budget")
+#legend3 = ax.legend(*sc3.legend_elements(),loc="lower left")
+#ax.add_artist(legend3)
 
+ax.set_xlabel("Economic Loss $",fontsize = 15)
+ax.xaxis.set_major_formatter(formatter)
+ax.set_ylabel("Population Dislocation",fontsize = 15)
+ax.set_title("Pareto frontier: Economic Loss in $ vs. Dislocation of different budgets for 500 year event ",fontsize = 15)
+fig.tight_layout()
 
+plt.grid()
+Budget_20 = mpatches.Patch(color='red', label='$40M budget')
+Budget_40 = mpatches.Patch(color='green', label='$80M budget')
+Budget_60 = mpatches.Patch(color='steelblue', label='$120M budget')
 
+p1 = plt.scatter(Emin500_B20['Economic_loss'],Emin500_B20['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
+p2 = plt.scatter(Dmin500_B20['Economic_loss'],Dmin500_B20['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
+p3 = plt.scatter(Fmin500_B20['Economic_loss'],Fmin500_B20['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
+p1 = plt.scatter(Emin500_B40['Economic_loss'],Emin500_B40['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
+p2 = plt.scatter(Dmin500_B40['Economic_loss'],Dmin500_B40['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
+p3 = plt.scatter(Fmin500_B40['Economic_loss'],Fmin500_B40['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
+p1 = plt.scatter(Emin500_B60['Economic_loss'],Emin500_B60['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
+p2 = plt.scatter(Dmin500_B60['Economic_loss'],Dmin500_B60['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
+p3 = plt.scatter(Fmin500_B60['Economic_loss'],Fmin500_B60['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
 
+# Create the second legend and add the artist manually.
+from matplotlib.legend import Legend
+leg = plt.legend((p1,p2,p3),('Plan 1','Plan 2', 'Plan 3'),loc="upper left",fontsize = 15)
+ax.add_artist(leg);
 
+plt.legend(handles=[Budget_20,Budget_40,Budget_60])
 
+#%%
 
 
 
