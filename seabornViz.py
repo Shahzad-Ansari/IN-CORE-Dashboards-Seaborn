@@ -370,31 +370,23 @@ def setmetricsNoSol(year):
 @app.callback(
         Output('Budget1','children'),
         Input('year-radio', 'value'),
-        Input('budget-radio', 'value')
+        Input('budget-radio', 'value'),
+        Input('graph','clickData')
     )
-def setbudgetDf(year,budget):
-    if budget == '20% Budget Option':
-        df = pr.Budget1_df
-        if year == '500 Years':
-            df = df[df['Budget $40,000,000'].str.contains('500')]
-        else:
-            df = df[df['Budget $40,000,000'].str.contains('1000')]
-        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
-    elif budget == '40% Budget Option':
-        df = pr.Budget2_df
-        if year == '500 Years':
-            df = df[df['Budget $80,000,000'].str.contains('500')]
-        else:
-            df = df[df['Budget $80,000,000'].str.contains('1000')]
-        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
-    else:
-        df = pr.Budget3_df
-        if year == '500 Years':
-            df = df[df['Budget $120,000,000'].str.contains('500')]
-        else:
-            df = df[df['Budget $120,000,000'].str.contains('1000')]
-        return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+def setbudgetDf(year,budget,clickData):
     
+    
+    if clickData is None: 
+        df = pr.getData( 197508874.2, 2338.789178, 166.5928389, "500 Years","20% Budget Option")
+    else:
+        Econ = clickData['points'][0]['x'] 
+        Dis = clickData['points'][0]["y"]
+        Func = clickData['points'][0]["z"]
+        df = pr.getData( Econ, Dis, Func, year,budget)
+        
+    return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+        
+        
     
 @app.callback(
     Output('result','children'),

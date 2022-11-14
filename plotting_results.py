@@ -153,7 +153,11 @@ loss_1000optimal20, dislocation_1000optimal20,func_1000optimal20 = optimal_point
 loss_1000optimal40, dislocation_1000optimal40,func_1000optimal40 = optimal_points(loss_1000optimal40,dislocation_1000optimal40,func_1000optimal40)
 loss_1000optimal60, dislocation_1000optimal60,func_1000optimal60 = optimal_points(loss_1000optimal60,dislocation_1000optimal60,func_1000optimal60)
 #%%
+#op20 = pd.concat([loss_500optimal20, dislocation_500optimal20,func_500optimal20],axis = 1)
 
+#%%
+
+#op20.loc[(op20['Functionality'] == 166.5928389) &  (op20['Dislocation'] == 2338.789178)]
 
 #%%
 
@@ -211,33 +215,36 @@ Yr1000
 
 
 #%%
-Fmin500_B20 = yr500B20[yr500B20.Functionality == yr500B20.Functionality.min()].iloc[0]
-Dmin500_B20 = yr500B20[yr500B20.Dislocation == yr500B20.Dislocation.min()].iloc[0]
+# Fmin500_B20 = yr500B20[yr500B20.Functionality == yr500B20.Functionality.min()].iloc[0]
+# Dmin500_B20 = yr500B20[yr500B20.Dislocation == yr500B20.Dislocation.min()].iloc[0]
+# Emin500_B20 = yr500B20[yr500B20.Economic_loss == yr500B20.Economic_loss.min()].iloc[0]
 
-Emin500_B20 = yr500B20[yr500B20.Economic_loss == yr500B20.Economic_loss.min()].iloc[0]
-Fmin500_B40 = yr500B40[yr500B40.Functionality == yr500B40.Functionality.min()].iloc[0]
+# Fmin500_B40 = yr500B40[yr500B40.Functionality == yr500B40.Functionality.min()].iloc[0]
+# Dmin500_B40 = yr500B40[yr500B40.Dislocation == yr500B40.Dislocation.min()].iloc[0]
+# Emin500_B40 = yr500B40[yr500B40.Economic_loss == yr500B40.Economic_loss.min()].iloc[0]
 
-Dmin500_B40 = yr500B40[yr500B40.Dislocation == yr500B40.Dislocation.min()].iloc[0]
-Emin500_B40 = yr500B40[yr500B40.Economic_loss == yr500B40.Economic_loss.min()].iloc[0]
+# Fmin500_B60 = yr500B60[yr500B60.Functionality == yr500B60.Functionality.min()].iloc[0]
+# Dmin500_B60 = yr500B60[yr500B60.Dislocation == yr500B60.Dislocation.min()].iloc[0]
+# Emin500_B60 = yr500B60[yr500B60.Economic_loss == yr500B60.Economic_loss.min()].iloc[0]
 
-Fmin500_B60 = yr500B60[yr500B60.Functionality == yr500B60.Functionality.min()].iloc[0]
-Dmin500_B60 = yr500B60[yr500B60.Dislocation == yr500B60.Dislocation.min()].iloc[0]
+# Fmin1000_B20 = yr1000B20[yr1000B20.Functionality == yr1000B20.Functionality.min()].iloc[0]
+# Dmin1000_B20 = yr1000B20[yr1000B20.Dislocation == yr1000B20.Dislocation.min()].iloc[0]
+# Emin1000_B20 = yr1000B20[yr1000B20.Economic_loss == yr1000B20.Economic_loss.min()].iloc[0]
 
-Emin500_B60 = yr500B60[yr500B60.Economic_loss == yr500B60.Economic_loss.min()].iloc[0]
-Fmin1000_B20 = yr1000B20[yr1000B20.Functionality == yr1000B20.Functionality.min()].iloc[0]
+# Fmin1000_B40 = yr1000B40[yr1000B40.Functionality == yr1000B40.Functionality.min()].iloc[0]
+# Dmin1000_B40 = yr1000B40[yr1000B40.Dislocation == yr1000B40.Dislocation.min()].iloc[0]
+# Emin1000_B40 = yr1000B40[yr1000B40.Economic_loss == yr1000B40.Economic_loss.min()].iloc[0]
 
-Dmin1000_B20 = yr1000B20[yr1000B20.Dislocation == yr1000B20.Dislocation.min()].iloc[0]
-Emin1000_B20 = yr1000B20[yr1000B20.Economic_loss == yr1000B20.Economic_loss.min()].iloc[0]
+# Fmin1000_B60 = yr1000B60[yr1000B60.Functionality == yr1000B60.Functionality.min()].iloc[0]
+# Dmin1000_B60 = yr1000B60[yr1000B60.Dislocation == yr1000B60.Dislocation.min()].iloc[0]
+# Emin1000_B60 = yr1000B60[yr1000B60.Economic_loss == yr1000B60.Economic_loss.min()].iloc[0]
+# #%%
+# # 
+# Fmin500_B20
 
-Fmin1000_B40 = yr1000B40[yr1000B40.Functionality == yr1000B40.Functionality.min()].iloc[0]
-Dmin1000_B40 = yr1000B40[yr1000B40.Dislocation == yr1000B40.Dislocation.min()].iloc[0]
+# Dmin500_B20
 
-Emin1000_B40 = yr1000B40[yr1000B40.Economic_loss == yr1000B40.Economic_loss.min()].iloc[0]
-Fmin1000_B60 = yr1000B60[yr1000B60.Functionality == yr1000B60.Functionality.min()].iloc[0]
-Dmin1000_B60 = yr1000B60[yr1000B60.Dislocation == yr1000B60.Dislocation.min()].iloc[0]
-Emin1000_B60 = yr1000B60[yr1000B60.Economic_loss == yr1000B60.Economic_loss.min()].iloc[0]
-#%%
-# 6
+# Emin500_B20
 #%%
 Op1_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X0.csv")
 Op2_500B20 = pd.read_csv("Optimization_Model/500_yr_Results/decision_variable_B20_X79.csv")
@@ -317,25 +324,26 @@ P3NumB1100020 = round(subset1_Op3_1000B20.Values.sum(), 0) #Number of Buildings 
 P3NumB2100020 = round(subset2_Op3_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
 P3NumB3100020 = round(subset3_Op3_1000B20.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 #%%
-Budget1 = {
-    ("500 Year Event Plan 1"):(Emin500_B20['Economic_loss'],Emin500_B20['Dislocation'],Emin500_B20['Functionality'],P1NumB050020,P1NumB150020,P1NumB250020,P1NumB350020),
-    ("500 Year Event Plan 2"):(Dmin500_B20['Economic_loss'],Dmin500_B20['Dislocation'],Dmin500_B20['Functionality'],P2NumB050020,P2NumB150020,P2NumB250020,P2NumB350020),
-    ("500 Year Event Plan 3"):(Fmin500_B20['Economic_loss'],Fmin500_B20['Dislocation'],Fmin500_B20['Functionality'],P3NumB050020,P3NumB150020,P3NumB250020,P3NumB350020),
+# Budget1 = {
+#     ("500 Year Event Plan 1"):(Emin500_B20['Economic_loss'],Emin500_B20['Dislocation'],Emin500_B20['Functionality'],P1NumB050020,P1NumB150020,P1NumB250020,P1NumB350020),
+#     ("500 Year Event Plan 2"):(Dmin500_B20['Economic_loss'],Dmin500_B20['Dislocation'],Dmin500_B20['Functionality'],P2NumB050020,P2NumB150020,P2NumB250020,P2NumB350020),
+#     ("500 Year Event Plan 3"):(Fmin500_B20['Economic_loss'],Fmin500_B20['Dislocation'],Fmin500_B20['Functionality'],P3NumB050020,P3NumB150020,P3NumB250020,P3NumB350020),
     
-    ("1000 Year Event Plan 1"):(Emin1000_B20['Economic_loss'],Emin1000_B20['Dislocation'],Emin1000_B20['Functionality'],P1NumB0100020,P1NumB1100020,P1NumB2100020,P1NumB3100020),
-    ("1000 Year Event Plan 2"):(Dmin1000_B20['Economic_loss'],Dmin1000_B20['Dislocation'],Dmin1000_B20['Functionality'],P2NumB0100020,P2NumB1100020,P2NumB2100020,P2NumB3100020),
-    ("1000 Year Event Plan 3"):(Fmin1000_B20['Economic_loss'],Fmin1000_B20['Dislocation'],Fmin1000_B20['Functionality'],P3NumB0100020,P3NumB1100020,P3NumB2100020,P3NumB3100020),
-}
-#%%
-Budget1_df = pd.DataFrame(list(Budget1.items()),columns = ['Budget $40,000,000','column2']) 
-new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
-for n,col in enumerate(new_col_list):
-    Budget1_df[col] = Budget1_df['column2'].apply(lambda column2: column2[n])
+#     ("1000 Year Event Plan 1"):(Emin1000_B20['Economic_loss'],Emin1000_B20['Dislocation'],Emin1000_B20['Functionality'],P1NumB0100020,P1NumB1100020,P1NumB2100020,P1NumB3100020),
+#     ("1000 Year Event Plan 2"):(Dmin1000_B20['Economic_loss'],Dmin1000_B20['Dislocation'],Dmin1000_B20['Functionality'],P2NumB0100020,P2NumB1100020,P2NumB2100020,P2NumB3100020),
+#     ("1000 Year Event Plan 3"):(Fmin1000_B20['Economic_loss'],Fmin1000_B20['Dislocation'],Fmin1000_B20['Functionality'],P3NumB0100020,P3NumB1100020,P3NumB2100020,P3NumB3100020),
+# }
 
-Budget1_df = Budget1_df.drop('column2',axis=1)
-Budget1_df = Budget1_df.round(decimals=0)
-Budget1_df.to_csv("Budget1_OptionsTable.csv")
-Budget1_df
+
+# Budget1_df = pd.DataFrame(list(Budget1.items()),columns = ['Budget $40,000,000','column2']) 
+# new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+# for n,col in enumerate(new_col_list):
+#     Budget1_df[col] = Budget1_df['column2'].apply(lambda column2: column2[n])
+
+# Budget1_df = Budget1_df.drop('column2',axis=1)
+# Budget1_df = Budget1_df.round(decimals=0)
+# #Budget1_df.to_csv("Budget1_OptionsTable.csv")
+# Budget1_df
 #%%
 ### PLAN 1
 
@@ -395,24 +403,24 @@ P3NumB1100040 = round(subset1_Op3_1000B40.Values.sum(), 0) #Number of Buildings 
 P3NumB2100040 = round(subset2_Op3_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
 P3NumB3100040 = round(subset3_Op3_1000B40.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
-Budget2 = {
-    ("500 Year Event Plan 1"):(Emin500_B40['Economic_loss'],Emin500_B40['Dislocation'],Emin500_B40['Functionality'],P1NumB050040,P1NumB150040,P1NumB250040,P1NumB350040),
-    ("500 Year Event Plan 2"):(Dmin500_B40['Economic_loss'],Dmin500_B40['Dislocation'],Dmin500_B40['Functionality'],P2NumB050040,P2NumB150040,P2NumB250040,P2NumB350040),
-    ("500 Year Event Plan 3"):(Fmin500_B40['Economic_loss'],Fmin500_B40['Dislocation'],Fmin500_B40['Functionality'],P3NumB050040,P3NumB150040,P3NumB250040,P3NumB350040),
+# Budget2 = {
+#     ("500 Year Event Plan 1"):(Emin500_B40['Economic_loss'],Emin500_B40['Dislocation'],Emin500_B40['Functionality'],P1NumB050040,P1NumB150040,P1NumB250040,P1NumB350040),
+#     ("500 Year Event Plan 2"):(Dmin500_B40['Economic_loss'],Dmin500_B40['Dislocation'],Dmin500_B40['Functionality'],P2NumB050040,P2NumB150040,P2NumB250040,P2NumB350040),
+#     ("500 Year Event Plan 3"):(Fmin500_B40['Economic_loss'],Fmin500_B40['Dislocation'],Fmin500_B40['Functionality'],P3NumB050040,P3NumB150040,P3NumB250040,P3NumB350040),
     
-    ("1000 Year Event Plan 1"):(Emin1000_B40['Economic_loss'],Emin1000_B40['Dislocation'],Emin1000_B40['Functionality'],P1NumB0100040,P1NumB1100040,P1NumB2100040,P1NumB3100040),
-    ("1000 Year Event Plan 2"):(Dmin1000_B40['Economic_loss'],Dmin1000_B40['Dislocation'],Dmin1000_B40['Functionality'],P2NumB0100040,P2NumB1100040,P2NumB2100040,P2NumB3100040),
-    ("1000 Year Event Plan 3"):(Fmin1000_B40['Economic_loss'],Fmin1000_B40['Dislocation'],Fmin1000_B40['Functionality'],P3NumB0100040,P3NumB1100040,P3NumB2100040,P3NumB3100040),
-}
-Budget2_df = pd.DataFrame(list(Budget2.items()),columns = ['Budget $80,000,000','column2']) 
-new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
-for n,col in enumerate(new_col_list):
-    Budget2_df[col] = Budget2_df['column2'].apply(lambda column2: column2[n])
+#     ("1000 Year Event Plan 1"):(Emin1000_B40['Economic_loss'],Emin1000_B40['Dislocation'],Emin1000_B40['Functionality'],P1NumB0100040,P1NumB1100040,P1NumB2100040,P1NumB3100040),
+#     ("1000 Year Event Plan 2"):(Dmin1000_B40['Economic_loss'],Dmin1000_B40['Dislocation'],Dmin1000_B40['Functionality'],P2NumB0100040,P2NumB1100040,P2NumB2100040,P2NumB3100040),
+#     ("1000 Year Event Plan 3"):(Fmin1000_B40['Economic_loss'],Fmin1000_B40['Dislocation'],Fmin1000_B40['Functionality'],P3NumB0100040,P3NumB1100040,P3NumB2100040,P3NumB3100040),
+# }
+# Budget2_df = pd.DataFrame(list(Budget2.items()),columns = ['Budget $80,000,000','column2']) 
+# new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+# for n,col in enumerate(new_col_list):
+#     Budget2_df[col] = Budget2_df['column2'].apply(lambda column2: column2[n])
 
-Budget2_df = Budget2_df.drop('column2',axis=1)
-Budget2_df = Budget2_df.round(decimals=0)
-Budget2_df.to_csv("Budget2_OptionsTable.csv")
-Budget2_df
+# Budget2_df = Budget2_df.drop('column2',axis=1)
+# Budget2_df = Budget2_df.round(decimals=0)
+# Budget2_df.to_csv("Budget2_OptionsTable.csv")
+# Budget2_df
 
 #%%
 ### PLAN 1
@@ -472,26 +480,124 @@ P3NumB1100060 = round(subset1_Op3_1000B60.Values.sum(), 0) #Number of Buildings 
 P3NumB2100060 = round(subset2_Op3_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 2 for 1000 yr event
 P3NumB3100060 = round(subset3_Op3_1000B60.Values.sum(), 0) #Number of Buildings in Retrofit Op 3 for 1000 yr event
 
-Budget3 = {
-    ("500 Year Event Plan 1"):(Emin500_B60['Economic_loss'],Emin500_B60['Dislocation'],Emin500_B60['Functionality'],P1NumB050060,P1NumB150060,P1NumB250060,P1NumB350060),
-    ("500 Year Event Plan 2"):(Dmin500_B60['Economic_loss'],Dmin500_B60['Dislocation'],Dmin500_B60['Functionality'],P2NumB050060,P2NumB150060,P2NumB250060,P2NumB350060),
-    ("500 Year Event Plan 3"):(Fmin500_B60['Economic_loss'],Fmin500_B60['Dislocation'],Fmin500_B60['Functionality'],P3NumB050060,P3NumB150060,P3NumB250060,P3NumB350060),
+# Budget3 = {
+#     ("500 Year Event Plan 1"):(Emin500_B60['Economic_loss'],Emin500_B60['Dislocation'],Emin500_B60['Functionality'],P1NumB050060,P1NumB150060,P1NumB250060,P1NumB350060),
+#     ("500 Year Event Plan 2"):(Dmin500_B60['Economic_loss'],Dmin500_B60['Dislocation'],Dmin500_B60['Functionality'],P2NumB050060,P2NumB150060,P2NumB250060,P2NumB350060),
+#     ("500 Year Event Plan 3"):(Fmin500_B60['Economic_loss'],Fmin500_B60['Dislocation'],Fmin500_B60['Functionality'],P3NumB050060,P3NumB150060,P3NumB250060,P3NumB350060),
     
-    ("1000 Year Event Plan 1"):(Emin1000_B60['Economic_loss'],Emin1000_B60['Dislocation'],Emin1000_B60['Functionality'],P1NumB0100060,P1NumB1100060,P1NumB2100060,P1NumB3100060),
-    ("1000 Year Event Plan 2"):(Dmin1000_B60['Economic_loss'],Dmin1000_B60['Dislocation'],Dmin1000_B60['Functionality'],P2NumB0100060,P2NumB1100060,P2NumB2100060,P2NumB3100060),
-    ("1000 Year Event Plan 3"):(Fmin1000_B60['Economic_loss'],Fmin1000_B60['Dislocation'],Fmin1000_B60['Functionality'],P3NumB0100060,P3NumB1100060,P3NumB2100060,P3NumB3100060),
-}
+#     ("1000 Year Event Plan 1"):(Emin1000_B60['Economic_loss'],Emin1000_B60['Dislocation'],Emin1000_B60['Functionality'],P1NumB0100060,P1NumB1100060,P1NumB2100060,P1NumB3100060),
+#     ("1000 Year Event Plan 2"):(Dmin1000_B60['Economic_loss'],Dmin1000_B60['Dislocation'],Dmin1000_B60['Functionality'],P2NumB0100060,P2NumB1100060,P2NumB2100060,P2NumB3100060),
+#     ("1000 Year Event Plan 3"):(Fmin1000_B60['Economic_loss'],Fmin1000_B60['Dislocation'],Fmin1000_B60['Functionality'],P3NumB0100060,P3NumB1100060,P3NumB2100060,P3NumB3100060),
+# }
 
-Budget3_df = pd.DataFrame(list(Budget3.items()),columns = ['Budget $120,000,000','column2']) 
-new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
-for n,col in enumerate(new_col_list):
-    Budget3_df[col] = Budget3_df['column2'].apply(lambda column2: column2[n])
+# Budget3_df = pd.DataFrame(list(Budget3.items()),columns = ['Budget $120,000,000','column2']) 
+# new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+# for n,col in enumerate(new_col_list):
+#     Budget3_df[col] = Budget3_df['column2'].apply(lambda column2: column2[n])
 
-Budget3_df = Budget3_df.drop('column2',axis=1)
-Budget3_df = Budget3_df.round(decimals=0)
-Budget3_df.to_csv("Budget3_OptionsTable.csv")
-Budget3_df
+# Budget3_df = Budget3_df.drop('column2',axis=1)
+# Budget3_df = Budget3_df.round(decimals=0)+
 
+# Budget3_df.to_csv("Budget3_OptionsTable.csv")
+# Budget3_df
+
+
+
+
+
+#%%
+def getData(Econ,Dis,Func,Year,Budget):
+    if Budget == '20% Budget Option':
+        if Year  == '500 Years':
+            y500_B20 = yr500B20[(yr500B20.Dislocation == Dis) & (yr500B20.Functionality == Func) & (yr500B20.Economic_loss == Econ)].iloc[0]
+            Budget1 = {
+                ("500 Year Event Plan 1"):(y500_B20['Economic_loss'],y500_B20['Dislocation'],y500_B20['Functionality'],P1NumB050020,P1NumB150020,P1NumB250020,P1NumB350020)
+            }
+        else:
+            y1000_B20 = yr1000B20[(yr1000B20.Dislocation == Dis) & (yr1000B20.Functionality == Func) & (yr1000B20.Economic_loss == Econ)].iloc[0]
+            Budget1 = {
+                ("1000 Year Event Plan 1"):(y1000_B20['Economic_loss'],y1000_B20['Dislocation'],y1000_B20['Functionality'],P1NumB0100020,P1NumB1100020,P1NumB2100020,P1NumB3100020)
+            }
+            
+        Budget1_df = pd.DataFrame(list(Budget1.items()),columns = ['Budget $40,000,000','column2']) 
+        new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+        for n,col in enumerate(new_col_list):
+            Budget1_df[col] = Budget1_df['column2'].apply(lambda column2: column2[n])
+        
+        Budget1_df = Budget1_df.drop('column2',axis=1)
+        Budget1_df = Budget1_df.round(decimals=0)
+        df = Budget1_df  
+    elif Budget == '40% Budget Option':
+        if Year  == '500 Years':
+            y500_B40 = yr500B40[(yr500B40.Dislocation == Dis) & (yr500B40.Functionality == Func) & (yr500B40.Economic_loss == Econ)].iloc[0]
+            Budget1 = {
+                ("500 Year Event Plan 1"):(y500_B40['Economic_loss'],y500_B40['Dislocation'],y500_B40['Functionality'],P1NumB050040,P1NumB150040,P1NumB250040,P1NumB350040)
+            }
+        else:
+            y1000_B40 = yr1000B40[(yr1000B40.Dislocation == Dis) & (yr1000B40.Functionality == Func) & (yr1000B40.Economic_loss == Econ)].iloc[0]
+            Budget1 = {
+                ("1000 Year Event Plan 1"):(y1000_B40['Economic_loss'],y1000_B40['Dislocation'],y1000_B40['Functionality'],P1NumB0100020,P1NumB1100020,P1NumB2100020,P1NumB3100020)
+            }
+            
+        Budget1_df = pd.DataFrame(list(Budget1.items()),columns = ['Budget $40,000,000','column2']) 
+        new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+        for n,col in enumerate(new_col_list):
+            Budget1_df[col] = Budget1_df['column2'].apply(lambda column2: column2[n])
+        
+        Budget1_df = Budget1_df.drop('column2',axis=1)
+        Budget1_df = Budget1_df.round(decimals=0)
+        df = Budget1_df  
+    else:
+        if Year  == '500 Years':
+            y500_B60 = yr500B60[(yr500B60.Dislocation == Dis) & (yr500B60.Functionality == Func) & (yr500B60.Economic_loss == Econ)].iloc[0]
+            Budget1 = {
+                ("500 Year Event Plan 1"):(y500_B60['Economic_loss'],y500_B60['Dislocation'],y500_B60['Functionality'],P1NumB050040,P1NumB150040,P1NumB250040,P1NumB350040)
+            }
+        else:
+            y1000_B60 = yr1000B60[(yr1000B60.Dislocation == Dis) & (yr1000B60.Functionality == Func) & (yr1000B60.Economic_loss == Econ)].iloc[0]
+            Budget1 = {
+                ("1000 Year Event Plan 1"):(y1000_B60['Economic_loss'],y1000_B60['Dislocation'],y1000_B60['Functionality'],P1NumB0100020,P1NumB1100020,P1NumB2100020,P1NumB3100020)
+            }
+            
+        Budget1_df = pd.DataFrame(list(Budget1.items()),columns = ['Budget $40,000,000','column2']) 
+        new_col_list = ['Economic_Loss','Population_Dislocation','Repair_Time (Days)','Number of Buildings not Retrofitted','Number of Buildings Retrofitted to Option 1','Number of Buildings Retrofitted to Option 2','Number of Buildings Retrofitted to Option 3']
+        for n,col in enumerate(new_col_list):
+            Budget1_df[col] = Budget1_df['column2'].apply(lambda column2: column2[n])
+        
+        Budget1_df = Budget1_df.drop('column2',axis=1)
+        Budget1_df = Budget1_df.round(decimals=0)
+        df = Budget1_df  
+        
+    return df
+        
+        
+   
+
+
+#%%
+
+#t1 = yr500B20.loc[(yr500B20['Dislocation'] == 2338.789178) & (yr500B20["Functionality"] == 166.5928389)]
+
+
+#t2 = yr1000B20[(yr1000B20.Dislocation == 2338.789178) & (yr1000B20.Functionality == 166.5928389) & (yr1000B20.Economic_loss == 197508874.2)].iloc[0]
+#yr500B20 
+
+#t1
+
+#t2
+
+
+
+#y500_B20 = yr500B20[(yr500B20.Dislocation == Dis) & (yr500B20.Functionality == Func) & (yr500B20.Functionality == Econ)].iloc[0]
+#%%
+
+ 
+df = getData( 362744062.4, 2765.152097, 384.7332042, "1000 Years","20% Budget Option")
+
+df
+
+
+#df = getData(197508874.2, 2338.789178, 166.5928389, "500 Years","20% Budget Option")
 
 
 
@@ -499,50 +605,50 @@ Budget3_df
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 #%%
-fig,ax = plt.subplots(figsize=(15,7))
-sc1 = ax.scatter(loss_500optimal60,dislocation_500optimal60,c=func_500optimal60,cmap =plt.cm.get_cmap('Blues', 10))
-fig.colorbar(sc1,shrink=0.5, aspect=7,label = 'Avg Repair Time with $120M budget')
-#legend1 = ax.legend(*sc1.legend_elements(),loc="upper right")
-#ax.add_artist(legend1)
+# fig,ax = plt.subplots(figsize=(15,7))
+# sc1 = ax.scatter(loss_500optimal60,dislocation_500optimal60,c=func_500optimal60,cmap =plt.cm.get_cmap('Blues', 10))
+# fig.colorbar(sc1,shrink=0.5, aspect=7,label = 'Avg Repair Time with $120M budget')
+# #legend1 = ax.legend(*sc1.legend_elements(),loc="upper right")
+# #ax.add_artist(legend1)
 
-sc2 = ax.scatter(loss_500optimal40,dislocation_500optimal40,c=func_500optimal40,cmap =plt.cm.get_cmap('Greens', 10))
-fig.colorbar(sc2,shrink=0.5, aspect=7,label = "Avg Repair Time with $80M budget")
-#legend2 = ax.legend(*sc2.legend_elements(),loc="lower right")
-#ax.add_artist(legend2)
+# sc2 = ax.scatter(loss_500optimal40,dislocation_500optimal40,c=func_500optimal40,cmap =plt.cm.get_cmap('Greens', 10))
+# fig.colorbar(sc2,shrink=0.5, aspect=7,label = "Avg Repair Time with $80M budget")
+# #legend2 = ax.legend(*sc2.legend_elements(),loc="lower right")
+# #ax.add_artist(legend2)
 
-sc3 = ax.scatter(loss_500optimal20,dislocation_500optimal20,c=func_500optimal20,cmap =plt.cm.get_cmap('Reds', 10))
-#v3 = np.linspace(min(loss_optimal20), max(loss_optimal20), 10, endpoint=True)
-fig.colorbar(sc3,shrink=0.5, aspect=7,label = "Avg Repair Time with $40M budget")
-#legend3 = ax.legend(*sc3.legend_elements(),loc="lower left")
-#ax.add_artist(legend3)
+# sc3 = ax.scatter(loss_500optimal20,dislocation_500optimal20,c=func_500optimal20,cmap =plt.cm.get_cmap('Reds', 10))
+# #v3 = np.linspace(min(loss_optimal20), max(loss_optimal20), 10, endpoint=True)
+# fig.colorbar(sc3,shrink=0.5, aspect=7,label = "Avg Repair Time with $40M budget")
+# #legend3 = ax.legend(*sc3.legend_elements(),loc="lower left")
+# #ax.add_artist(legend3)
 
-ax.set_xlabel("Economic Loss $",fontsize = 15)
-ax.xaxis.set_major_formatter(formatter)
-ax.set_ylabel("Population Dislocation",fontsize = 15)
-ax.set_title("Pareto frontier: Economic Loss in $ vs. Dislocation of different budgets for 500 year event ",fontsize = 15)
-fig.tight_layout()
+# ax.set_xlabel("Economic Loss $",fontsize = 15)
+# ax.xaxis.set_major_formatter(formatter)
+# ax.set_ylabel("Population Dislocation",fontsize = 15)
+# ax.set_title("Pareto frontier: Economic Loss in $ vs. Dislocation of different budgets for 500 year event ",fontsize = 15)
+# fig.tight_layout()
 
-plt.grid()
-Budget_20 = mpatches.Patch(color='red', label='$40M budget')
-Budget_40 = mpatches.Patch(color='green', label='$80M budget')
-Budget_60 = mpatches.Patch(color='steelblue', label='$120M budget')
+# plt.grid()
+# Budget_20 = mpatches.Patch(color='red', label='$40M budget')
+# Budget_40 = mpatches.Patch(color='green', label='$80M budget')
+# Budget_60 = mpatches.Patch(color='steelblue', label='$120M budget')
 
-p1 = plt.scatter(Emin500_B20['Economic_loss'],Emin500_B20['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
-p2 = plt.scatter(Dmin500_B20['Economic_loss'],Dmin500_B20['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
-p3 = plt.scatter(Fmin500_B20['Economic_loss'],Fmin500_B20['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
-p1 = plt.scatter(Emin500_B40['Economic_loss'],Emin500_B40['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
-p2 = plt.scatter(Dmin500_B40['Economic_loss'],Dmin500_B40['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
-p3 = plt.scatter(Fmin500_B40['Economic_loss'],Fmin500_B40['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
-p1 = plt.scatter(Emin500_B60['Economic_loss'],Emin500_B60['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
-p2 = plt.scatter(Dmin500_B60['Economic_loss'],Dmin500_B60['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
-p3 = plt.scatter(Fmin500_B60['Economic_loss'],Fmin500_B60['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
+# p1 = plt.scatter(Emin500_B20['Economic_loss'],Emin500_B20['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
+# p2 = plt.scatter(Dmin500_B20['Economic_loss'],Dmin500_B20['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
+# p3 = plt.scatter(Fmin500_B20['Economic_loss'],Fmin500_B20['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
+# p1 = plt.scatter(Emin500_B40['Economic_loss'],Emin500_B40['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
+# p2 = plt.scatter(Dmin500_B40['Economic_loss'],Dmin500_B40['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
+# p3 = plt.scatter(Fmin500_B40['Economic_loss'],Fmin500_B40['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
+# p1 = plt.scatter(Emin500_B60['Economic_loss'],Emin500_B60['Dislocation'],color = 'red',s = 150,marker ='h',alpha=0.6)
+# p2 = plt.scatter(Dmin500_B60['Economic_loss'],Dmin500_B60['Dislocation'],color = 'cyan',s = 200,marker ='s',alpha=0.6)
+# p3 = plt.scatter(Fmin500_B60['Economic_loss'],Fmin500_B60['Dislocation'],color = 'purple',s = 150,marker ='D',alpha=0.6)
 
-# Create the second legend and add the artist manually.
-from matplotlib.legend import Legend
-leg = plt.legend((p1,p2,p3),('Plan 1','Plan 2', 'Plan 3'),loc="upper left",fontsize = 15)
-ax.add_artist(leg);
+# # Create the second legend and add the artist manually.
+# from matplotlib.legend import Legend
+# leg = plt.legend((p1,p2,p3),('Plan 1','Plan 2', 'Plan 3'),loc="upper left",fontsize = 15)
+# ax.add_artist(leg);
 
-plt.legend(handles=[Budget_20,Budget_40,Budget_60])
+# plt.legend(handles=[Budget_20,Budget_40,Budget_60])
 
 #%%
 
