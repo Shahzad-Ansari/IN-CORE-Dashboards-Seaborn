@@ -34,11 +34,6 @@ external_stylesheets = [
 app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
-#(loss_500optimal60,dislocation_500optimal60,c=func_500optimal60,cmap =plt.cm.get_cmap('Blues', 10))
-
-
-
-
 all_options = {
     '500 Years': ['20% Budget Option', '40% Budget Option','60% Budget Option'],
     '1000 Years': ['20% Budget Option', '40% Budget Option','60% Budget Option']
@@ -77,7 +72,6 @@ img = dbc.Card(
             
         ]
     )
-
 
 jumbotron = html.Div(
     dbc.Container(
@@ -150,9 +144,6 @@ other = html.Div(
         ]),  
     ])
 )
-
-
-
 
 app.layout = dbc.Container([
     jumbotron,
@@ -386,14 +377,9 @@ def setbudgetDf(year,budget,clickData):
         
     return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
         
-        
-    
 @app.callback(
     Output('result','children'),
     Input('graph', 'clickData'))
-# =============================================================================
-#   Block 11: Callback Function
-# =============================================================================
 def show_coords(clickData):
 
         if clickData is None: 
@@ -407,10 +393,7 @@ def show_coords(clickData):
             print(f'xcoord is {xCoord} and ycoord is {yCoord} and zcord is {zCoord}',flush=True)
            
             return "xcoord is {} and ycoord is {} and zcord is {}".format(xCoord,yCoord,zCoord)
-    
-
-    
-    
+      
 if __name__ == '__main__':
     app.run_server(debug=True)
 
