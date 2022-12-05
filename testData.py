@@ -18,15 +18,26 @@ cLong = -96.7929680
 
 def randomPreato():
     
-    sol_id = list(range(1,51))
+    SolId = list(range(1,51))
     x = random.sample(range(0, 300), 50)
     y = random.sample(range(0, 1000), 50)
     z = random.sample(range(0, 3500), 50)
     
-    df = pd.DataFrame(list(zip(sol_id,x,y,z)),columns = ['id','x','y','z'])
-    df.set_index('id')
+    df = pd.DataFrame(list(zip(SolId,x,y,z)),columns = ['SolId','x','y','z'])
+    df = df.set_index('SolId')
     return df
    
+# test = randomPreato()
+
+# df = test
+
+# mask = (df.x > 122)
+
+# df= df[mask]
+# df
+
+
+
 def randomNoSolution():
     
     
@@ -37,7 +48,6 @@ def randomNoSolution():
     return [x,y,z]
 
 
-t = randomNoSolution()
 
 def randomLatLong():
     minLong = -96.51695
@@ -71,12 +81,3 @@ def getBuildingUpgrades(coords):
 def getSolution(solutionList,sol_Id):
     return solutionList[sol_Id+1]
     
-
-
-test = randomPreato()
-
-test['x'].max()
-
-x = 4
-
-print(str(x))
