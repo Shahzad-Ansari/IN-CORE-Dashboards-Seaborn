@@ -173,7 +173,6 @@ if dim ==2:
             ]),  
         ])
     )
-
     
 if dim == 3:
     ThreeContainer = html.Div(
@@ -233,7 +232,6 @@ if dim == 3:
             ]),  
         ])
     )
-
 
 if dim == 3:
     MainContainer = ThreeContainer
@@ -376,23 +374,6 @@ def show_coords_2d(clickData):
             
             
             
-                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-# @app.callback(
-#         Output('noSolutionDf','children'),
-#         ,
-#     )
-# def setmetricsNoSol(year):
-#         df = noSolution
-#         return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
     
     
     
