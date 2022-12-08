@@ -15,7 +15,7 @@ import plotly.express as px
 
 # get test data. 
 
-dim = 2
+dim = 3
 xlab = "Cost or repair"
 ylab = "Time to repair"
 zlab = "Population Dislocation"
@@ -233,14 +233,43 @@ if dim == 3:
         ])
     )
 
+maps = html.Div(
+        dbc.Container([
+            
+            
+                dbc.Row([
+                    dbc.Col(
+                       dcc.Graph(id='map'),
+                       width = {"size": 6, "offset": -5},
+                    ),
+                ])
+
+            ])
+    
+    )
 if dim == 3:
     MainContainer = ThreeContainer
 else:
     MainContainer = TwoContainer
 
 app.layout = dbc.Container([
-    jumbotron,
-    MainContainer 
+    dbc.Row([
+        jumbotron
+        ]),
+    
+    dbc.Row(
+        [
+            dbc.Col([
+                MainContainer,
+            maps
+            ]
+                
+            ),
+            
+            dbc.Col(html.Div("One of three columns")),
+        ]
+    )
+
 ],style={"overflowY":"scroll",'height':"1500px"},fluid=True)
 
 
@@ -372,7 +401,110 @@ def show_coords_2d(clickData):
            
             return "Selected : [{},{}]".format(xCoord,yCoord)
             
-            
+@app.callback(
+    Output('map','figure'),
+    Input('graph', 'clickData'))
+# =============================================================================
+#   Block 11: Callback Function
+# =============================================================================
+def update_map(clickData):
+    # insert your own mapbox token
+    mapbox_access_token = 'pk.eyJ1IjoicHJvbWFjaG9zIiwiYSI6ImNsNG5hYjkyYjFhZXYzanA0cTVwNjA3dm4ifQ.pcuIpf5FRuFB7SxT8k05Xw'
+    
+# =============================================================================
+#     P1. Render Map when no point is clicked
+# =============================================================================
+    # If No point has been clicked
+    #if clickData is None:
+        #make a map
+    maps = go.Figure(go.Scattermapbox(
+        lat=coords['lat'], # set lat and long
+        lon=coords['long'],
+        mode='markers', 
+        marker =({'size':5.5}) # make markers size variable 
+    ))
+
+    # set up map layout
+    maps.update_layout(
+        autosize=True, # Autosize
+        hovermode='closest', # Show info on the closest marker
+        showlegend=True, # show legend of colors
+        mapbox=dict(
+            accesstoken=mapbox_access_token, # token
+            bearing=0, # starting facing direction
+            # starting location
+            center=dict(
+                lat=td.cLat,
+                lon=td.cLong
+            ),
+            #angle and zoom
+            pitch=0,
+            zoom=12
+        ),
+        #height and width
+        width=1000,
+        height=1000
+    )
+    return maps
+    
+# =============================================================================
+#     P2. Render map with click data
+# =============================================================================
+    # if a point is clicked
+    # else: 
+    #     # get the x and y coords from the json obj
+    #     xCoord = clickData['points'][0]['x'] 
+    #     yCoord = clickData['points'][0]["y"]
+    #     zCoord = clickData['points'][0]["z"]
+        
+    #     #add flush = True or it wont display the message.
+    #     print(f'xcoord is {xCoord} and ycoord is {yCoord} and zcord is {zCoord}',flush=True)
+        
+    #     #get the solution ID 
+    #     solutionRow = solution2.loc[(solution2['Economic Loss'] == xCoord) & (solution2['Functionality'] == yCoord) & (solution2['Dislocation'] == zCoord)].values[0]
+    #     solutionID = int(solutionRow[0])        
+        
+    #     print(f'solution id is {solutionID}',flush=True)
+    #     # get the rows that coorespond to that solution ID
+    #     sample = modeDF.loc[(modeDF['Solution ID'] == solutionID)]
+        
+    #     # render the map with the new solution data        
+    #     maps = go.Figure(go.Scattermapbox(
+    #         lat=sample['y'],
+    #         lon=sample['x'],
+    #         mode='markers', 
+    #         marker =({'color':sample['color'],'size':sample['count']})
+
+    #     ))
+        
+# =============================================================================
+#   P3. Map Layout
+# =============================================================================
+        
+        # set up map layout
+        # maps.update_layout(
+        #     autosize=True, # Autosize
+        #     hovermode='closest', # Show info on the closest marker
+        #     showlegend=True, # show legend of colors
+        #     mapbox=dict(
+        #         accesstoken=mapbox_access_token, # token
+        #         bearing=0, # starting facing direction
+        #         # starting location
+        #         center=dict(
+        #             lat=37.0433,
+        #             lon=-94.51306
+        #         ),
+        #         #angle and zoom
+        #         pitch=0,
+        #         zoom=12
+        #     ),
+        #     #height and width
+        #     width=2000,
+        #     height=1000
+        # )
+
+        # return maps
+      
             
     
     

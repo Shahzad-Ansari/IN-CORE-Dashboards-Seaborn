@@ -70,7 +70,7 @@ def randomLatLong():
     lats = []
     longs = []
     
-    for i in range(100):
+    for i in range(500):
         lats.append(np.random.uniform(minLat,maxLat))
         longs.append(np.random.uniform(minLong,maxLong))
    
