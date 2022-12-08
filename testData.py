@@ -16,37 +16,47 @@ cLong = -96.7929680
 
 
 
-def randomPreato():
+def randomPreato(dims):
     
     SolId = list(range(1,51))
+    
     x = random.sample(range(0, 300), 50)
     y = random.sample(range(0, 1000), 50)
-    z = random.sample(range(0, 3500), 50)
-    
-    df = pd.DataFrame(list(zip(SolId,x,y,z)),columns = ['SolId','x','y','z'])
-    df = df.set_index('SolId')
+    if dims == 3:
+        z = random.sample(range(0, 3500), 50)
+        df = pd.DataFrame(list(zip(SolId,x,y,z)),columns = ['SolId','x','y','z'])
+    else:
+        df = pd.DataFrame(list(zip(SolId,x,y)),columns = ['SolId','x','y'])
+        
+   
+   
     return df
    
-# test = randomPreato()
-
-# df = test
-
-# mask = (df.x > 122)
-
-# df= df[mask]
-# df
 
 
-
-def randomNoSolution():
+def randomNoSolution(dims):
     
     
     x = random.randint(500, 2000)
     y = random.randint(300, 1000)
     z = random.randint(650, 3500)
+    b = random.randint(0,100)
     
-    return [x,y,z]
-
+    df = pd.DataFrame()
+    
+    if dims == 3:   
+        df['x'] = [x]
+        df['y'] = [y]
+        df['z'] = [z]
+        df['b'] = [b]
+    else:
+        df['x'] = [x]
+        df['y'] = [y]
+        df['b'] = [b]
+    
+    
+    
+    return df
 
 
 def randomLatLong():
