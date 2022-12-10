@@ -9,7 +9,7 @@ import random
 import pandas as pd
 import random 
 import numpy as np
-random.seed(10)
+
 
 cLat = 32.779193
 cLong = -96.7929680
@@ -18,7 +18,7 @@ cLong = -96.7929680
 
 def randomPreato(dims):
     
-    SolId = list(range(1,51))
+    SolId = list(range(0,50))
     
     x = random.sample(range(0, 300), 50)
     y = random.sample(range(0, 1000), 50)
@@ -58,7 +58,7 @@ def randomNoSolution(dims):
     
     return df
 
-
+numOfBuildings = 500
 def randomLatLong():
     minLong = -96.51695
     maxLong = -97.033364
@@ -70,24 +70,27 @@ def randomLatLong():
     lats = []
     longs = []
     
-    for i in range(500):
+    for i in range(numOfBuildings):
         lats.append(np.random.uniform(minLat,maxLat))
         longs.append(np.random.uniform(minLong,maxLong))
-   
+    
+    
     return pd.DataFrame(list(zip(lats,longs)),columns = ['lat','long'])
 
-def getBuildingUpgrades(coords):
+
+
+
+coords = randomLatLong()
+solutionList = []
+for i in range (50):
+    df = coords.copy(deep = True)
+    x = list(np.random.randint(low = 0,high=4,size=numOfBuildings))
+    df['upGrade'] = x
+    solutionList.append(df)
     
-    solutionList = []
     
-    for i in range(50):
-        df = pd.DataFrame()
-        df = coords
-        df['upGrade'] = np.random.randint(0, 3, df.shape[0])
-        solutionList.append(df)
+
     
-    return solutionList
-      
 def getSolution(solutionList,sol_Id):
-    return solutionList[sol_Id+1]
+    return solutionList[sol_Id]
     
