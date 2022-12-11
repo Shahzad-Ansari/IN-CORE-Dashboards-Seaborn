@@ -14,6 +14,7 @@ import plotly.express as px
 from dash import dash_table
 import pandas as pd
 import statistics
+import dash_table as dt
 
 
 # get test data. 
@@ -36,7 +37,7 @@ coords = td.coords
 
 solutions = td.solutionList
    
-levels = ['grey','blue','green','red']
+
 
 if dim == 3:
 
@@ -112,7 +113,6 @@ else:
 
 # solution['color'] = color
 
-# solution2 = solution[solution['color'].isin(levels)]
 # red = solution.loc[solution['color'] == 'red']
 
 #--------------------------
@@ -157,23 +157,6 @@ card = dbc.Card(
     },
 )
 
-
-button = html.Div(
-    [
-     dbc.Row(
-         dbc.Row(         dbc.Col(
-                          dbc.Button(
-                                  "Download Data", id="download button", className="me-2", n_clicks=0
-                              ),
-                           width={"size": 3, "order": 1, "offset": 5},
-                           align="end"
-                      ))
-
-         )  
-    ]
-)
-
-
 img = dbc.Card(
         [
             dbc.CardImg(
@@ -200,7 +183,7 @@ jumbotron = html.Div(
             html.Br(),
             html.Br(),
             html.P(
-                "Data visualization dashboard for general data sets. Model created by general visualizations created by Shahzad Ansari",
+                "Data visualization dashboard for general data sets. Model created by general visualizations created by Shahzad Ansari tt",
                 className="lead",
             ),
             html.Hr(className="my-2"),
@@ -365,38 +348,15 @@ else:
 
 
 
+
 mainDisplay = dbc.Row(
-    [   
+    [
         dbc.Col([
-            
-            
-            MainContainer
-            
-            
+            MainContainer,
+            maps
         ]),
         dbc.Col([
-                        maps,
-                        
-                        dbc.Row([
-                            dbc.Col(
-                                
-                                    button,
-                                    width={"size": 3, "order": 1, "offset": 0}
-                                    
-                                
-                                ),
-                            dbc.Col(
-                                    dcc.Checklist(
-                                    id = 'checklist',
-                                    options=levels,
-                                    value=levels,
-                                    inline = True
-                                ),
-                            width={"size": 3, "order": 2, "offset": 6}
-                            ),
-                            
-                        ]),
-                        
+                   
                         html.H6("Statistics over solution set"),
                         dbc.Table.from_dataframe(stats_df,striped=True,bordered=True,hover=True),
                     
@@ -413,6 +373,13 @@ mainDisplay = dbc.Row(
                  ]),
     ]
 )
+
+
+right_col = dbc.Row([
+    
+    
+    
+    ])
 
 app.layout = dbc.Container([
     dbc.Row([
@@ -531,9 +498,9 @@ def show_coords_3d(clickData):
             type1 = type(xCoord)
             
             #add flush = True or it wont display the message.
-            print(f'Selected [{xCoord},{yCoord}]',flush=True)
+            print(f'Selected [{xCoord},{yCoord},{zCoord}]',flush=True)
            
-            return "Selected : [{},{},{}]".format(xCoord,yCoord,zCoord,type1)
+            return "Selected : [{},{},{}, type is :{}]".format(xCoord,yCoord,zCoord,type1)
         
         
 @app.callback(
@@ -555,14 +522,14 @@ def show_coords_2d(clickData):
             
 @app.callback(
     Output('map','figure'),
-    [Input('graph', 'clickData'),
-    Input('checklist', 'value')])
+    Input('graph', 'clickData'))
 # =============================================================================
 #   Block 11: Callback Function
 # =============================================================================
-def update_map(clickData,checklist):
+def update_map(clickData):
     # insert your own mapbox token
     mapbox_access_token = 'pk.eyJ1IjoicHJvbWFjaG9zIiwiYSI6ImNsNG5hYjkyYjFhZXYzanA0cTVwNjA3dm4ifQ.pcuIpf5FRuFB7SxT8k05Xw'
+    
 # =============================================================================
 #     P1. Render Map when no point is clicked
 # =============================================================================
@@ -628,28 +595,25 @@ def update_map(clickData,checklist):
 
         solution['color'] = color
         
-        solution2 = solution[solution['color'].isin(checklist)]
-        
         #print(f'solution id is {solId}',flush=True)
         # get the rows that coorespond to that solution ID
         
         #maps = go.Figure()
-        # red = solution.loc[solution['color'] == 'red']
-        # blue = solution.loc[solution['color'] == 'blue']
-        # green = solution.loc[solution['color'] == 'green']
-        # grey = solution.loc[solution['color'] == 'grey']
+        red = solution.loc[solution['color'] == 'red']
+        blue = solution.loc[solution['color'] == 'blue']
+        green = solution.loc[solution['color'] == 'green']
+        grey = solution.loc[solution['color'] == 'grey']
     
-        #display(solution2)
       
         maps = go.Figure(go.Scattermapbox(
-            lat=solution2['lat'],
-            lon=solution2['long'],
+            lat=solution['lat'],
+            lon=solution['long'],
             mode='markers', 
             #marker =({'color':solution['color']},{'size':5.5})
             
             marker=dict(
                         size=12,
-                        color=solution2['color'], #set color equal to a variable
+                        color=solution['color'], #set color equal to a variable
                         colorscale='Viridis', # one of plotly colorscales
                         showscale=True
                     )
@@ -758,7 +722,6 @@ def update_map_2d(clickData):
                 color.append('red')
 
         solution['color'] = color
-        solution2 = solution[solution['color'].isin(checklist)]
         
         #print(f'solution id is {solId}',flush=True)
         # get the rows that coorespond to that solution ID
@@ -766,14 +729,14 @@ def update_map_2d(clickData):
         
         # render the map with the new solution data        
         maps = go.Figure(go.Scattermapbox(
-            lat=solution2['lat'],
-            lon=solution2['long'],
+            lat=solution['lat'],
+            lon=solution['long'],
             mode='markers', 
             #marker =({'color':solution['color']},{'size':5.5})
             
             marker=dict(
                         size=12,
-                        color=solution2['color'], #set color equal to a variable
+                        color=solution['color'], #set color equal to a variable
                         colorscale='Viridis', # one of plotly colorscales
                         showscale=True
                     )
@@ -860,6 +823,6 @@ def update_map_2d(clickData):
     
     
 if __name__ == '__main__':
-    app.run_server(debug=True,use_reloader=False)
+    app.run_server(debug=True)
     
     
